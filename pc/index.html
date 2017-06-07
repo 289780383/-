@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>交运出行服务</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/city-day.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a&plugin=AMap.Driving"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!--[if lt IE 9]-->
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=7,chrome=1"/>
+    <!--[endif]-->
+
+</head>
+<body class="bc_f0">
+<header class="bc_f0 c_36 ">
+    <div class="header_inner clearfix">
+        <h2>欢迎来到交运出行服务网</h2>
+        <ul class="header_right">
+            <li><span>登录</span> | <span>注册</span></li>
+            <li><span>会员中心</span> | <span class="wx">微信公众号<div class="wx_box"><p>微信搜索“<span
+                    class="c_or">滨州交运集团</span>”<br>或者扫描右侧二维码关注。<br><br>即刻参与优惠等您！</p><img src="images/2wm.png"></div></span></li>
+        </ul>
+    </div>
+</header>
+<nav class="bc_ff c_36">
+    <div class="nav_inner clearfix">
+        <div class="nav_left">
+            <h1>交运出行服务</h1>
+            <h2>滨州交运集团官方出行服务平台</h2>
+        </div>
+        <p class="nav_tel c_or">0546-7095666</p>
+        <ul class="nav_nav c_7c">
+            <li class="nav_active">首页</li>
+            <li>汽车票</li>
+            <li>约租车</li>
+            <li>定制班线</li>
+            <li>景区直达</li>
+            <li>新闻中心</li>
+        </ul>
+    </div>
+</nav>
+<div class="banner">
+    <i class="title_bg"></i>
+    <div class="banner_inner clearfix">
+        <!--查票主要的部分-->
+        <div class="trip bc_ff clearfix">
+            <ul class="trip_left">
+                <li class="trip_item trip_active"><img src="images/trip1.png"><br>汽车票</li>
+                <li class="trip_item"><img src="images/trip_2.png"><br>约租车</li>
+                <li class="trip_item"><img src="images/trip_3.png"><br>定制班线</li>
+                <li class="trip_item"><img src="images/trip_4.png"><br>景区直达</li>
+                <li></li>
+            </ul>
+            <ul class="trip_right">
+                <li class="qcp">
+                    <p>出发车站</p>
+                    <input type="text" value="全部" class="start_point">
+                    <p>目的地</p>
+                    <input type="text" value="中文/拼音/简拼" class="end_point">
+                    <p>出发时间</p>
+                    <input type="text" class="send_time end-li startDay">
+                    <p>
+                        <span onclick="get_date(this);" class="next_day">后天</span>
+                        <span onclick="get_date(this);">明天</span>
+                        <span onclick="get_date(this);">今天</span>
+                    </p>
+                    <a href="javascript:;" class="search_qcp">立即查询</a>
+                    <!--出发站-->
+                    <ul class="s_p_list">
+                        <li class="point_title">请选择汽车站</li>
+                        <li class="point_item">滨州汽车总站</li>
+                        <li class="point_item">滨州汽车西站</li>
+                        <li class="point_item">广饶汽车站</li>
+                        <li class="point_title">最近行程</li>
+                        <li class="point_near clearfix">
+                            <span onclick="near(this);">滨州汽车站—济南</span>
+                            <span onclick="near(this);">滨州汽车站—济南</span>
+                        </li>
+                    </ul>
+                    <!--目的站-->
+                    <ul class="e_p_box2">
+                        <li class="yzc_p_title">支持中文/拼音/简拼输入</li>
+                        <li class="yzc_p_item">无棣</li>
+                        <li class="yzc_p_item">阳信</li>
+                        <li class="yzc_p_item">惠民</li>
+                    </ul>
+
+                    <div class="e_p_box">
+                        <p class="e_p_msg">支持中文/拼音/简拼输入</p>
+                        <p class="e_p_title">搜索历史</p>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <div class="e_p_letter clearfix">
+                            <ul class="letter_group">
+                                <li class="letter-active">ABCD</li>
+                                <li>EFGH</li>
+                                <li>JKLMN</li>
+                                <li>PQRST</li>
+                                <li>WXYZ</li>
+                            </ul>
+                        </div>
+                        <ul class="e_p_city">
+                            <li class="e_p_c">
+                                <i>A</i>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="yzc">
+                    <p class="yzc_type">
+                        <span class="select_yzc">拼车</span>
+                        <span>包车</span>
+                        <span>租车</span>
+                    </p>
+                    <div class="pin_car">
+                        <p class="pin_car_title">出发地</p>
+                        <div class="pin_car_item">
+                            <p class="city_sel_go">滨州</p>
+                            <input type="text" value="您从哪上车" class="pin_start">
+                            <input type="text" value="您从哪上车" id="pin_start_b" onfocus='city_(this);' class="pin_start_b" style="display: none;">
+                        </div>
+                        <p class="pin_car_title">目的地</p>
+                        <div class="pin_car_item">
+                            <p class="city_sel_to">滨州</p>
+                            <input type="text" value="您从哪下车" class="pin_end">
+                            <input type="text" value="您从哪下车" id="pin_end_b" onfocus='city_2(this);' class="pin_end_b" style="display: none;">
+                        </div>
+                        <p class="pin_car_title">出发时间及人数</p>
+                        <div class="clearfix">
+                            <input type="text" class="pin_time text-box" style="display: none">
+                            <input type="text" class="pin_time end-li startDay">
+                        <span class="peo_warp">
+                            <img src="images/jian_01.png" class="jian"> <i class="pin_peo">1人</i><img
+                                src="images/add_01.png" class="add">
+                        </span>
+
+                        </div>
+                        <a href="javascript:;" class="search_pin_bao search_pin">立即查询</a>
+                        <a href="javascript:;" class="search_pin_bao search_bao" style="display: none;">立即查询</a>
+                        <!--出发站-->
+                        <ul class="yzc_c_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--出发站-->
+                        <ul class="yzc_e_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--乘车点-->
+                        <ul class="yzc_d_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+                        <ul class="yzc_f_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+
+                    </div>
+                    <div class="zu_car">
+                        <p class="pin_car_title">取车地</p>
+                        <div class="pin_car_item">
+                            <p class="city_zl_go">滨州</p>
+                            <input type="text" value="您从哪取车" class="pin_start_zr">
+                        </div>
+                        <p class="pin_car_title">还车地</p>
+                        <div class="pin_car_item">
+                            <p class="city_zl_to">滨州</p>
+                            <input type="text" value="您从哪还车" class="pin_end_zr">
+                        </div>
+                        <p class="pin_car_title">取车时间<span>还车时间</span></p>
+                        <div class="clearfix">
+                            <input type="text" class="pin_time end-li startDay">
+                            <input type="text" class="pin_time zu_time end-li startDay">
+                        </div>
+                        <a href="javascript:;" class="search_zu">立即查询</a>
+                        <!--出发站-->
+                        <ul class="yzc_z1l_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--出发站-->
+                        <ul class="yzc_z2l_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--乘车点-->
+                        <ul class="yzc_z1r_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+                        <ul class="yzc_z2r_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+
+                    </div>
+                </li>
+                <li class="dzbx">
+                    <p>出发地</p>
+                    <input type="text" value="您从哪上车" class="dzbx_point_start">
+                    <p>目的地</p>
+                    <input type="text" value="您从哪下车" class="dzbx_point">
+                    <p class="pin_car_title">出发时间及人数</p>
+                    <div class="clearfix">
+                        <input type="text" class="pin_time end-li startDay">
+                        <span class="peo_warp">
+                            <img src="images/jian_01.png" onclick="peo_jian();" class="jian"> <i class="pin_peo">1人</i><img
+                                src="images/add_01.png" onclick="peo_add();" class="add">
+                        </span>
+                    </div>
+
+                    <a href="javascript:;" class="search_dzbx">立即查询</a>
+                    <a href="javascript:;" class="dzbx_new">我要发起新线路</a>
+
+                    <!--上车点-->
+                    <ul class="s_p_list">
+                        <li class="dzbx_p_title">请选择乘车地点</li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                    <!--下车点-->
+                    <ul class="dzbx_list">
+                        <li class="dzbx_p_title">请选择乘车地点</li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                </li>
+                <li class="jqzd">
+                    <p>选择景区</p>
+                    <input type="text" value="您要去哪个景区" class="start_point">
+                    <p>乘车地点</p>
+                    <input type="text" value="您要从哪乘车" class="jqzd_point">
+
+                    <p class="pin_car_title">出发时间及人数</p>
+                    <div class="clearfix">
+                        <input type="text" class="pin_time end-li startDay">
+                        <span class="peo_warp">
+                            <img src="images/jian_01.png" onclick="peo_jian();" class="jian"> <i class="pin_peo">1人</i><img
+                                src="images/add_01.png" onclick="peo_add();" class="add">
+                        </span>
+                    </div>
+
+                    <a href="javascript:;" class="search_jqzd">立即查询</a>
+                    <!--出发站-->
+                    <ul class="s_p_list">
+                        <li class="point_title">请选择景区</li>
+                        <li class="point_item">无棣</li>
+                        <li class="point_item">阳信</li>
+                        <li class="point_item">惠民</li>
+                    </ul>
+                    <!--乘车点-->
+                    <ul class="jqzd_list">
+                        <li class="jqzd_p_title">请选择乘车地点</li>
+                        <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <h5 class="banner_title c_ff">让城际出行服务更加便捷</h5>
+        <ul class="banner_nav">
+            <li class="banner_active">路虽远，心相伴</li>
+            <li>城际出行，约租最快</li>
+            <li>定制班线，专座直达</li>
+            <li>旅游优选，直达景区</li>
+        </ul>
+
+    </div>
+
+</div>
+<section class="icon bc_ff">
+    <ul class="icon_inner clearfix">
+        <li>
+            <img src="images/icon1.png">
+            <p>权威服务</p>
+            <h5>交运集团唯一官方平台</h5>
+        </li>
+        <li>
+            <img src="images/icon2.png">
+            <p>实时同步</p>
+            <h5>与车站窗口同步出票</h5>
+        </li>
+        <li>
+            <img src="images/icon3.png">
+            <p>支付安全</p>
+            <h5>支付宝、微信支付有保障</h5>
+        </li>
+        <li>
+            <img src="images/icon4.png">
+            <p>服务快捷、贴心</p>
+            <h5>一键下单，扫码检票乘车</h5>
+        </li>
+    </ul>
+</section>
+<section class="main bc_ff">
+    <div class="main_inner clearfix">
+        <section class="main_left">
+            <div class="m_l_top clearfix">
+                <h4>热门线路</h4>
+                <ul class="m_l_point">
+                    <li class="main_active">滨州出发</li>
+                    <li>广饶出发</li>
+                </ul>
+            </div>
+            <ul class="m_l_main  clearfix">
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+                <li>
+                    <p class="m_l_start">滨州<span><i>150.0</i>元</span></p>
+                    <p class="m_l_end">北京永定门</p>
+                </li>
+            </ul>
+        </section>
+        <section class="main_right">
+            <div class="m_r_top clearfix">
+                <p onclick="news(this);">新闻</p><span onclick="news(this);">公告</span>
+                <i>更多</i>
+            </div>
+            <ul class="m_r_list">
+                <li><p>滨州汽车总站增开班次客车助力市民助力市民</p></li>
+                <li><p>滨州汽车总站增开班次客车助力市民助力市民</p></li>
+                <li><p>滨州汽车总站增开班次客车助力市民助力市民</p></li>
+                <li><p>滨州汽车总站增开班次客车助力市民助力市民</p></li>
+                <li><p>滨州汽车总站增开班次客车助力市民助力市民</p></li>
+                <li><p>滨州汽车总站增开班次客车助力市民助力市民</p></li>
+            </ul>
+        </section>
+    </div>
+</section>
+<section class="help bc_ff clearfix">
+    <ul class="help_inner">
+        <li class="help1">
+            <span>如何购票</span>
+            <p>新手指南</p>
+            <p>注册流程</p>
+            <p>购票流程</p>
+        </li>
+        <li class="help2">
+            <span>如何支付</span>
+            <p>支付宝支付流程</p>
+            <p>微信支付流程</p>
+            <p>银联支付流程</p>
+        </li>
+        <li class="help3">
+            <span>如何取票</span>
+            <p>自助机取票</p>
+            <p>售票窗口取票</p>
+        </li>
+        <li class="help4">
+            <span>如何退票</span>
+            <p>网上退票</p>
+            <p>窗口退票</p>
+            <p>服务台退票</p>
+        </li>
+        <li class="help5">
+            <span>如何验票</span>
+            <p>纸质客票验票</p>
+            <p>电子客票验票</p>
+        </li>
+        <li class="help6">
+            <span>如何乘车</span>
+            <p>检票口验票乘车</p>
+        </li>
+    </ul>
+</section>
+<footer class="bc_5e clearfix">
+    <ul class="footer_inner">
+        <li>
+            <span>联系与合作</span>
+            <p>联系我们</p>
+            <p>用户反馈</p>
+            <p>关于我们</p>
+            <p>网站地图</p>
+        </li>
+        <li>
+            <span>友情链接</span>
+            <p>中华人民共和国交通运输部</p>
+            <p>山东省交通厅</p>
+            <p>山东省道路运输管理局</p>
+            <p>山东省道路运输协会</p>
+            <p>滨州市交通局</p>
+        </li>
+        <li class="footer_last">
+            <span>关注我们</span>
+            <p>新浪微博：@滨州交运集团</p>
+            <p>官方QQ：188356956</p>
+            <p>客服热线：0546-7095666</p>
+            <p>客服邮箱：service@jiaoyun.com</p>
+            <p>官方微信：<img src="images/2wm.png"></p>
+        </li>
+    </ul>
+</footer>
+<div class="copy bc_00 clearfix">
+    <div class="copy_inner">
+        <p>Copyright©2016-2017交运出行www.jiaoyunchuxing.com</p>
+        <p>版权所有：山东省滨州交运集团 备案序号：鲁ICP备150433435号-1</p>
+        <span class="police">鲁公网安备 370703234543534号</span>
+    </div>
+    <div class="copy_pic">
+        <img src="images/pic_98.jpg">
+        <img src="images/pic_100.jpg">
+        <img src="images/pic_102.jpg" class="c_p_last">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/**改变文字大小的同时改变布局*/
+header{position:fixed;top:0;width: 100%;background-color:#ec584e;z-index: 1;}
+.head_l{display:block;width:0.22rem;padding:0.2rem;position: absolute;left: 0;top:0;}
+.head_c{line-height: 0.88rem;text-align: center;font-size:0.34rem;}
+/**主体*/
+.main{margin-top: 1.48rem;}
+.main .text1{font-size: 0.34rem;color: #333;line-height: 0.7rem;padding-left: 0.65rem;background: url("../images/clock_03.png") no-repeat left center;background-size:0.5rem;width:2rem;margin: 0 auto;}
+.main .text2{font-size: 0.28rem;color: #555;line-height: 0.64rem;margin-bottom: 0.4rem;text-align: center;}
+.main .btn_group{margin: 0 0.4rem 0.28rem;overflow: hidden;}
+.main .btn_group button{float: left;background-color:#fff;border:1px solid #ec584e;border-radius: 0.1rem;width:30.5%;margin: 0 1%;font-size: 0.3rem;line-height:0.64rem;color:#ec584e;}
+.main .btn_group .btn_disable{background-color:#ec584e; color:#fff;border:1px solid #ec584e;}
+.main .main_info{width:90%;margin: 0 auto;}
+.main .main_info li{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.main .main_info p{font-size: 0.3rem;line-height: 1rem;color: #777;padding-left: 0.16rem;width:2rem;float:left;}
+.main .main_info span{font-size: 0.32rem;line-height: 0.96rem;color: #333;display: block;float:left;}

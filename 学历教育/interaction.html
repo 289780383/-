@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>互动交流</title>
+    <!--[if lt IE9]> 
+<script src="js/drv/v1/html5shiv.js"></script>
+<![endif]-->
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/interaction.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/interaction.js"></script>
+</head>
+
+<body class="bc_fff">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="history.go(-1)" class="head_fh">
+        <p>留言板</p>
+        <img src="images/drv/v1/write.jpg" class="head_write">
+    </header>
+    <div style="height: 0.14rem;background-color: #f0f0f0;"></div>
+    <ul class="main">
+        <li>
+            <div class="the_top">
+                <img src="images/drv/v1/head.gif" class="user_head">
+                <p class="user_name over_ellipsis">快乐学车</p>
+                <p class="text_title over_ellipsis">科目二场地</p>
+            </div>
+            <div class="the_middle">
+                今天第一次上车，被教练骂的狗血淋头，不是挂挡 出错，就是离合控制的不好，怎么可以这么难啊！
+            </div>
+            <div class="the_bottom">
+                <p class="the_time">1分钟前</p>
+            </div>
+        </li>
+    </ul>
+    <div class="go_msg_box" onclick="window.open('index.html','_self','')" style="width: 1.2rem;height: 1.2rem;background-color:rgba(255, 180, 0, 0.58);position: fixed;z-index: 10;right:1rem;bottom:1.8rem;border-radius: 50%;">
+        <p style="width: 1rem;height: 1rem;background-color: #ffb400;margin:0.1rem;border-radius: 50%;font-size: 0.3rem;line-height: 1rem;text-align: center;color: #fff;">留</p>
+    </div>
+</body>
+<script type="text/javascript">
+    var imgUrl = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496200585722&di=96163d9611dc5687e779f0a5703f2eeb&imgtype=0&src=http%3A%2F%2Fimg.tupianzj.com%2Fuploads%2Fallimg%2F160602%2F9-160602215623-50.jpg";
+    var lineLink = "www.baidu.com";
+    var descContent = '爱写什么写什么1';
+    var shareTitle = '爱写什么写什么2';
+    var appid = '';
+
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('send_msg', res.err_msg);
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+               //_report('timeline', res.err_msg);
+        });
+    }
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo',{
+            "content": descContent,
+            "url": lineLink,
+        }, function(res) {
+            //_report('weibo', res.err_msg);
+        });
+    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv){
+            shareWeibo();
+        });
+    }, false);
+</script>
+</html>

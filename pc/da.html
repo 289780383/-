@@ -1,0 +1,57 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery带时间的日期控件代码</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <style type="text/css">
+       body .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+       body .ui-timepicker-div dl { text-align: left;padding: 5px 0 0 0;}
+       body .ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px;margin-top: -5px; }
+       body .ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+       body .ui-timepicker-div td { font-size: 90%; }
+       body .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+          /* Datepicker */
+       body .ui-datepicker{border:1px solid #e7e7e7;}
+       body .ui-datepicker .ui-datepicker-header{background-color:#fd4f00;color:#ffffff;}
+       body .ui-datepicker table {border-color:#ffffff; }
+       body .ui-datepicker-calendar{background:#ffffff;}
+       body .ui-datepicker-calendar .ui-state-default{background-color:#fff;border-color:#fff;color:#333;border-radius:50%;width: 18px;height: 18px;}
+       body .ui-datepicker-calendar .ui-state-hover{background-color:#fd4f00 !important;border-color:#fd4f00 !important;color:#ffffff !important;}
+       body .ui-datepicker-calendar .ui-state-highlight{background-color: #fff;border-color:#fd4f00;color:#404040;}
+       body .ui-datepicker-calendar .ui-state-active{background-color:#fd4f00;border-color:#fd4f00;color:#ffffff;border-radius:50%;width: 18px;height: 18px;}
+        /* Slider */
+       body .ui-slider{background:#d4d4d4;}
+       body .ui-slider .ui-state-default{background-color:#fd4f00;}
+       body .ui-slider .ui-state-active{background-color:#fd4f00 !important;}
+       body .ui-slider .ui-state-focus{background-color:#fd4f00;}
+       body .ui-slider .ui-state-hover{background-color:#fd4f00;}
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <ul class="sub-nav">
+        <li ><a href="javascript:void(0);">基础信息</a></li>
+    </ul>
+    <ul class="doc-set">
+        <li>
+            <div class="doc-dt">
+                <p>活动时间</p>
+            </div>
+            <div class="doc-dd">
+                <input name="act_start_time" type="text" class="text-box" value="" placeholder="开始时间≥当前时间" title="开始时间≥当前时间" readonly="readonly" style="cursor:pointer;"/>
+                <input name="act_stop_time" type="text" class="text-box" value="" placeholder="结束时间>开始时间" title="结束时间>开始时间" readonly="readonly" style="cursor:pointer;"/>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>

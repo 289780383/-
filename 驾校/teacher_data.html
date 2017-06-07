@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>资料填写</title>
+    <script type="text/javascript" src="js/drv/v1/html5shiv.js"></script>
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/teacher_data.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/teacher_data.js"></script>
+</head>
+<body class="bc_fff">
+<header>
+    <img src="images/drv/v1/fh.gif" onclick="history.go(-1)" class="head_fh">
+    <p>资料填写</p>
+</header>
+<div class="main">
+    <div class="main_top">
+        <div class="job_type sel_xsj"><p>陪练类型</p><span>科目二陪练/科目三陪练/拿本上路陪练</span></div>
+        <div class="price"><p>价格</p><input type="number" placeholder="请填写价格"></div>
+    </div>
+    <div class="main_bot">
+    <p class="bot_title">其他信息</p>
+        <div class="bot_list">
+            <div class="sel_xsj item_service"><p>服务特色</p><span>不吸烟/拿证快/包接送</span></div>
+            <div class="sel_xsj item_environment"><p>教学环境</p></div>
+            <div class="sel_xsj item_introduce"><p>教练简介</p></div>
+        </div>
+    </div>
+</div>
+<a href="JavaScript:;" class="btn">发布</a>
+<div class="mask_select">
+    <p class="select_title">陪练类型</p>
+    <div class="select"><i></i><span>科目二陪练</span></div>
+    <div class="select"><i></i><span>科目三陪练</span></div>
+    <div class="select"><i></i><span>拿本上路陪练</span></div>
+    <div class="btn_group"><span class="btn_cancel">取消</span><span class="btn_sure">确定</span></div>
+</div>
+<!--服务特色-->
+<div class="service">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="$(this).parent().parent().hide();" class="head_fh">
+        <p>服务特色</p>
+        <span class="head_right" onclick="service_save();">保存</span>
+    </header>
+<ul class="service_list">
+    <li><p>一人一车</p><i></i></li>
+    <li><p>拿证快</p><i></i></li>
+    <li><p>就近练车</p><i></i></li>
+    <li><p>价格低</p><i></i></li>
+    <li><p>不吸烟</p><i></i></li>
+    <li><p>幽默</p><i></i></li>
+    <li><p>吃饭AA</p><i></i></li>
+    <li><p>星级教练</p><i></i></li>
+    <li><p>态度好</p><i></i></li>
+    <li><p>包接送</p><i></i></li>
+</ul>
+    <p class="notice">*&nbsp;最多可选三个服务特色</p>
+</div>
+<!--教学环境上传-->
+<div class="upload_photos">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="photos_cancel();" class="head_fh">
+        <p>教学环境</p>
+        <span class="head_right photos_sure" onclick="photos_sure();">确认</span>
+        <span class="head_right photos_save" onclick="photos_save();">保存</span>
+    </header>
+<div class="photos_library">
+    <p class="photos_notice">
+        还没有上传照片哟！<br>
+        传些照片，让更多的学员关注！
+    </p>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+    <div class="img_warp"><img src="images/drv/v1/hj_pic_24.jpg"></div>
+</div>
+    <a href="JavaScript:;" class="upload_btn">马上上传</a>
+</div>
+<div class="mask_select_pic">
+    <p class="select_title">上传图片</p>
+    <div class="select1"><p class="select_pic">拍照</p></div>
+    <div class="select2"><p class="select_pic">从相册选择</p></div>
+</div>
+<!--教练简介-->
+<div class="teacher_introduce">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="introduce_cancel();" class="head_fh">
+        <p>教练简介</p>
+        <span class="head_right introduce_save" onclick="introduce_save();">保存</span>
+    </header>
+<div class="introduce_main">
+    <textarea>请输入您的个人简介</textarea>
+</div>
+    <a href="javascript:;" class="go_template">模板</a>
+    <div class="template">
+        <div class="template_text">本人是驾培行业资深教练，有多年的驾培经验，驾驶
+            技术精湛，教学态度端正，秉承独特的教学理念。本人是
+            驾培行业资深教练，有多年的驾培经验，驾驶技术精湛，教
+            学态度端正，秉承独特的教学理念。本人是驾培行业资深
+            教练，有多年的驾培经验，驾驶技术精湛，教学态度端正，
+            秉承独特的教学理念。</div>
+        <div class="template_btn">
+            <a href="javascript:;" class="template_next">换一个</a>
+            <a href="javascript:;" class="template_this">使用模板</a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

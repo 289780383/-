@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>自适应显示多个点标记</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/yue_admin.css" />
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.3&key=8a6d35c2fd8c2878290e67fda811c718"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.page.js"></script>
+    <script type="text/javascript" src="js/layer/laydate/laydate.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/yue_admin.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div class="my_warp">
+        <div class="search_warp">
+            <div class="all_line select_box">
+                <div class="select_title">全部线路</div>
+                <ul class="select_list">
+                    <li>
+                        <p>全部线路</p>
+                    </li>
+                    <li>
+                        <p>烟台市-济宁市</p>
+                    </li>
+                    <li>
+                        <p>烟台市-济宁市</p>
+                    </li>
+                    <li>
+                        <p>烟台市-济宁市</p>
+                    </li>
+                    <li>
+                        <p>烟台市-济宁市</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="all_car select_box">
+                <div class="select_title">全部车辆</div>
+                <ul class="select_list">
+                    <li>
+                        <p>全部车辆</p>
+                    </li>
+                    <li>
+                        <p>鲁H12345</p><span>余1座</span><i>上行</i></li>
+                </ul>
+            </div>
+            <ul class="car_state radio_box">
+                <li>
+                    <i class="radio_sel"></i>
+                    <p>所有</p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>待客</p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>运行</p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>空车</p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>停运</p>
+                </li>
+            </ul>
+            <ul class="up_down radio_box">
+                <li>
+                    <i class="radio_sel"></i>
+                    <p>所有</p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>上行</p>
+                </li>
+                <li>
+                    <i></i>
+                    <p>下行</p>
+                </li>
+            </ul>
+            <p class="order_sure jump_btn">接单确认<i>5</i></p>
+            <p class="dispatch jump_btn">派单</p>
+        </div>
+        <div class="sure_table order_table">
+            <div class="order_top">
+                <i class="close_table"></i>
+                <ul class="order_nav">
+                    <li class="sel_nav">待确认订单</li>
+                    <li>已确认订单</li>
+                    <li>所有订单</li>
+                    <li>订单录入</li>
+                </ul>
+            </div>
+            <div class="order_mid">
+                <ul class="order_sort">
+                    <li class="sel_sort">按线路排序</li>
+                    <li>按支付方式排序</li>
+                    <li>按时间排序</li>
+                    <li>按订单状态排序</li>
+                </ul>
+                <div class="order_search">
+                    <input type="text" placeholder="请输入手机号或姓名">
+                    <i class="order_search_btn"></i>
+                </div>
+            </div>
+            <!--订单确认与订单取消公用一个order_bot-->
+            <div class="order_bot">
+                <ul class="order_list">
+                    <!--定单确认li模板-->
+                    <li>
+                        <div class="peo_msg">
+                            <p class="peo_tel">18605359965：孙先生</p><span class="pay_state">已支付</span>
+                            <p class="peo_num"><span>1人</span><i>拼车</i></p>
+                        </div>
+                        <div class="trip_msg">
+                            <div class="trip_left">
+                                <p class="trip_time"><span>03-21</span><i>08:00</i></p>
+                                <p class="trip_name">鱼台-济宁</p>
+                            </div>
+                        </div>
+                        <div class="trip_poi">
+                            <p class="trip_start over_ellipsis">鱼台·汉府大酒店－济宁市鱼台县北环路新汽车站西88米</p>
+                            <p class="trip_end over_ellipsis">济宁·开泰花园－济宁市任城区光河路</p>
+                        </div>
+                        <div class="trip_sure order_trip_btn">接单确认</div>
+                    </li>
+                    <!--定单取消li模板-->
+                    <li>
+                        <div class="peo_msg">
+                            <p class="peo_tel">18605359965：孙先生</p><span class="pay_state">已支付</span>
+                            <p class="peo_num"><span>1人</span><i class="peo_bao">包车</i></p>
+                        </div>
+                        <div class="trip_msg">
+                            <div class="trip_left">
+                                <p class="trip_time"><span>03-21</span><i>08:00</i></p>
+                                <p class="trip_name">鱼台-济宁</p>
+                            </div>
+                        </div>
+                        <div class="trip_poi">
+                            <p class="trip_start over_ellipsis">鱼台·汉府大酒店－济宁市鱼台县北环路新汽车站西88米</p>
+                            <p class="trip_end over_ellipsis">济宁·开泰花园－济宁市任城区光河路</p>
+                        </div>
+                        <div class="trip_cancel order_trip_btn">接单取消</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="order_footer">
+                <!--<div class="tcdPageCode"></div>-->
+            </div>
+            <div class="order_entry">
+                <ul class="order_entry_form">
+                    <li class="form_two">
+                        <p>姓名：</p>
+                        <input type="text" class="form_name" placeholder="请输入姓名">
+                        <p>手机号：</p>
+                        <input type="tel" class="form_tel" placeholder="请输入手机号">
+                    </li>
+                    <li class="form_two">
+                        <p>乘车方式：</p>
+                        <select class="form_way">
+                        </select>
+                        <p>乘车人数：</p>
+                        <input type="tel" class="form_num" placeholder="请输入乘车人数">
+                    </li>
+                    <li class="form_one">
+                        <p>乘车日期：</p>
+                        <input type="text" id="form_date" class="laydate-icon" placeholder="请选择日期">
+                    </li>
+                    <li class="form_one">
+                        <p>起点：</p>
+                        <input type="text" id="start_poi" class="form_start" placeholder="请输入出发地">
+                        <ul class="data_box">
+                            <li>
+                                <span class="state_name">科技创业大厦</span>
+                                <span class="state_poi">地址：科技创业大厦</span>
+                            </li>
+                            <li>
+                                <span class="state_name">科技创业大厦</span>
+                                <span class="state_poi">地址：科技创业大厦地址：科技创业大厦地址：科技创业大厦地址：科技创业大厦地址：科技创业大厦地址：科技创业大厦地址：科技创业大厦</span>
+                            </li>
+                            <li>
+                                <span class="state_name">科技创业大厦</span>
+                                <span class="state_poi">地址：科技创业大厦</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="form_one">
+                        <p>终点：</p>
+                        <input type="text" id="end_poi" class="form_end" placeholder="请输入目的地">
+                    </li>
+                </ul>
+                <div class="entry_btn_group">
+                    <p class="entry_again">重新填写</p>
+                    <p class="entry_sure">确认提交</p>
+                </div>
+            </div>
+        </div>
+        <div class="order_mask">
+            <p class="order_title">
+                鱼台市-济宁市
+            </p>
+            <i class="close_mask"></i>
+            <div class="order_entry">
+                <ul class="order_entry_form">
+                    <li class="form_two">
+                        <p>姓名：</p>
+                        <input type="text" class="form_name" placeholder="请输入姓名">
+                        <p>手机号：</p>
+                        <input type="tel" class="form_tel" placeholder="请输入手机号">
+                    </li>
+                    <li class="form_two">
+                        <p>乘车方式：</p>
+                        <select class="form_way">
+                        </select>
+                        <p>乘车人数：</p>
+                        <input type="tel" class="form_num" placeholder="请输入乘车人数">
+                    </li>
+                    <li class="form_one">
+                        <p>乘车日期：</p>
+                        <input type="text" id="form_date2" class="laydate-icon" placeholder="请选择日期">
+                    </li>
+                    <li class="form_one">
+                        <p>起点：</p>
+                        <input type="text" id="start_poi2" class="form_start" placeholder="请输入出发地">
+                    </li>
+                    <li class="form_one">
+                        <p>终点：</p>
+                        <input type="text" id="end_poi2" class="form_end" placeholder="请输入目的地">
+                    </li>
+                </ul>
+                <div class="entry_btn_group">
+                    <p class="entry_again">重新填写</p>
+                    <p class="entry_sure">确认提交</p>
+                </div>
+            </div>
+            <div id="small_map"></div>
+        </div>
+        <!--派单分页-->
+        <div class="dispatch_table order_table">
+            <div class="order_top">
+                <i class="close_table"></i>
+                <ul class="order_nav">
+                    <li class="sel_nav">待派订单</li>
+                    <li>已派订单</li>
+                </ul>
+            </div>
+            <div class="order_mid">
+                <ul class="order_sort">
+                    <li class="sel_sort">按线路排序</li>
+                    <li>按支付方式排序</li>
+                    <li>按时间排序</li>
+                    <li>按订单状态排序</li>
+                </ul>
+                <div class="order_search">
+                    <input type="text" placeholder="请输入手机号或姓名">
+                    <i class="order_search_btn"></i>
+                </div>
+            </div>
+            <!--派单公用一个order_bot-->
+            <div class="order_bot">
+                <ul class="order_list">
+                    <!--未派单li模板-->
+                    <li>
+                        <div class="peo_msg">
+                            <p class="peo_tel">18605359965：孙先生</p><span class="pay_state">已支付</span>
+                            <p class="peo_num"><span>1人</span><i>拼车</i></p>
+                        </div>
+                        <div class="trip_msg">
+                            <div class="trip_left">
+                                <p class="trip_time"><span>03-21</span><i>08:00</i></p>
+                                <p class="trip_name">鱼台-济宁</p>
+                            </div>
+                        </div>
+                        <div class="trip_poi">
+                            <p class="trip_start over_ellipsis">鱼台·汉府大酒店－济宁市鱼台县北环路新汽车站西88米</p>
+                            <p class="trip_end over_ellipsis">济宁·开泰花园－济宁市任城区光河路</p>
+                        </div>
+                        <div class="dispatch_sure dispatch_btn">派单</div>
+                        <div class="submit_warp">
+                            <p>车号：</p>
+                            <input type="text" class="driver_id" placeholder="输入车号">
+                            <p>司机：</p>
+                            <input type="text" class="driver_name" placeholder="输入姓名">
+                            <p>手机号：</p>
+                            <input type="tel" class="driver_tel" placeholder="输入手机号">
+                            <div class="dispatch_submit submit_btn">提交</div>
+                        </div>
+                    </li>
+                    <!--已派单li模板-->
+                    <li>
+                        <div class="peo_msg">
+                            <p class="peo_tel">18605359965：孙先生</p><span class="pay_state">已支付</span>
+                            <p class="peo_num"><span>1人</span><i>拼车</i></p>
+                        </div>
+                        <div class="trip_msg">
+                            <div class="trip_left">
+                                <p class="trip_time"><span>03-21</span><i>08:00</i></p>
+                                <p class="trip_name">鱼台-济宁</p>
+                            </div>
+                        </div>
+                        <div class="trip_poi">
+                            <p class="trip_start over_ellipsis">鱼台·汉府大酒店－济宁市鱼台县北环路新汽车站西88米</p>
+                            <p class="trip_end over_ellipsis">济宁·开泰花园－济宁市任城区光河路</p>
+                        </div>
+                        <div class="dispatch_over dispatch_btn">已派单</div>
+                        <div class="submit_warp submit_over">
+                            <p>车号：</p>
+                            <input type="text" readonly class="driver_id" value="鲁H88765">
+                            <p>司机：</p>
+                            <input type="text" readonly class="driver_name" value="王师傅">
+                            <p>手机号：</p>
+                            <input type="tel" readonly class="driver_tel" value="18605351234">
+                            <div class="dispatch_cancel submit_btn">取消派单</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="order_footer">
+            </div>
+        </div>
+        <div class="show_or">
+            <p class="show_title">是否真的取消提交？</p>
+            <div class="show_btn_group">
+                <p class="show_no">取消</p>
+                <p class="show_yes">确定</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    /**地图渲染*/
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        center: [116.397428, 39.90923],
+        zoom: 13
+    });
+    /**地图渲染*/
+    var small_map = new AMap.Map('small_map', {
+        resizeEnable: true,
+        zoom: 13
+    });
+    $(function() {
+        $(".my_warp div,.my_warp p").each(function() {
+$(this).css({
+    "width": ''+$(this).width()*0.8+'px',
+     "height": ''+$(this).height()*0.8+'px',
+ "font-size": ''+$(this).css("font_size")*0.8+'px',
+  "line-height": ''+$(this).css("lineHeight")*0.8+'px',
+});
+        });
+    });
+    </script>
+</body>
+
+</html>

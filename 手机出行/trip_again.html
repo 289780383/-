@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--uc强制竖屏-->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>发布行程</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/trip_again.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="trip_A_mid bc_fff">
+    <ul class="trip_A_left c_333">
+        <li class="trim_time">09月08日80:00</li>
+        <li class="trip_A_start">济宁·太白楼太白楼太白楼太白楼太白楼太白楼太白楼太白楼</li>
+        <li class="trip_A_end">济宁·政府</li>
+    </ul>
+    <div class="trip_A_right">
+        <p class="c_a"><span class="trip_A_number">1人</span>·<span class="trip_A_pin">拼座</span></p>
+        <p class="c_333"><span class="trip_A_money">120.00</span>元</p>
+    </div>
+</div>
+<div class="trip_A_bot">
+    <p class="prompt c_333">您已经取消了行程<br>感谢您的预约，期待下次为您服务</p>
+    <div class="cry"></div>
+    <a href="index.html" class="train_again bc_or c_fff">重新预约</a>
+</div>
+</body>
+<script type="text/javascript">
+
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+
+</script>
+
+</html>

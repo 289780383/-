@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>直通车</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="the_header">
+        <img src="images/menu_1.png" onclick="user_login(this);" class="header_left">
+        <p>直通车</p>
+        <img src="images/sao_1.png" class="header_right">
+    </div>
+    <div class="the_banner">
+        <img src="images/banner_02.jpg">
+        <p>齐顺达
+            <br>期待与您一起顺利到达</p>
+    </div>
+    <div class="the_main">
+        <div class="line_item hospital">
+            <p class="item_title">医疗直通车</p>
+            <div class="item_info">七座豪华商务车，途径济南省立医院、中医院、 齐鲁医院、千佛山医院、省立医院东院。拼车、 包车价格仅限单程。座号按报名顺序乘坐。
+            </div>
+            <div class="item_type">
+                <div class="f_l">
+                    <span>拼车</span>
+                    <p><i>60</i>元／人</p>
+                </div>
+                <div class="f_r">
+                    <span>包车</span>
+                    <p><i>300</i>元／车</p>
+                </div>
+            </div>
+            <div class="item_poi">
+                <p class="start_poi">临淄-济南 05:30发车</p>
+                <p class="end_poi">济南-临淄 16:30发车</p>
+            </div>
+        </div>
+        <div class="line_item city_item">
+            <p class="item_title">城区通勤车</p>
+            <div class="item_info">华侨城南区东门、莲池小学、黄金国际东门、黄 金国际南门、小义乌、水文局、龙凤苑、世纪花 园、华侨城西门、南营、蓝帆总部、工商银行
+            </div>
+            <div class="item_type">
+                <div class="f_l">
+                    <span>拼车</span>
+                    <p><i>20</i>元／人</p>
+                </div>
+            </div>
+            <div class="item_poi">
+                <p class="start_poi">临淄-济南 05:30发车</p>
+                <p class="end_poi">济南-临淄 16:30发车</p>
+            </div>
+        </div>
+        <div class="line_item qsd_item">
+            <p class="item_title">齐顺达，期待与您一起顺利到达！</p>
+            <div class="item_info">齐顺达，期待与您一起顺利到达！
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="my_ticket"></div>
+    <!-------------------------分割线-------------------------------------------------------->
+    <!--登陆那套-->
+    <!--登录前手机验证-->
+    <div class="mask"></div>
+    <div class="login bc_f7">
+        <div class="login_top bc_f0"><span class="c_333">登录</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <form class="login_form">
+            <input type="tel" class="login_tel c_a" onclick="login_tel(this);" onblur="login_blur(this);" maxlength="13" value="请输入手机号">
+            <p class="c_fff bg_0">手机号码输入有误</p>
+            <button type="button" class="login_btn c_fff bc_a" onclick="tel_false('.login_form');" disabled>下一步</button>
+        </form>
+    </div>
+    <!--发送验证码-->
+    <div class="login_yan bc_f7">
+        <div class="login_top bc_f0"><img class="fh" src="images/fh_03.png" onclick="fanhui(this);"><span class="c_333">输入验证码</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <p class="c_fff bg_0">验证码输入有误</p>
+        <form class="yzmWarp">
+            <span class="yan_tel c_a">170 0050 2223</span>
+            <button class="yan_btn c_a" onclick="send_yan(this);" disabled>90秒后重发</button>
+            <div class="clearfix"></div>
+            <input type="number" class="yzm">
+            <input type="number" class="yzm">
+            <input type="number" class="yzm">
+            <input type="number" class="yzm">
+        </form>
+    </div>
+    <!--设置登录密码-->
+    <div class="set_pass bc_f7">
+        <div class="login_top bc_f0"><span class="c_333">设置登录密码</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <form class="login_form">
+            <input type="password" class="set_pw c_a" onclick="set_pass(this);" maxlength="16" min="6"><span class="pass_num c_a" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+            <input type="text" class="set_pw2 c_a" onclick="set_pass(this);" maxlength="16" min="6" value="请输入6-16位密码">
+            <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+            <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+            <span class="pass_msg c_a">设置密码可保障资金安全，密码为后续登陆凭证，请务必牢记</span>
+            <button type="button" class="pass_btn c_fff bc_a" onclick="set_mm();" disabled>确定</button>
+        </form>
+    </div>
+    <!--我要登录-->
+    <div class="login_now bc_f7">
+        <div class="login_top bc_f0"><span class="c_333">登录</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <form class="login_form">
+            <input type="tel" class="login_tel c_a" onblur="login_blur(this);" onclick="login_tel(this);" maxlength="13" value="请输入手机号">
+            <input type="password" class="set_pw c_a" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16" min="6"><span class="pass_num c_a" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+            <input type="text" class="set_pw2 c_a" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16" min="6">
+            <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+            <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+            <button type="button" class="pass_btn c_fff bc_a" onclick="login_now();" disabled>登录</button>
+            <span class="forget c_a" onclick="forget();">忘记密码</span>
+        </form>
+    </div>
+    <!--我的设置-->
+    <div class="my_home bc_fff">
+        <div class="my_top">
+            <img src="images/index_03.png"><span>170****5555</span>
+        </div>
+        <ul class="my_list">
+            <li class="my_trip"><a href="my_trip.html">行程</a></li>
+            <li class="my_setting"><a href="setting.html">设置</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

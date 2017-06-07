@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>收单记录</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/record_list.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_fff">
+<div class="select_line">
+    <div class="select_top bc_f6">
+        <p class="c_333">10月9日 星期日 收单记录</p><img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip"><span class="car_id">鲁H12345</span><!--<img src="images/loc_07.png" onclick="open_map(this);" class="loc_map">-->
+    </div>
+    <p class="item_name bc_fff">济宁-济南 07:20<span class="c_53">1号线</span></p>
+<ul class="station_list">
+    <li class="station_item"><p>济宁 · <span>山东省人大常委会</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+</ul>
+</div>
+<div class="mask"></div>
+<div class="mask_show bc_fff">
+    <div class="mask_top bc_f6"><p>收单明细</p><img class="close" src="images/close_1.png" onclick="close_this(this);"></div>
+    <p class="station_name bc_e5 c_333"><span class="c_53">济宁</span> · 解放桥</p>
+    <ul class="detail">
+        <li class="online_pay"><span class="pay_way">网约·已付</span><i>5人</i><span class="pay_money">1200.0元</span></li>
+        <li class="online_money"><span class="pay_way">网约·现金</span><i>5人</i><span class="pay_money">1200.0元</span></li>
+        <li class="local_money"><span class="pay_way">现场·现金</span><i>5人</i><span class="pay_money">1200.0元</span></li>
+        <li class="all_money"><span class="pay_way">收单·汇总</span><i>5人</i><span class="pay_money">1200.0元</span></li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    /**关闭窗口层*/
+    function close_this(obj){
+        $(obj).parent().parent().hide();
+        $(".mask").hide();
+    }
+    /**点击列表事件*/
+    $(".station_list li").click(function(){
+        $(".mask_show").show();
+        $(".mask").show();
+    });
+    $(function(){
+        $(".station_list li").eq(0).find(".yuan").addClass("yuan_s");
+        $(".station_list li").eq($(".station_list li").length-1).find(".yuan").addClass(" yuan_e");
+        /**有乘客上车的位置变橙色*/
+        for(var i=0;i<$(".station_list li").length;i++){
+            if($(".station_list li").eq(i).find(".shang").text().length>0){
+/*
+                $(".station_list li").eq(i).find("p span").css("color","#ff4f00");
+*/
+                if($(".station_list li").eq(i).find(".xia").text().length<=0){
+                    $(".station_list li").eq(i).find(".this_people").css("line-height","1rem")
+                }
+            }else if($(".station_list li").eq(i).find(".xia").text().length>0){
+/*
+                $(".station_list li").eq(i).find("p span").css("color","#0c9ef1");
+*/
+                $(".station_list li").eq(i).find(".this_people").css("line-height","1rem")
+
+            }
+        }
+
+    });
+</script>
+</html>

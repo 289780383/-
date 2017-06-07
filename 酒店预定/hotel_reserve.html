@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>酒店预定</title>
+    <script type="text/javascript" src="js/drv/v1/html5shiv.js"></script>
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/hotel_reserve.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/hotel_reserve.js"></script>
+</head>
+<body class="bc_f0">
+<header>
+    <img src="images/drv/v1/xsj_l_03.gif" onclick="history.go(-1)" class="head_fh">
+    <p>酒店预定</p>
+    <a href="hotel.html">酒店</a>
+</header>
+<div class="top">
+    <span class="top_title over_ellipsis">高级大床房</span>
+    <div class="top_text">入住时间：2017-01-10&nbsp;离店时间：2017-01-14&nbsp;4晚&nbsp;大床&nbsp;无早&nbsp;免费WIFI&nbsp;免费宽带</div>
+</div>
+<ul class="middle">
+    <li class="the_number"><p>房间数</p><span>1间</span></li>
+    <li class="the_name"><p>入住人</p><input type="text" placeholder="请填写入住人的姓名"></li>
+    <li class="the_tel"><p>联系电话</p> <input type="tel" placeholder="请填写联系电话"></li>
+</ul>
+<div class="pay_way">
+    <p class="way_title">选择支付方式</p>
+    <ul class="way_list">
+        <li class="wx" onclick="pay_way(this);"><p>微信支付</p><span class="selected"></span></li>
+<!--隐藏
+        <li class="zfb" onclick="pay_way(this);"><p>支付宝支付</p><span></span></li>
+        <li class="xj" onclick="pay_way(this);"><p>到店支付</p><span></span></li>
+-->
+    </ul>
+</div>
+<div class=" bill"><p>发票</p><span>如需发票，请到酒店前台领取</span></div>
+<div class="footer">
+    <div><p>总共：</p><i>¥</i><span>500</span></div>
+    <div class="foot_btn">提交订单</div>
+</div>
+<!--房间数量-->
+<div class="room_num">
+    <p class="room_title">房间数量选择</p>
+    <ul class="room_list">
+        <li>1间</li>
+        <li>2间</li>
+        <li>3间</li>
+        <li>4间</li>
+        <li>5间</li>
+        <li>6间</li>
+        <li>7间</li>
+        <li>8间</li>
+    </ul>
+    <a href="javascript:;" class="room_btn">确定</a>
+</div>
+<div class="submit_end">
+    <div class="submit_header">
+        <img src="images/drv/v1/xsj_l_03.gif" class="head_fh close_mask">
+        <p>酒店预定</p>
+    </div>
+    <div class="sub_info">
+        <p class="text1">订单确认中</p>
+        <p class="text2">工作人员会第一时间联系您，请保持手机畅通!</p>
+    </div>
+    <ul class="success_nav">
+        <li class="sel_success_li">订单详情</li>
+        <li>取消订单</li>
+        <li>返回首页</li>
+    </ul>
+    <ul class="success_info">
+        <li><p>酒店名称</p><span class="over_ellipsis">如家派柏·云酒店（威海汽车总站店）</span></li>
+        <li><p>到店时间</p><span class="over_ellipsis">2017-01-05  18：00前到店</span></li>
+        <li><p>联系电话</p><span class="over_ellipsis">18612345678</span></li>
+    </ul>
+</div>
+<div class='mask2'></div>
+</body>
+</html>

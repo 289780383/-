@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>手机出行</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/peopleNumber.js"></script>
+    <script type="text/javascript" src="js/start_end.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+<header>
+    <img class="user_photo f_l" onclick="user_login(this);" src="images/index_03.png">
+    <div class="nav_warp">
+    <ul class="head_nav f_l">
+        <li onclick="big_nav(this);"><p class="a_active">公务出行</p></li>
+        <li onclick="big_nav(this);"><p>城际专车</p></li>
+        <li onclick="big_nav(this);"><p>机场快线</p></li>
+        <li onclick="big_nav(this);"><p>高铁直达</p></li>
+        <li onclick="big_nav(this);"><p>包车</p></li>
+        <li onclick="big_nav(this);"><p>租车</p></li>
+        <li onclick="big_nav(this);"><p>定制班线</p></li>
+    </ul>
+    </div>
+    <i class="head_btn f_r" style="display: none;" onclick="zhan(this);"></i><!--展开收齐-->
+</header>
+<div class="banner">
+       <div class="banner_text">
+    <h2 class="banner_title">我是banner的标题</h2>
+    <p class="banner_prompt">简单的提示信息</p>
+    </div>
+</div>
+<div class="main">
+    <p class="msg c_or"></p>
+    <form>
+        <input class="position_start" onclick="start_station();" readonly="readonly" type="text" value="定位中...">
+        <input class="position_end" onclick="end_station();" readonly="readonly" type="text" value="去哪儿...">
+        <input class="people_num" onclick="people();" readonly="readonly" type="text" value="乘车人数">
+        <input class="send_time" onclick="time();" readonly="readonly" type="text" value="预定时间">
+        <label class="pin"><input type="radio" name="w" value="1"><span
+                class="pin_ pin_active">拼座</span><br><em>120</em>元</label>
+        <label class="pin no_pin"><input type="radio" name="w" value="0"><span class="pin_">不拼座</span><br><em>180</em>元</label>
+        <a class="main_sub" onclick="main_msg();">公务出行预约</a>
+    </form>
+</div>
+<form class="main_info">
+    <input class="start_" type="hidden">
+    <input class="end_" type="hidden">
+    <input class="number_" type="hidden">
+    <input class="time_" type="hidden">
+    <input class="pin_or" type="hidden">
+    <input class="pin_money" type="hidden">
+</form>
+<div class="mask"></div>
+<!--商定人数-->
+<div class="people bc_f5" style="display: none">
+    <div class="bot_title bc_f5 c_333">
+        <span class="cancel  f_l" onclick="cancel();">取消</span>
+        <span class="cancel return  f_l" onclick="return_p();">返回</span>
+        请选择乘车人数
+        <span class="sure sure_ f_r" onclick="sure();">确定</span>
+    </div>
+    <ul class="people_n c_333 bc_fff">
+        <li onclick="people_n(this)">1人</li>
+        <li onclick="people_n(this)">2人</li>
+        <li onclick="people_n(this)">3人</li>
+        <li onclick="people_n(this)">4人</li>
+    </ul>
+    <div class="people_more c_333 bc_fff" onclick="go_more(this);">更多</div>
+    <div class="more_warp bc_fff">
+        <div class="more_add"><p class="reduce_p f_l" onclick="reduce(this)"></p><span>5</span>
+            <p class="add_p f_r" onclick="add(this)"></p></div>
+    </div>
+</div>
+
+
+<!--确定时间-->
+<div class="getTime  bc_f5">
+    <div class="bot_title bc_f5 c_333">
+        <span class="cancel  f_l" onclick="get_time_btn();" id="datecancle">取消</span>
+        <span class="cancel return  f_l" onclick="return_t();">返回</span>
+        请选择出发时间
+        <span class="sure sure_ f_r" onclick="get_time_btn();" id="dateconfirm">确定</span>
+    </div>
+    <ul class="today_time c_333 bc_fff">
+        <li onclick="today_time(this);"><p>今天 13:00</p></li>
+        <li onclick="today_time(this);"><p>今天 13:00</p></li>
+        <li onclick="today_time(this);"><p>今天 13:00</p></li>
+        <li onclick="today_time(this);"><p>今天 13:15</p></li>
+        <li onclick="today_time(this);"><p>今天 14:00</p><i class="bc_or c_fff">推荐</i>
+            <span class="c_7c">提前30分钟预约，派单更有可能成功</span>
+        </li>
+    </ul>
+    <div class="go_time c_333 bc_fff" onclick="go_time();">其他时间</div>
+   
+   
+    <!--确定时间2-->
+    <div class="day_new bc_fff">
+        <p class="today c_or bc_fff">09月01日</p>
+        <div class="ri_li">
+            <ul class="week">
+                <li>日</li>
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+                <li>四</li>
+                <li>五</li>
+                <li>六</li>
+            </ul>
+            <ul class="week_new c_fff"></ul>
+        </div>
+        <div class="time_warp bc_fff" style="display: none;">
+            <ul class="time_show">
+                <li class="sel_time">12:13</li>
+                <li>12:13</li>
+                <li>12:13</li>
+                <li>12:13</li>
+                <li>12:13</li>
+                <li>12:13</li>
+                <li>12:13</li>
+                <li>12:13</li>
+            </ul>
+        </div>
+    </div>
+    <div class="timeMain c_333">
+        <div id="yearwrapper" style="overflow: hidden;">
+            <ul></ul>
+        </div>
+        <div id="monthwrapper" style="overflow: hidden;">
+            <ul></ul>
+        </div>
+        <div id="daywrapper" style="overflow: hidden;">
+            <ul></ul>
+        </div>
+    </div>
+</div>
+
+<!--选择城市列表-->
+<div class="city_select bc_fff">
+    <div class="city_top bc_f5">
+        <img src="images/fh_03.png" class="city_fh" onclick="city_fh();">
+        <p class="city_title c_333">选择出发城市</p>
+    </div>
+    <ul class="city_nav">
+        <li>Q</li>
+    </ul>
+    <div class="city_main">
+        <div class="layer-tips" id="showT"><p>Z</p></div>
+        <p class="local_city" onclick="local_city(this);">当前城市:<span class="c_or"></span></p>
+        <ul class="city_list" id="city_list">
+            <li class="c_a">
+                <span>Q</span>
+                <p>请先选择出发城市</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--登录前手机验证-->
+<div class="login bc_f7">
+    <div class="login_top bc_f0"><span class="c_333">登录</span><img class="close" src="images/close_1.png"
+                                                                   onclick="close_login(this);"></div>
+    <form class="login_form">
+        <input type="tel" class="login_tel c_a" onclick="login_tel(this);" onblur="login_blur(this);" maxlength="13"
+               value="请输入手机号">
+        <p class="c_fff bg_0">手机号码输入有误</p>
+        <button type="button" class="login_btn c_fff bc_a" onclick="tel_false('.login_form');" disabled>下一步</button>
+    </form>
+</div>
+<!--发送验证码-->
+<div class="login_yan bc_f7">
+    <div class="login_top bc_f0"><img class="fh" src="images/fh_03.png" onclick="fanhui(this);"><span class="c_333">输入验证码</span><img
+            class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+    <p class="c_fff bg_0">验证码输入有误</p>
+    <form class="yzmWarp">
+        <span class="yan_tel c_a">170 0050 2223</span>
+        <button class="yan_btn c_a" onclick="send_yan(this);" disabled>90秒后重发</button>
+        <div class="clearfix"></div>
+        <input type="number" class="yzm">
+        <input type="number" class="yzm">
+        <input type="number" class="yzm">
+        <input type="number" class="yzm">
+    </form>
+</div>
+<!--设置登录密码-->
+<div class="set_pass bc_f7">
+    <div class="login_top bc_f0"><span class="c_333">设置登录密码</span><img class="close" src="images/close_1.png"
+                                                                       onclick="close_login(this);"></div>
+    <form class="login_form">
+        <input type="password" class="set_pw c_a" onclick="set_pass(this);" maxlength="16" min="6"><span
+            class="pass_num c_a" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+        <input type="text" class="set_pw2 c_a" onclick="set_pass(this);" maxlength="16" min="6" value="请输入6-16位密码">
+        <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+        <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+        <span class="pass_msg c_a">设置密码可保障资金安全，密码为后续登陆凭证，请务必牢记</span>
+        <button type="button" class="pass_btn c_fff bc_a" onclick="set_mm();" disabled>确定</button>
+    </form>
+</div>
+<!--我要登录-->
+<div class="login_now bc_f7">
+    <div class="login_top bc_f0"><span class="c_333">登录</span><img class="close" src="images/close_1.png"
+                                                                   onclick="close_login(this);"></div>
+    <form class="login_form">
+        <input type="tel" class="login_tel c_a" onblur="login_blur(this);" onclick="login_tel(this);" maxlength="13"
+               value="请输入手机号">
+        <input type="password" class="set_pw c_a" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16"
+               min="6"><span class="pass_num c_a" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+        <input type="text" class="set_pw2 c_a" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16"
+               min="6">
+        <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+        <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+        <button type="button" class="pass_btn c_fff bc_a" onclick="login_now();" disabled>登录</button>
+        <span class="forget c_a" onclick="forget();">忘记密码</span>
+    </form>
+</div>
+<!--我的设置-->
+<div class="my_home bc_fff">
+    <div class="my_top">
+        <img src="images/index_03.png"><span>170****5555</span>
+    </div>
+    <ul class="my_list">
+        <li class="my_trip"><a href="my_trip.html">行程</a></li>
+        <li class="my_setting"><a href="setting.html">设置</a></li>
+    </ul>
+</div>
+<!--我的未完成-->
+<div class="my_wwc" onclick="my_wwc();">
+    <img src="images/wwc_03.png" class="wwc_pic"><span class="wwc_badge"></span>
+</div>
+</body>
+<script type="text/javascript">
+    /**我的未完成*/
+    function my_wwc(){
+        window.open("my_trip.html","_self","");
+    }
+    /**用于关闭个人信息页*/
+    // touch swipe手势
+    $(".my_home").swipe(
+            {//*swipe (事件，滑动的方向，滑动的距离，一次滑动的时间 , 几根手指)
+                swipe: function (event, direction, distance, duration, fingerCount) {
+                    if (direction == "left") {
+                        $(".mask").hide();
+                        $(".my_home").hide();
+                    } else if (direction == "up") {
+                        $(".mask").hide();
+                        $(".my_home").hide();
+                    }
+                }
+            });
+
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    $('.send_time').date();
+    /**用于导航左右滑动*/
+    $(function(){
+        var li_n=$(".head_nav li").length;
+        console.log(li_n);
+        var str=0;
+        for(var i=0;i<li_n;i++){
+            str+=$(".head_nav li").eq(i).outerWidth();
+            console.log(str);
+        }
+        $(".head_nav").css("width",str);
+    });
+
+    /*头部展开收齐*/
+    var flag = 1;
+    function zhan(obj) {
+        if (flag == 1) {
+            $(obj).css("background", "url('images/index_06.png')no-repeat 0 -0.19rem");
+            $(obj).css("background-size", "0.33rem");
+            flag = 0;
+        } else {
+            $(obj).css("background", "");
+            flag = 1;
+        }
+    }
+  
+    /*是否拼座*/
+    $(".pin").click(function () {
+        $(".pin .pin_").removeClass("pin_active");
+        $(this).find(".pin_").addClass("pin_active");
+    });
+    function main_msg() {
+        start_ = $(".position_start").val();
+        end_ = $(".position_end").val();
+        number_ = $(".people_num").val();
+        time_ = $(".send_time").val();
+        pin_or = $(".pin_active").text();
+        pin_money = $(".pin_active").next().next().text();
+        if (start_ == "定位中...") {
+            $(".msg").html("请选择出发地");
+            return false;
+        } else if (end_ == "去哪儿...") {
+            $(".msg").html("请选择目的地");
+            return false;
+        } else if (number_ == "乘车人数") {
+            $(".msg").html("请选择乘车人数");
+            return false;
+        } else if (time_ == "预定时间") {
+            $(".msg").html("请选择预定时间");
+            return false;
+        } else {
+            $(".msg").html("");
+            $(".start_").val(start_);
+            $(".end_").val(end_);
+            $(".number_").val(number_);
+            $(".time_").val(time_);
+            $(".pin_or").val(pin_or);
+            $(".pin_money").val(pin_money);
+
+            if(flag2){
+            $.ajax({
+                type: "POST", //GET
+                url: "***.action",
+                data: {
+                    start_station: $(".start_").val(),
+                    end_station: $(".end_").val(),
+                    people_number: $(".number_").val(),
+                    send_time: $(".time_").val(),
+                    pin_or: $(".pin_or").val(),
+                    pin_money: $(".pin_money").val()
+                }, //组装参数
+                dataType: "json",
+                success: function (data) {
+                    alert("登陆后选票走这里.数据铺到select_city.html");
+                    window.open("select_city.html", "_self", "")
+                },
+                error: function (data) {
+                    alert("没有后台，模拟成功了");
+                    /**以下测试代码记得删除*/
+                    window.open("select_city.html", "_self", "")
+                }
+            });
+
+        }else {
+                /**没有登录就走这里*/
+                $(".mask").show();
+                $(".login").show();
+                $(".login .login_btn").attr("disabled");
+                $(".login .login_btn").css("background-color", "#aaa");
+                $(".login .login_tel").val("请输入手机号");
+                $(".login .login_tel").css("color", "#aaa");
+                $(".login .login_tel").css("border-bottom", "1px solid #d5d2d2");
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;height:0.88rem;transform: translateX(-50%);background-color: #24b4ff;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.28rem;}
+header input{font-size: 0.28rem;color:#fff;line-height: 0.6rem;border:none;background:rgba(255,255,255,0.5) url("../../../images/drv/v1/index_search.png") no-repeat 1.16rem 0.16rem;background-size:0.32rem;padding-left: 1.6rem;width: 3.4rem;border-radius: 0.1rem;position:absolute;left: 50%;top:50%;transform: translate(-50%,-50%);}
+
+.main{padding-top: 0.88rem;}
+/**输入提示*/
+.amap-pl-pc .poi-more{display: none;}
+.amap-pl-pc .poi-img{display: none;}
+.amap-pl-pc .poi-name{border-bottom: 1px solid #e5e5e5;font-size: 0.3rem;}
+.poi-addr{display:block;font-size:0.24rem;line-height:0.5rem; color:#c7c7c7;}
+/**周边*/
+body .amap-sug-result{display: none;}
+body .amap-sug-result{display:block;width:7.5rem;border:none;margin-left: -7.5rem;margin-top: -0.22rem;}
+body .amap-sug-result .auto-item{margin: 0 0.2rem;border-bottom: 1px solid #e5e5e5;font-size: 0.3rem;padding-left: 0.2rem;}
+body .amap-sug-result .auto-item .auto-item-span{display:block;font-size:0.24rem;line-height:0.5rem; color:#c7c7c7;}
+body .amap_lib_placeSearch{display:block;width:7.5rem;border: none;}
+body .amap_lib_placeSearch_page{display:none;}
+body .amap_lib_placeSearch_poi,body .poi-more,body .poi-tel{display:none;}
+body .amap_lib_placeSearch .poibox{padding: 0;}
+body .amap_lib_placeSearch .poibox .poi-title{line-height: 0.3rem;padding-top: 0.2rem;}
+body .amap_lib_placeSearch .poibox .poi-info p{line-height: 0.5rem;}
+.amap_lib_placeSearch .poibox.active, .amap_lib_placeSearch .poibox.hover, .amap_lib_placeSearch .poibox:hover{background-color: #fff;}

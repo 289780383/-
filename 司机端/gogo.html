@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>排班计划</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/gogo.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+<!--
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="js/plan_map.js"></script>
+-->
+
+</head>
+<body class="bc_fff">
+<!--地图路线-->
+<div class="mask"></div>
+<div class="map_warp bc_fff">
+    <div id="container"></div>
+    <div id="panel" style="display:none;">
+    </div>
+    <img src="images/close__14.png" class="close_map" onclick="close_map();">
+</div>
+<div class="select_line">
+    <div class="select_top bc_f6">
+        <p class="c_333">10月09日 星期日 运行线路</p><img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip"><span class="car_id">鲁H12345</span><!--<img src="images/loc_07.png" onclick="open_map(this);" class="loc_map">-->
+    </div>
+    <p class="item_name bc_fff">济宁-济南 <span class="c_53">1号线</span></p>
+<ul class="station_list">
+    <li class="station_item"><p>济宁 · <span>山东省人大常委会</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="xia c_blue">下12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><span class="this_time c_blue">07:20</span><span class="this_people"><span class="shang c_or">上12人</span></span><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+    <li class="station_item"><p>济宁 · <span>解放桥</span></p><i class="sj_r"></i><i class="yuan"></i></li>
+</ul>
+</div>
+<div class="btn_group">
+    <p class="car_out bc_or c_fff" onclick="go_inspect();">到站</p>
+    <p class="btn_over c_or" onclick="btn_over();">完成</p>
+    <p class="btn_full c_or">满员<span class="bc_or c_fff">18</span></p>
+</div>
+<div class="btn_bg"></div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    var tm=$(".btn_bg").css("background-image");
+    if(tm==""||tm=="none"||tm=="undefined"){
+        $(".btn_bg").css({backgroundColor:"#fff"});
+    }
+    /**点击列表事件*/
+    $(".station_list li").click(function(){
+        go_inspect();
+    });
+
+    /**点击到站跳转验票*/
+    function go_inspect(){
+        window.open("inspect_ticket.html","_self","");
+    }
+    /**跳首页*/
+    function btn_over(){
+        window.open("index1.html","_self","");
+    }
+    $(function(){
+        $(".station_list li").eq(0).find(".yuan").addClass("yuan_s");
+        $(".station_list li").eq($(".station_list li").length-1).find(".yuan").addClass(" yuan_e");
+        /**有乘客上车的位置变橙色*/
+        for(var i=0;i<$(".station_list li").length;i++){
+            if($(".station_list li").eq(i).find(".shang").text().length>0){
+/*
+                $(".station_list li").eq(i).find("p span").css("color","#ff4f00");
+*/
+                if($(".station_list li").eq(i).find(".xia").text().length<=0){
+                    $(".station_list li").eq(i).find(".this_people").css("line-height","1rem")
+                }
+            }else if($(".station_list li").eq(i).find(".xia").text().length>0){
+/*
+                $(".station_list li").eq(i).find("p span").css("color","#0c9ef1");
+*/
+                $(".station_list li").eq(i).find(".this_people").css("line-height","1rem")
+
+            }
+        }
+
+    });
+</script>
+</html>

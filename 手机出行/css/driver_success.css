@@ -1,0 +1,32 @@
+.driver_S_top{font-size: 0.3rem;line-height: 1rem;padding: 0 0.42rem;border-bottom:1px solid #aaa;overflow: hidden;position: relative;}
+.driver_S_top p{text-align: center;}
+.driver_S_top span{position:absolute;right:0.5rem;top:0;font-size: 0.26rem;display: inline-block;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+/*司机*/
+.driver{position: relative;overflow: hidden;padding: 0.4rem 0 0.5rem 1.8rem;}
+.driver_name{font-size: 0.28rem;line-height: 0.4rem;}
+.driver_info{font-size: 0.26rem;line-height: 0.5rem;}
+.driver_car{font-size: 0.3rem;}
+.driver_head{position: absolute;left:0.5rem;top:0.6rem;width:1rem;}
+.driver_tel{position: absolute;right:0.5rem;top:0.7rem;width: 0.88rem;}
+.driver_xx{width: 1.5rem;overflow: hidden;}
+.driver_xx li{float:left;width: 0.3rem;height: 0.3rem;background: url("../images/success_07.png") no-repeat right center;background-size:0.6rem;}
+.driver_xx .sjxx{background: url("../images/success_07.png") no-repeat left center;background-size:0.6rem;}
+/*感谢*/
+.thanks{width:6.6rem;border-radius: 0.2rem;display:none;position: fixed;z-index:120;left: 50%;margin:-2.6rem -3.3rem;top:50%;padding-top: 0.64rem;}
+.thanks_img{display: block;width: 1.26rem;margin: 0 auto;}
+.thanks_txt{width: 100%;text-align: center;font-size: 0.34rem;line-height:1.06rem;}
+.thanks_btn{width: 5.4rem;line-height: 1rem;display: block;margin: 0.3rem auto 0.85rem;border-radius: 0.1rem;font-size: 0.34rem;text-align: center;}
+
+
+.zffs{text-align: center;height: 0.5rem;position: relative;margin-top: 0.4rem;}
+.zffs i{width: 3rem;border-bottom: 1px solid #aaa;margin-top:0.25rem;height: 0;}
+.zffs_txt{font-size: 0.24rem;top:0;width:4rem;padding:0 0.05rem;text-align:center;display:inline-block;line-height:0.5rem;position:absolute;left: 50%;margin-left:-2rem;}
+.zf_big{width: 100%;text-align: center;font-size:0.38rem;line-height: 0.66rem;padding-top: 0.45rem;}
+.zf_sm{width: 100%;text-align: center;font-size:0.24rem;line-height: 0.42rem;padding-bottom: 0.1rem;}
+.server_xx{width: 5rem;margin: 0 auto;padding-top: 0.5rem;overflow: hidden;}
+.server_xx li{float:left;width: 1rem;height: 1rem;background: url("../images/success_07.png") no-repeat right center;background-size:2rem;}
+.server_xx .ser_xx{background: url("../images/success_07.png") no-repeat left center;background-size:2rem;}
+.server_over{width: 100%;text-align: center;font-size: 0.3rem;line-height: 1.2rem;}
+.success_go{display:block;width: 6rem;line-height: 1rem;margin: 1.2rem auto 0;text-align: center;font-size: 0.3rem;border-radius:0.1rem; }

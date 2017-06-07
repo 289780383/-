@@ -1,0 +1,62 @@
+.top{font-size: 0.3rem;line-height: 1rem;width:7.5rem;overflow:hidden;border-bottom:1px solid #aaa;position:fixed;top:0;}
+.top p{text-align: center;}
+.top span{position:absolute;right:0.5rem;top:0;font-size: 0.26rem;display: inline-block;}
+.mine{font-size: 0.26rem;position: absolute;left:0.5rem;top: 0;}
+.index_msg{padding:1.4rem 0 0.3rem 0.44rem;border-bottom: 1px solid #aaa;}
+.index_msg .time_online{font-size:0.28rem;line-height:0.45rem;}
+.index_msg .state{font-size: 0.36rem;line-height:0.53rem;}
+.news{padding:0.14rem 0 0.26rem 0;border-bottom: 1px solid #aaa;position: relative;}
+.news_title{font-size:0.3rem;line-height: 0.66rem;padding-left: 0.87rem;background: url("../images/msg_03.png") no-repeat 0.33rem center;background-size: 0.44rem;}
+.news_txt{padding:0 0.57rem 0 0.87rem;font-size:0.27rem;line-height: 0.37rem;}
+.news img{position: absolute;display: block;width:0.4rem;right:0;top:0;padding: 0.2rem;}
+.btn_group{width:7.5rem;position: fixed;bottom:0;overflow: hidden;z-index: 4;}
+.car_out {width: 1.6rem;height: 1.6rem;border-radius:50%;font-size: 0.32rem;line-height: 1.6rem;margin:0 auto 0.92rem;text-align: center;}
+.btn_bg{width: 7.5rem;height:2.8rem;background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);position: fixed;bottom: 0;z-index: 3;}
+
+/**计划**/
+.plan_box{display: none;}
+.select_item{margin-top: 0.24rem;border-top: 1px solid #aaa;border-bottom: 1px solid #aaa;padding-left: 0.26rem;}
+.item_name{font-size: 0.3rem;line-height:0.82rem;}
+.item_name span{display: block;float:right;font-size:0.28rem;margin-right: 0.4rem;}
+.item_content{border-top: 1px solid #c7c7c7;border-bottom: 1px solid #c7c7c7;padding: 0.12rem 0;}
+.item_content li{line-height: 0.7rem;padding: 0 0.4rem 0 0.5rem;}
+.select_start{background: url("../images/start_end_03.png") no-repeat left center;background-size: 0.38rem;font-size: 0.28rem;}
+.select_cen{position:relative;background: url("../images/start_end_06.png") no-repeat left center;background-size: 0.38rem;font-size: 0.24rem;}
+.select_cen p{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.select_sel{display:inline-block;position:absolute;right:0.5rem;top:0.18rem;width:0.34rem;height: 0.33rem;background: url("../images/select__03.png") no-repeat left bottom;background-size: 0.33rem;}
+.select_select{background: url("../images/select__03.png") no-repeat left top;background-size: 0.33rem;}
+.select_end{background: url("../images/start_end_08.png") no-repeat left center;background-size: 0.38rem;font-size: 0.28rem;}
+.item_bot{line-height: 0.8rem;font-size: 0.28rem;/*background: url("../images/loc_07.png") no-repeat 6.45rem center;background-size: 0.27rem;*/}
+.item_bot span{font-size: 0.3rem;}
+
+/*我的*/
+.my_home{width:5.8rem;position: fixed;left: 0;top: 0;height: 100%;z-index: 250;display: none;}
+.my_top{height:4rem;font-size: 0.32rem;border-bottom: 1px solid #aaa;padding-top:0.66rem;text-align: center;}
+.my_top .sj_head_warp{width:1.4rem;height:1.2rem;padding-top:0.2rem;text-align:center;margin: 0 auto;background-color: #fff;border-radius: 50%;}
+.my_top .sj_head{width: 1rem;display:inline-block;}
+
+.sj_name{display: block;font-size:0.28rem;line-height: 0.5rem;padding-top: 0.1rem;}
+.driver_xx{width: 1.5rem;overflow: hidden;margin: 0 auto;}
+.sj_tel{font-size: 0.26rem;line-height: 0.5rem;}
+.sj_company{font-size: 0.24rem;line-height: 0.22rem;display: block;}
+.driver_xx li{float:left;width: 0.3rem;height: 0.3rem;background: url("../images/success_07.png") no-repeat right center;background-size:0.6rem;}
+.driver_xx .sjxx{background: url("../images/success_07.png") no-repeat left center;background-size:0.6rem;}
+.my_list{font-size: 0.3rem;line-height: 0.96rem;padding-left: 0.3rem;border-bottom:1px solid #aaa;}
+.my_list li{padding-left:0.1rem;border-bottom: 1px solid #aaa;}
+.my_list li:last-of-type{border-bottom:none;}
+
+/**地图*/
+.map_warp{width: 6.8rem;height: 10rem;position: fixed;margin: -5rem 0 0 -3.4rem;left:50%;top: 45%;z-index:200;border-radius:0.2rem;display: none;}
+#container{width: 6.4rem;height: 9.6rem;margin: 0.2rem;}
+.close_map{width:1.1rem;left: 2.75rem;bottom: -1.5rem;position: absolute;}
+
+/*确认退出*/
+.mask2{width:100%;height: 100%;background-color: #000;opacity: 0.5;position: fixed;top:0;left:0;z-index: 300;display: none;}
+.close_trip{position: fixed;width: 6.8rem;font-size: 0.3rem;height: 5rem;left: 50%;top: 50%;margin:-2.5rem 0 0 -3.35rem;display:none;border-radius:0.1rem;z-index:400;}
+.close_top{width: 1.5rem;height: 1.5rem;border-radius: 50%;margin: 0.66rem auto 0;position: relative;}
+.chang{position: absolute;width: 0.09rem;height: 0.46rem;left: 0.7rem;top:0.4rem;}
+.dian{width: 0.12rem;height: 0.12rem;border-radius: 50%;position: absolute;bottom: -0.2rem;left: -0.01rem;}
+.close_trip p{text-align: center;font-size: 0.38rem;width: 100%;line-height: 1.1rem;}
+.close_trip a{display: inline-block;border-top: 1px solid #ff4f00;line-height: 1.2rem;width:50%;text-align: center;float: left;position: absolute;bottom: 0;}
+.close_no{border-bottom-left-radius:0.1rem;}
+.close_yes{left: 50%;border-bottom-right-radius:0.1rem;}

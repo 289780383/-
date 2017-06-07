@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>实名认证</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/real_name.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/real_name.js"></script>
+</head>
+<body class="bc_fff">
+<div class="header bc_f5">
+    <img src="images/fh_fff_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">实名认证</p>
+</div>
+<div class="the_form">
+    <div><p>真实姓名</p><input type="text" placeholder="请输入姓名" class="the_name"></div>
+    <div><p>身份证号</p><input type="text" placeholder="请输入身份证号" class="the_id"></div>
+</div>
+<div class="the_pic">
+    <div class="drv_id"><!--<img src="images/photo_03.jpg">--></div>
+    <p class="drv_title">驾驶证主副页</p>
+    <div class="drv_peo"><!--<img src="images/photo_07.jpg">--></div>
+    <p class="drv_title">手持驾驶证正面照</p>
+</div>
+<div class="foot_btn">
+    <a href="javascript:;" class="btn_pass">跳过</a>
+    <a href="javascript:;" class="btn_submit">提交</a>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+</script>
+</html>

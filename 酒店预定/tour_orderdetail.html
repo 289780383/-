@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>订单详情</title>
+    <script type="text/javascript" src="js/drv/v1/html5shiv.js"></script>
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/tour_orderdetail.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/mobiscroll_date.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/tour_orderdetail.js"></script>
+    <script type="text/javascript" src="js/drv/v1/mobiscroll_date.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/drv/v1/mobiscroll.js"></script>
+
+</head>
+<body class="bc_f0">
+<header>
+    <img src="images/drv/v1/xsj_l_03.gif" onclick="history.go(-1)" class="head_fh">
+    <p>订单详情</p>
+</header>
+<div class="top">
+    <div class="top_margin"><p class="text_left">威海刘公岛一日跟团游</p><span>¥<i class="the_price">180</i>/人</span></div>
+    <div class="sel_date"><p class="text_left">选择日期</p><input type="text" class="the_day" placeholder="请选择日期"></div>
+</div>
+<div class="sel_people">
+    <p class="people_title">选择出行人数</p>
+    <div class="peo_main">
+        <div><p class="text_left">成人</p><div class="peo_warp"><i class="peo_jian"></i><span class="the_peo_num">1人</span><i class="peo_add"></i></div></div>
+<!--
+        <div><p class="text_left">儿童</p><div class="peo_warp"><i class="peo_jian"></i><span>1人</span><i class="peo_add"></i></div></div>
+-->
+    </div>
+</div>
+<div class="user_info">
+    <p class="user_title">预定人信息</p>
+    <div class="user_main">
+        <div class="user_border"><p class="text_left">联系人</p><input type="text" placeholder="请填写您的姓名"></div>
+        <div><p class="text_left">联系电话</p><input type="text" placeholder="请填写您的电话号码"></div>
+    </div>
+</div>
+<div class="pay_way">
+    <p class="way_title">选择支付方式</p>
+    <ul class="way_list">
+        <li class="wx" onclick="pay_way(this);"><p>微信支付</p><span class="selected"></span></li>
+        <!--隐藏
+                <li class="zfb" onclick="pay_way(this);"><p>支付宝支付</p><span></span></li>
+                <li class="xj" onclick="pay_way(this);"><p>到店支付</p><span></span></li>
+        -->
+    </ul>
+</div>
+<div class=" bill"><p>发票</p><span>如需发票，请到酒店前台领取</span></div>
+<div class="footer">
+    <div><p>总共：</p><i>¥</i><span class="the_money">1000</span></div>
+    <div class="foot_btn">提交订单</div>
+</div>
+<div class='mask2'></div>
+</body>
+</html>

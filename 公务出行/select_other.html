@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>订单确认</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/select_other.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/peo_num.js"></script>
+    <script type="text/javascript" src="js/select_date.js"></script>
+</head>
+<body class="bc_f5">
+
+<div class="select_top bc_f5">
+    <p class="c_333 bc_f6">订单确认</p><img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip"><span
+        class="c_333" onclick="close_trip();">取消约车</span>
+</div>
+<div class="select_station">
+    <p class="select_s">济宁·南池公园</p>
+    <p class="select_e">济南·南池公园</p>
+</div>
+<div class="select_time">
+    <p class="select_p" onclick="people();">乘车人数<span>1人</span><img src="images/xsj_07.png"></p>
+    <p class="select_t" onclick="time();">乘车时间<span>2016-10-10 08:00</span><img src="images/xsj_07.png"></p>
+</div>
+<div class="select_pz">
+    <p class="select_pin" onclick="pin_zuo(this);">拼座<span class="sel_span">120.0元/人</span><i class="selected"></i></p>
+    <p class="select_no_pin" onclick="pin_zuo(this);">不拼座<span>180.0元/人</span><i></i></p>
+</div>
+<div class="select_bot">
+    <p class="c_333 bc_fff"><i>1人</i><span class="all_money">约<span class="c_or">120.0</span>元</span></p><span
+        class="go_select bc_or c_fff" onclick="go_trip();">确认</span>
+</div>
+<div class="mask"></div>
+<div class="close_trip bc_f7">
+    <div class="bc_a close_top"><span class="chang bc_or"><span class="dian bc_or"></span></span></div>
+    <p class="c_333">您确认取消此次用车？</p>
+    <a class="close_no bc_fff c_333" onclick="close_no();" href="JavaScript:;">不</a><a class="close_yes bc_or c_fff" onclick="close_yes();" href="JavaScript:;">是</a>
+</div>
+
+<!--商定人数-->
+<div class="people bc_f5" style="display: none">
+    <div class="bot_title bc_f5 c_333">
+        <span class="cancel  f_l" onclick="cancel();">取消</span>
+        <span class="cancel return  f_l" onclick="return_p();">返回</span>
+        请选择乘车人数
+        <span class="sure sure_ f_r" onclick="sure();">确定</span>
+    </div>
+    <ul class="people_n c_333 bc_fff">
+        <li onclick="people_n(this)">1人</li>
+        <li onclick="people_n(this)">2人</li>
+        <li onclick="people_n(this)">3人</li>
+        <li onclick="people_n(this)">4人</li>
+    </ul>
+    <div class="people_more c_333 bc_fff" onclick="go_more(this);">更多</div>
+    <div class="more_warp bc_fff">
+        <div class="more_add"><p class="reduce_p f_l" onclick="reduce(this)"></p><span>5</span>
+            <p class="add_p f_r" onclick="add(this)"></p></div>
+    </div>
+</div>
+<!--时间-->
+<div class="getTime">
+    <div class="bot_title bc_f5 c_333">
+        <span class="cancel  f_l" onclick="close_time();">取消</span>
+        请选择出发时间
+        <span class="sure f_r" onclick="get_time_sure();">确定</span>
+    </div>
+    <div class="getTime_main">
+        <div class="main_warp">
+            <div class="date_warp">
+                <ul class="get_date">
+                    <li class="sel_li"><span>今天</span>
+                        <p class="sel_p">10-16</p></li>
+                    <li><span>明天</span>
+                        <p class="sel_p">10-16</p></li>
+                    <li><span>后天</span>
+                        <p class="sel_p">10-16</p></li>
+                    <li><p>10-16</p></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="get_time">
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li class="sel_time">07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+            <li>07:20</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    /*取消发布*/
+    function close_trip(){
+        $(".mask").show();
+        $(".close_trip").show();
+    }
+    /*不取消发布了*/
+    function close_no(){
+        $(".mask").hide();
+        $(".close_trip").hide();
+    }
+    function close_yes(){
+        window.open("trip_again.html","_self","");
+    }
+</script>
+</html>

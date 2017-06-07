@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>租车订单确认</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/order_confirmation_zc.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pay.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p>订单确认</p>
+</div>
+
+<div class="pay_msg">
+    <div class="get_car">
+<span class="car_way">取车</span>
+        <p class="car_time"><span class="start_date">2016-11-11</span><span class="c_or"> 08:00</span></p>
+        <p class="car_site">德州市 · 德州汽车总站南翼楼金桥国际旅行社</p>
+    </div>
+    <div class="lose_car">
+<span class="car_way">还车</span>
+        <p class="car_time"><span class="end_date">2016-11-11</span><span class="c_or"> 08:00</span></p>
+        <p class="car_site">德州市 · 德州汽车总站南翼楼金桥国际旅行社</p>
+    </div>
+</div>
+<div class="car_msg">
+<img src="images/zu_05.jpg" class="car_img">
+    <p class="car_type">宝马740i<br><span>空调，wifi等车内设施车</span></p>
+    <p class="car_price">日租价<br><span><i>120.0</i>元</span></p>
+</div>
+<div class="zu_way bc_fff">
+    <p class="way_title c_95">选择租赁方式</p>
+    <ul class="zu_list c_333">
+        <li class="rz"><p>日租</p><span  class="sel_zu"></span><i>120元/天</i></li>
+        <li class="yz"><p>月租</p><span></span><i>80元/天</i></li>
+    </ul>
+</div>
+<div class="driver_or bc_fff">
+    <p class="driver_title c_95">需要驾驶员？<span class="sel_driver"></span></p>
+    <ul class="driver_list c_333">
+        <li class="driver1"><p>100km以内</p><span  class="sel_zu"></span><i>100元/天</i></li>
+        <li class="driver2"><p>100km以外</p><span></span><i>150元/天</i></li>
+    </ul>
+</div>
+<div class="pay_way bc_fff">
+    <p class="way_title c_95">选择支付方式</p>
+    <ul class="way_list c_333">
+        <li class="zfb" onclick="pay_way(this);"><p>支付宝支付</p><span  class="selected"></span></li>
+        <li class="wx" onclick="pay_way(this);"><p>微信支付</p><span></span></li>
+    </ul>
+</div>
+<div class="ticket bc_fff" onclick="ticket_way(this);">
+    <p class="f_l c_95">需要车票报销</p><span class="f_r"></span>
+</div>
+<div class="pay_bot">
+    <p class="c_333 bc_fff"><span class="days">共<i class="c_or"></i>天</span><span class="all_money"><i class="c_or">120.0</i>元</span></p><span class="go_pay bc_or c_fff">去支付</span>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    /**给定的一个月的天数*/
+    var day=28;
+    $(function(){
+        $(".zu_list li").on("click",zu_list);
+        $(".driver_title").on("click",driver_title);
+        $(".driver_list li").on("click",driver_list);
+        /**判断是否满一个月*/
+        $(".days i").text(dateCompare($(".start_date").text(),$(".end_date").text()));
+        if(dateCompare($(".start_date").text(),$(".end_date").text())<=day){
+            $(".zu_list .yz").off("click",zu_list).css("background-color","#f0f0f0");
+        }else{
+            $(".zu_list .yz").on("click",zu_list).css("background-color","");
+        }
+    });
+    /**日租月租*/
+    function zu_list(){
+        $(this).parent().find("span").removeClass("sel_zu");
+        $(this).find("span").addClass("sel_zu");
+    }
+    /**是否需要司机*/
+    function driver_title(){
+        $(this).find("span").toggleClass("sel_driver","");
+        if($(this).find("span").hasClass("sel_driver")){
+            $(".driver_list li").on("click",driver_list);
+            $(".driver_list").css("background-color","");
+        }else {
+            $(".driver_list li").off("click",driver_list);
+            $(".driver_list").css("background-color","#f0f0f0");
+            $(".driver_list li").find("span").removeClass("sel_zu");
+        }
+    }
+    /**司机列表*/
+    function driver_list(){
+        $(this).parent().find("span").removeClass("sel_zu");
+        $(this).find("span").addClass("sel_zu");
+    }
+    /**计算有多少天*/
+    function dateCompare(date1,date2){
+        date1 = date1.replace(/\-/gi,"/");
+        date2 = date2.replace(/\-/gi,"/");
+        var time1 = new Date(date1).getTime();
+        var time2 = new Date(date2).getTime();
+        var days=(time2-time1)/86400000;
+        if((time2-time1)/86400000<1){
+            days=1;
+        }
+        return days;
+    }
+</script>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>首页</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index1.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <!--重要不要删
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="js/plan_map.js"></script>
+    -->
+    <script type="text/javascript" src="js/index1.js"></script>
+</head>
+<body class="bc_f6">
+<div class="top bc_f6">
+    <p class="c_333">10月09日 星期日</p>
+    <div class="mine c_53" onclick="show_mine();">我的</div><span class="c_or c_53" onclick="today_ban(this);">今日排班</span>
+</div>
+<div class="index_msg bc_f6">
+    <p class="time_online c_53">收单：0，在线：0小时</p>
+    <p class="state c_333">未确认排班</p>
+</div>
+<div class="news bc_fff">
+    <p class="news_title c_333">集团消息<time class="news_time">10-09 08:30</time></p>
+<p class="news_txt c_53">今天开始集团公司为每辆车提供车载无线WIFI，GPS设备安装，请各位师傅到各自所属单位......</p>
+<img src="images/news_c_07.png" onclick="close_news(this);">
+</div>
+<div class="plan_box">
+    <div class="select_item bc_fff" >
+        <p class="item_name">济宁-济南 1号线<span class="c_53">鲁H12345</span></p>
+        <ul class="item_content c_333">
+            <li class="select_start">济宁</li>
+            <li class="select_cen c_7c"><p>解放桥，运河宾馆，运河宾馆，青少年宫，第二人民医院，如意嘉园</p></li>
+            <li class="select_end">济南</li>
+        </ul>
+        <p class="item_bot"><span class="c_or">120.00</span>元起 | 约运行<span class="c_or">60</span>分钟</p>
+    </div>
+</div>
+<div class="btn_group">
+    <p class="car_out bc_or c_fff">出车</p>
+</div>
+<div class="btn_bg"></div>
+<!--我的-->
+<div class="my_home bc_fff">
+    <div class="my_top bc_f6">
+        <div class="sj_head_warp">
+            <img src="images/sjtx.png" class="sj_head">
+        </div>
+        <span class="sj_name c_53">冯师傅</span>
+        <ul class="driver_xx">
+            <li class="sjxx"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <p class="sj_tel c_333">170****1213</p>
+        <span class="sj_company c_a">济宁交运集团鱼台客运分公司</span>
+    </div>
+    <ul class="my_list">
+        <li onclick="open_new('job_plan');">排班计划</li>
+        <li onclick="open_new('record_list');">收单记录</li>
+        <li onclick="go_out()">退出</li>
+    </ul>
+</div>
+
+<!--地图路线-->
+<div class="mask"></div>
+<div class="map_warp bc_fff">
+    <div id="container"></div>
+    <div id="panel" style="display:none;">
+    </div>
+    <img src="images/close__14.png" class="close_map" onclick="close_map();">
+</div>
+
+<!--确认退出-->
+<div class="mask2"></div>
+<div class="close_trip bc_f6">
+    <div class="bc_a close_top"><span class="chang bc_or"><span class="dian bc_or"></span></span></div>
+    <p class="c_333">您确定要退出？</p>
+    <a class="close_no bc_fff c_333" onclick="close_no();" href="JavaScript:;">取消</a><a class="close_yes bc_or c_fff" onclick="close_yes();" href="JavaScript:;">确认</a>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    var tm=$(".btn_bg").css("background-image");
+    if(tm==""||tm=="none"||tm=="undefined"){
+        $(".btn_bg").css({backgroundColor:"#fff"});
+    }
+
+</script>
+</html>

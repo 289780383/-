@@ -1,0 +1,30 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+/**banner*/
+.banner{overflow: hidden;padding-top:0.88rem;}
+.banner img{width: 7.5rem;display: block;}
+.banner_bot_line{width: 7.5rem;height: 0.14rem;background-color: #f0f0f0;display: block;}
+/**main*/
+.main_nav{overflow: hidden;}
+.main_nav p{width: 50%;font-size: 0.28rem;line-height: 1rem;color: #777;float: left;text-align:center;border-bottom: 2px solid #e5e5e5;}
+.main_nav .sel_nav{border-bottom: 2px solid #ec584e;}
+.main input,.main span{width:4.4rem;font-size: 0.3rem;line-height: 0.96rem;color: #333;display: block;float: right;padding-right: 0.5rem;background-color: transparent;border: none;text-align: right;}
+.main a{width:6.8rem;font-size: 0.34rem;line-height: 0.9rem;color: #fff;display: block;background-color:#ec584e;border-radius:0.1rem;margin-top:0.6rem;text-align:center;}
+.send_info,.receive_info{width: 6.8rem;margin: 0 auto;display: none;}
+.send_info div,.receive_info div{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.send_info p,.receive_info p{font-size: 0.3rem;line-height: 1rem;color: #555;padding-left: 0.16rem;float:left;}
+.send_site,.send_date,.receive_site,.receive_date{background: url("../../../images/drv/v1/r_xsj.gif") no-repeat 6.4rem center;background-size: 0.28rem;}
+/**提交成功*/
+.submit_end{display: none;position:fixed;top:0;width: 7.5rem;overflow:auto;height: 100%;background-color:#fff;z-index: 110;}
+.submit_end .submit_header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+.submit_end .submit_header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+.submit_end .submit_header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+.submit_end .sub_info{padding-top:1.56rem;}
+.submit_end .sub_info img{width: 0.98rem;height: 0.98rem;display: block;margin: 0 auto;}
+.submit_end .text1{font-size: 0.32rem;line-height: 0.46rem;color: #333;text-align: center;}
+.submit_end .text2{font-size: 0.28rem;line-height: 0.42rem;color: #555;text-align: center;}
+.success_info{width: 6.8rem;margin: 0.52rem auto 0;}
+.success_info li{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.success_info p{font-size: 0.3rem;line-height: 1rem;color: #555;padding-left: 0.16rem;width:2rem;float:left;}
+.success_info span{font-size: 0.3rem;line-height: 0.96rem;color: #333;display: block;float:left;}

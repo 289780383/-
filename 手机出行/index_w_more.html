@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>全部分类</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index_w_more.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f0">
+<div class="header">
+    <img src="images/xsj_l_03.png"  onclick="history.go(-1)" class="fh_btn">
+    <p class="c_333">全部分类</p>
+</div>
+<div class="box1">
+    <p class="box_type">交通</p>
+    <ul class="nav">
+        <li><img src="images/nav01.gif"><p>景区直达</p></li>
+        <li><img src="images/nav02.gif"><p>汽车票</p></li>
+        <li><img src="images/nav03.gif"><p>公务出行</p></li>
+        <li><img src="images/nav04.gif"><p>机场快线</p></li>
+        <li><img src="images/nav05.gif"><p>出租车</p></li>
+        <li><img src="images/nav06.gif"><p>城市公交</p></li>
+    </ul>
+
+
+</div>
+<div class="box2">
+    <p class="box_type">旅游度假</p>
+    <ul class="nav">
+        <li><img src="images/f_icon1.gif"><p>国外游</p></li>
+        <li><img src="images/f_icon2.gif"><p>国内游</p></li>
+        <li><img src="images/f_icon3.gif"><p>主题游</p></li>
+        <li><img src="images/f_icon4.gif"><p>一日游</p></li>
+        <li><img src="images/f_icon5.gif"><p>自驾游</p></li>
+    </ul>
+
+
+</div>
+<div class="box2">
+    <p class="box_type">服务</p>
+    <ul class="nav">
+        <li><img src="images/nav07.gif"><p>私人订制</p></li>
+        <li><img src="images/f_icon6.gif"><p>会员</p></li>
+        <li><img src="images/f_icon7.gif"><p>客服</p></li>
+    </ul>
+
+
+</div>
+</body>
+<script type="text/javascript">
+    /**规定页面基本单位*/
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+
+</script>
+</html>

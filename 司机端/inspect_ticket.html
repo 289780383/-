@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>验票</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/inspect_ticket.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/inspect_ticket.js"></script>
+</head>
+<body class="bc_fff">
+<div class="select_line">
+    <div class="select_top bc_f6">
+        <p class="c_333">乘客列表</p><img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip">
+    </div>
+    <div class="item_name bc_fff"><p class="name_top c_53">济宁-济南 1号线</p><p class="name_bot c_333">解放桥</p><span class="car_id c_53">鲁H12345</span></div>
+    <ul class="station_list bc_fff c_333">
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel select_select"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel select_select"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+        <li class="station_item"><p>170****7998</p><span class="this_people">12人</span><i class="yuan"></i><i class="select_sel"></i></li>
+    </ul>
+</div>
+
+<div class="inspect_b">
+    <a href="javascript:;" class="local_btn bc_fff c_or" onclick="local_btn();">现场售票</a><a href="javascript:;" class="inspect_btn bc_or c_fff" onclick="inspect_btn();">验票</a>
+</div>
+<div class="btn_bg"></div>
+
+<div class="mask"></div>
+<!-输入验证码-->
+<div class="inspect_bot">
+    <div class="mask_title bc_f0"><p class="title_txt c_333">输入验证码</p><img class="close" src="images/close_1.png" onclick="close_this(this);"></div>
+    <div class="mask_main bc_fff">
+        <p class="scan"><span class="letter_"></span><span class="letter_"></span><span class="letter_"></span><span class="letter_"></span><a href="javascript:;" class="scan_btn c_fff bc_e5">扫码</a></p>
+    <div class="scan_msg "><p class="msg_txt bc_e5 c_7c7">请输入手机号后四位或短信乘车码</p><a href="javascript:;" class="scan_sure c_fff bc_e5">确定</a></div>
+    </div>
+    <ul class="num_btn bc_fff">
+       <li class="number">7</li>
+       <li class="number">8</li>
+       <li class="number">9</li>
+        <li class="number">4</li>
+        <li class="number">5</li>
+       <li class="number">6</li>
+       <li class="number">1</li>
+       <li class="number">2</li>
+       <li class="number">3</li>
+       <li class="number num0">0</li>
+       <li class="clear_num">清除</li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    var tm=$(".btn_bg").css("background-image");
+    if(tm==""||tm=="none"||tm=="undefined"){
+        $(".btn_bg").css({backgroundColor:"#fff"});
+    }
+
+</script>
+</html>

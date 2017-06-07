@@ -1,0 +1,21 @@
+body{min-height:100%;background-color: #f0f0f0;}
+/**head*/
+.the_header{font-size: 0.3rem;line-height: 1rem;overflow: hidden;background-color: #ec584e;position:fixed;top:0;z-index: 1;width:7.5rem;}
+.the_header p{text-align: center;color:#fff;}
+.the_header .fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+/**main*/
+.main{margin:1.16rem 0.24rem 0;}
+.recharge{border-radius: 0.1rem;overflow: hidden;background-color: #fff;}
+.recharge p{float: left;font-size: 0.3rem;line-height: 1.1rem;color: #333;padding-left: 0.68rem;margin-left: 0.3rem;background: url("../images/card_01.png") no-repeat  left center;background-size:0.58rem 0.44rem; }
+.recharge .recharge_money{float: right;width: 4.4rem;padding-right: 0.3rem;text-align: right;border:none;background: transparent;font-size: 0.28rem;line-height: 1.1rem;color: #777;}
+/**recharge*/
+.recharge_list{background-color: #fff;border-radius: 0.1rem;margin-top: 0.16rem;}
+.recharge_list li{font-size: 0.3rem;line-height: 1.1rem;overflow: hidden;border-bottom: 1px solid #e5e5e5;}
+.recharge_list .sel_way{background: url("../images/sel_true.png") no-repeat 6.4rem center;background-size:0.38rem 0.28rem;}
+.recharge_list li:last-of-type{border-bottom:none;}
+.recharge_list li p{float: left;font-size: 0.3rem;line-height: 1.1rem;color: #333;padding-left: 0.68rem;margin-left: 0.3rem;background: url("../images/pay_08.png") no-repeat left center;background-size:0.56rem; }
+.recharge_list .zfb p{background-image: url("../images/pay_03.png");}
+/**recharge_btn*/
+.recharge_btn{position:fixed;bottom:0;width: 7.5rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
+.recharge_btn button{width: 6.8rem;background:#ec584e;font-size:0.3rem;color: #fff;text-align: center;line-height: 0.8rem;border-radius: 0.1rem;border:none;display:block;margin:0.2rem auto;}

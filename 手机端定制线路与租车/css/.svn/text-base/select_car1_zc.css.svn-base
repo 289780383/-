@@ -1,0 +1,32 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;background-color:#f6f6f6;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+/***/
+.pay_msg {border-top: 1px solid #aaa;background-color: #fff;overflow:hidden;border-bottom: 1px solid #aaa;padding-left:0.3rem;padding-top:1.01rem;}
+.get_car{border-bottom: 1px solid #c7c7c7;}
+.get_car,.lose_car{position: relative;padding: 0.2rem 0;}
+.car_time,.car_site{font-size: 0.28rem;color: #363636;line-height: 0.4rem;padding:0  0.5rem 0 0.97rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.car_way{display:block;width:0.75rem;font-size: 0.26rem;color:#7c7c7c;line-height: 0.66rem;border-right: 2px solid #c7c7c7;position: absolute;top:0.27rem;left: 0;}
+/***/
+.result{margin-top: 0.2rem;}
+.result_box{width:7.5rem;border-top: 1px solid #c7c7c7;border-bottom: 1px solid #c7c7c7;height: 0.58rem;}
+.result_top_warp{position: relative;overflow:auto;width:7.5rem;height: 0.64rem;top: -0.04rem;}
+.result_top{border-top:1px solid #c7c7c7;position:absolute;top: -0.02rem;}
+.result_top li{font-size: 0.26rem;line-height: 0.6rem;color: #7c7c7c;float: left;width:1.2rem;text-align: center;border: 1px solid #c7c7c7;border-left: none;background-color: #f6f6f6;}
+.result_top .sel_type{color: #363636;background-color:#fff;border-top: 1px solid #ff4f00;border-bottom: 1px solid #fff;}
+
+.select_footer{width: 7.5rem;position: fixed;bottom: 0;margin: 0 auto;}
+.select_footer p{width: 3.75rem;display:inline-block;float:left;background-color: #ff4f00;color: #fff;font-size: 0.3rem;text-align: center;line-height:1rem;}
+.car_sort i{margin:0 0 0 0.1rem;display:inline-block;width: 0.24rem;height: 0.16rem;background: url("../images/up_03.png") no-repeat left top;background-size:0.24rem;}
+
+/***/
+.result_list{height: 7rem;padding-bottom: 2rem;overflow: auto;}
+.result_item{position:relative;padding:0.5rem 0.8rem 0.5rem 0.2rem;border-bottom:1px solid #c7c7c7;overflow: hidden;background:#fff url("../images/xsj_07.png") no-repeat 6.9rem center;background-size:0.18rem; }
+.car_img{width:1.8rem;height: 0.72rem;display: block;float: left;vertical-align: middle;margin-right: 0.05rem;}
+.car_type{float: left;font-size: 0.3rem;line-height: 0.32rem;color: #363636;width:3rem;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.car_type span{font-size: 0.28rem;line-height: 0.4rem;color: #7c7c7c;}
+.car_price{float:right;font-size: 0.28rem;line-height: 0.32rem;color: #7c7c7c;text-align: right;}
+.car_price span{font-size: 0.32rem;line-height: 0.4rem;color: #363636;}
+.car_price span i{color: #fd4e00;font-style: normal;}
+.result_t{display: block;font-style:normal;position: absolute;padding: 0 0.15rem;background-color: #0c9ef1;color: #fff;font-size: 0.24rem;line-height:0.45rem;top:1.2rem;left: 2.06rem;border-radius:0.1rem; }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>收单记录</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/record.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_fff">
+<div class="select_line">
+    <div class="select_top bc_f6">
+        <p class="c_333">收单记录</p><img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip"><!--<img src="images/loc_07.png" onclick="open_map(this);" class="loc_map">-->
+    </div>
+    <ul class="paln_nav clearfix">
+        <li onclick="go_plan(this);">历史</li>
+        <li onclick="go_plan(this);">最近三天</li>
+    </ul>
+    <ul class="plan_list">
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+        <li class="plan_item clearfix" onclick="go_trip_item(this);">
+            <span class="trip_time">09/30<br> 08:00</span>
+            <i class="round bc_fff"></i>
+            <span class="car_id">鲁H12345</span>
+            <div class="no_trip_item">
+                <p class="trip_start">济南·山东省政府</p>
+                <p class="trip_end">济宁·运河宾馆</p>
+                <i class="xsj_r"></i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    go_plan($(".paln_nav li").eq(0));
+    function go_plan(obj){
+        $(obj).siblings().css({borderBottom:"",color:""});
+        $(obj).css({borderBottom:"1px solid #ff4f00",color:"#ff4f00"});
+    }
+
+</script>
+</html>

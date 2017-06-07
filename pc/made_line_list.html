@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>定制班线</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/made_line_list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a&plugin=AMap.Driving"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/made_line_list.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=7,chrome=1"/>
+    <![endif]-->
+
+</head>
+<body class="bc_f0">
+<header class="bc_f0 c_36 ">
+    <div class="header_inner clearfix">
+        <h2>欢迎来到交运出行服务网</h2>
+        <ul class="header_right">
+            <li><span>登录</span> | <span>注册</span></li>
+            <li><span>会员中心</span> | <span class="wx">微信公众号<div class="wx_box"><p>微信搜索“<span
+                    class="c_or">滨州交运集团</span>”<br>或者扫描右侧二维码关注。<br><br>即刻参与优惠等您！</p></div></span></li>
+        </ul>
+    </div>
+</header>
+<nav class="bc_ff c_36">
+    <div class="nav_inner clearfix">
+        <div class="nav_left">
+            <h1>交运出行服务</h1>
+            <h2>滨州交运集团官方出行服务平台</h2>
+        </div>
+        <p class="nav_tel c_or">0546-7095666</p>
+        <ul class="nav_nav c_7c">
+            <li>首页</li>
+            <li>汽车票</li>
+            <li>约租车</li>
+            <li class="nav_active">定制班线</li>
+            <li>景区直达</li>
+            <li>新闻中心</li>
+        </ul>
+
+    </div>
+</nav>
+<div class="banner">
+    <div class="banner_inner clearfix">
+        <h5 class="banner_title c_ff">交运，给您不一样的享受</h5>
+    </div>
+</div>
+
+
+<section class="main bc_f0">
+    <div class="main_inner clearfix">
+        <div class="main_search clearfix">
+            <div class="banner_table">
+                <input type="text" class="banner_start" value="您从哪上车"><input type="text" class="banner_end"
+                                                                             value="您从哪下车"><input
+                    type="text" class="banner_time end-li startDay">
+            <span class="peo_warp">
+            <img src="images/jian_01.png" onclick="peo_jian();" class="jian">
+            <i class="pin_peo">1人</i>
+            <img src="images/add_01.png" onclick="peo_add();" class="add">
+            </span>
+                <a href="javascript:;" class="search_btn">查询</a>
+                <!--出发站-->
+                <ul class="s_p_list">
+                    <li class="jqzd_p_title">请选择乘车地点</li>
+                    <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                </ul>
+                <!--乘车点-->
+                <ul class="jqzd_list">
+                    <li class="jqzd_p_title">请选择乘车地点</li>
+                    <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="main_result">
+
+        <section class="result_left">
+            <div class="result_top">
+                <p class="result_title result_title_active">已开通线路</p>
+                <p class="result_title">发起新线路</p>
+
+            </div>
+            <!--已开通-->
+            <div class="result_old1">
+                <div class="result2">
+                    <div class="result1_title"><p>排序</p><span>按票价排序</span><span>按发车时间排序</span></div>
+
+                    <ul class="result1_main">
+                        <li class="result1_item">
+                            <span class="trip_time">02:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">120.0</span>元</p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                        <li class="result1_item">
+                            <span class="trip_time">04:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">90.0</span>元</p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                        <li class="result1_item">
+                            <span class="trip_time">01:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">110.0</span>元</p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                    </ul>
+                </div>
+                <p class="main_more">加载更多···</p>
+            </div>
+            <!--发起线路-->
+            <div class="result_new">
+                <div class="result1_title"><p>发布定制班线需求</p></div>
+                <h5 class="new_line_h5">定制班线，专座直达</h5>
+                <p class="new_line_p">填写乘车需求，我们会第一时间为您开通定制班车！</p>
+                <div class="msg_warp">
+                    <span>起点</span><p><i></i><input type="text" id="new_start" value="请输入出发地"></p>
+                </div>
+                <div class="msg_warp">
+                    <span>终点</span><p><i></i><input type="text" id="new_end" value="请输入目的地"></p>
+                </div>
+                <div class="msg_warp">
+                    <span>去程时间</span><input type="text" class="dan_time new_start_time" value="08:30">
+                </div>
+                <div class="msg_warp">
+                    <span>返程时间</span><input type="text" class="dan_time new_end_time" value="17:30">
+                </div>
+                <p class="new_line_tishi">填写准确信息，可以加速线路开通！</p>
+                <div class="new_line_btn">
+                <a class="submit_btn">提交信息</a><a class="reset_btn">重填</a>
+                    </div>
+            </div>
+        </section>
+        <section class="result_right">
+            <img src="images/yzc_2wm_03.jpg">
+            <p class="gzh_txt">关注公众号，一起约车吧！</p>
+            <img src="images/yzc_2wm_03.jpg">
+            <p class="app_txt">下载APP，约车更便捷！</p>
+        </section>
+    </div>
+    </div>
+</section>
+<section class="help bc_ff clearfix">
+    <ul class="help_inner">
+        <li class="help1">
+            <span>如何购票</span>
+            <p>新手指南</p>
+            <p>注册流程</p>
+            <p>购票流程</p>
+        </li>
+        <li class="help2">
+            <span>如何支付</span>
+            <p>支付宝支付流程</p>
+            <p>微信支付流程</p>
+            <p>银联支付流程</p>
+        </li>
+        <li class="help3">
+            <span>如何取票</span>
+            <p>自助机取票</p>
+            <p>售票窗口取票</p>
+        </li>
+        <li class="help4">
+            <span>如何退票</span>
+            <p>网上退票</p>
+            <p>窗口退票</p>
+            <p>服务台退票</p>
+        </li>
+        <li class="help5">
+            <span>如何验票</span>
+            <p>纸质客票验票</p>
+            <p>电子客票验票</p>
+        </li>
+        <li class="help6">
+            <span>如何乘车</span>
+            <p>检票口验票乘车</p>
+        </li>
+    </ul>
+</section>
+<footer class="bc_5e clearfix">
+    <ul class="footer_inner">
+        <li>
+            <span>联系与合作</span>
+            <p>联系我们</p>
+            <p>用户反馈</p>
+            <p>关于我们</p>
+            <p>网站地图</p>
+        </li>
+        <li>
+            <span>友情链接</span>
+            <p>中华人民共和国交通运输部</p>
+            <p>山东省交通厅</p>
+            <p>山东省道路运输管理局</p>
+            <p>山东省道路运输协会</p>
+            <p>滨州市交通局</p>
+        </li>
+        <li class="footer_last">
+            <span>关注我们</span>
+            <p>新浪微博：@滨州交运集团</p>
+            <p>官方QQ：188356956</p>
+            <p>客服热线：0546-7095666</p>
+            <p>客服邮箱：service@jiaoyun.com</p>
+            <p>官方微信：<img src="images/2wm.png"></p>
+        </li>
+    </ul>
+</footer>
+<div class="copy bc_00 clearfix">
+    <div class="copy_inner">
+        <p>Copyright©2016-2017交运出行www.jiaoyunchuxing.com</p>
+        <p>版权所有：山东省滨州交运集团 备案序号：鲁ICP备2433435号-1</p>
+        <span class="police">鲁公网安备 370703234543534号</span>
+    </div>
+    <div class="copy_pic">
+        <img src="images/pic_98.jpg">
+        <img src="images/pic_100.jpg">
+        <img src="images/pic_102.jpg" class="c_p_last">
+    </div>
+</div>
+</body>
+</html>

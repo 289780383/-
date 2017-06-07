@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>酒店预定</title>
+    <script type="text/javascript" src="js/drv/v1/html5shiv.js"></script>
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/hotel.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/mobiscroll_date.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/hotel.js"></script>
+    <script src="js/drv/v1/mobiscroll_date.js" charset="gb2312"></script>
+    <script src="js/drv/v1/mobiscroll.js"></script>
+
+</head>
+<body class="bc_f0">
+<header>
+    <img src="images/drv/v1/xsj_l_03.gif" onclick="history.go(-1)" class="head_fh">
+    <p>酒店预定</p>
+</header>
+<div class="banner"><img src="images/drv/v1/jd_banner_06.jpg"></div>
+<!--表单-->
+<div class="the_table">
+    <ul>
+        <li><p class="the_city">烟台</p></li>
+        <li>
+            <div class="come_time">
+                <p>入住日期</p><input type="text" id="come_time" readonly placeholder="请填写你的入住日期"/>
+
+            </div>
+        </li>
+        <li>
+            <div class="go_time">
+                <p>离店日期</p><input type="text" id="go_time" readonly placeholder="请填写你的离店日期"/>
+            </div>
+        </li>
+        <li><p class="the_hotel_name">选择酒店</p></li>
+        <li><p class="the_room_price">价格/房型</p></li>
+    </ul>
+    <a href="javascript:;" class="the_btn">查询</a>
+</div>
+<div class="my_btn">
+    <span>我的订单</span>
+    <span>我的记录</span>
+</div>
+<div class="hot">
+    <div class="hot_title"><p>热门推荐</p></div>
+    <ul class="hot_list">
+        <li>
+            <img src="images/drv/v1/jd01.jpg">
+            <p class="jd_price"><i>¥</i>180<i>起/间</i></p>
+            <p class="jd_name">烟台金沙滩喜来登度假酒店</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg">
+            <p class="jd_price"><i>¥</i>180<i>起/间</i></p>
+            <p class="jd_name">烟台金沙滩喜来登度假酒店</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg">
+            <p class="jd_price"><i>¥</i>180<i>起/间</i></p>
+            <p class="jd_name">烟台金沙滩喜来登度假酒店</p>
+        </li>
+    </ul>
+</div>
+<div class="select_hotel">
+    <div class="sel_header">
+        <img src="images/drv/v1/xsj_l_03.gif" class="head_fh close_mask">
+        <p>选择酒店</p>
+    </div>
+    <ul class="hotel_list">
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name">烟台金海湾酒店</p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>不可预订</i><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn hotel_btn_sure">预定</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name"><span>烟台金海湾酒店</span></p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn">休整</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name">烟台金海湾酒店</p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn hotel_btn_sure">预定</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name"><span>烟台金海湾酒店</span></p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn">休整</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name">烟台金海湾酒店</p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn hotel_btn_sure">预定</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name"><span>烟台金海湾酒店</span></p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn">休整</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name">烟台金海湾酒店</p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn hotel_btn_sure">预定</p>
+        </li>
+        <li>
+            <img src="images/drv/v1/jd01.jpg" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name"><span>烟台金海湾酒店</span></p>
+                <div class="the_address">山东省烟台市莱山区迎春大街131号</div>
+                <div class="the_tag"><i>推荐</i><span>热门</span></div>
+            </section>
+            <p class="hotel_btn">休整</p>
+        </li>
+    </ul>
+
+</div>
+<!--选择房间种类-->
+<div class="select_room">
+    <div class="sel_header">
+        <img src="images/drv/v1/xsj_l_03.gif" class="head_fh close_mask">
+        <p>选择房型</p>
+    </div>
+    <ul class="room_list">
+        <li>
+            <div class="f_l">
+                <div class="room_type"><p>房间类型：</p><span>总统套房</span></div>
+                <div class="room_price"><p>单价：</p><span>180元/天</span></div>
+            </div>
+            <div class="f_r">
+                <p class="room_btn pic_show_or">图片展示</p>
+                <p class="room_btn room_btn_stop">暂无</p>
+            </div>
+            <ul class="room_pic">
+                <li><img src="images/drv/v1/jd01.jpg">
+                    <p>卧室</p></li>
+                <li><img src="images/drv/v1/jd01.jpg">
+                    <p>卧室</p></li>
+                <li><img src="images/drv/v1/jd01.jpg">
+                    <p>卧室</p></li>
+            </ul>
+        </li>
+        <li>
+            <div class="f_l">
+                <div class="room_type"><p>房间类型：</p><span>总统套房</span></div>
+                <div class="room_price"><p>单价：</p><span>180元/天</span></div>
+            </div>
+            <div class="f_r">
+                <p class="room_btn pic_show_or">图片展示</p>
+                <p class="room_btn room_btn_stop room_btn_sure">选定</p>
+            </div>
+            <ul class="room_pic">
+                <li><img src="images/drv/v1/jd01.jpg">
+                    <p>卧室</p></li>
+                <li><img src="images/drv/v1/jd01.jpg">
+                    <p>卧室</p></li>
+                <li><img src="images/drv/v1/jd01.jpg">
+                    <p>卧室</p></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+<script type="text/javascript">
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = {preset: 'date'};
+        opt.datetime = {preset: 'datetime'};
+        opt.time = {preset: 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear, //开始年份
+            endYear: currYear + 10 //结束年份
+        };
+        $("#come_time").mobiscroll($.extend(opt['date'], opt['default']));
+        $("#go_time").mobiscroll($.extend(opt['date'], opt['default']));
+    });
+</script>
+</body>
+</html>

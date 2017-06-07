@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>行车线路</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/map_poi.css"/>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.3&key=8a6d35c2fd8c2878290e67fda811c718"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/map_poi.js"></script>
+</head>
+<body>
+<div id="container"></div>
+    <div class="the_header">
+        <img src="images/fh_b.png" onclick="history.go(-1)" class="header_left">
+        <p>烟台 - 鱼台</p>
+    </div>
+
+</body>
+<script type="text/javascript">
+    var map = new AMap.Map('container', {
+    resizeEnable: true,
+    zoom: 13
+});
+
+</script>
+</html>

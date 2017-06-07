@@ -1,0 +1,49 @@
+.trip_I_top{font-size: 0.3rem;line-height: 1rem;padding: 0 0.42rem;overflow: hidden;position: relative;}
+.trip_I_top p{text-align: center;}
+.trip_I_top span{position:absolute;right:0.5rem;top:0;font-size: 0.26rem;display: inline-block;}
+.trip_I_msg {border-top: 1px solid #aaa;overflow:hidden;border-bottom: 1px solid #aaa;margin-bottom:0.3rem;}
+.msg_top {font-size: 0.3rem;line-height: 0.9rem;overflow: hidden;padding:0 0.5rem;}
+.msg_top .trip_I_money{display:inline-block;font-size:0.45rem;}
+.msg_mid {font-size: 0.26rem;line-height: 0.5rem;border-top: 1px solid #aaa;border-bottom: 1px solid #aaa;overflow: hidden;margin-left:0.26rem;padding:0.2rem 0.5rem 0.2rem 0.24rem;position: relative;}
+.msg_mid p,.msg_mid .up{display: inline-block;float: left;}
+.msg_mid .up{margin-right:0.4rem;}
+.msg_mid p{padding-left: 0.5rem;}
+.msg_mid p span{font-size: 0.28rem;}
+.msg_mid .trip_I_start{background: url("../images/index_13.png") no-repeat left 0.12rem;background-size: 0.25rem;}
+.msg_mid .trip_I_end{background: url("../images/index_16.png") no-repeat left 0.12rem;background-size: 0.25rem;}
+.msg_mid .trip_I_line{position: absolute;height: 0.5rem;display: block;border-left: 1px dashed #aaa;top: 0.7rem;left: 1.28rem;}
+.msg_bot{font-size: 0.26rem;padding: 0 0.5rem;line-height: 1rem;}
+.trip_I_money span{font-size: 0.35rem;}
+.msg_bot p span{font-size: 0.35rem;}
+/*司机*/
+.driver{border-top: 1px solid #aaa;border-bottom: 1px solid #aaa;position: relative;overflow: hidden;padding: 0.4rem 0 0.5rem 1.8rem;}
+.driver_name{font-size: 0.28rem;line-height: 0.4rem;}
+.driver_info{font-size: 0.26rem;line-height: 0.5rem;}
+.driver_car{font-size: 0.3rem;}
+.driver_head{position: absolute;left:0.5rem;top:0.6rem;width:1rem;}
+.driver_tel{position: absolute;right:0.5rem;top:0.7rem;width: 0.88rem;}
+.driver_xx{width: 1.5rem;overflow: hidden;}
+.driver_xx li{float:left;width: 0.3rem;height: 0.3rem;background: url("../images/success_07.png") no-repeat right center;background-size:0.6rem;}
+.driver_xx .sjxx{background: url("../images/success_07.png") no-repeat left center;background-size:0.6rem;}
+
+/*按钮*/
+.trip_I_btn{position: fixed;bottom:1.1rem;width:7.5rem;margin: 0 auto;}
+.trip_I_btn a{display:block;width:2.8rem;border:2px solid #aaa;border-radius:0.05rem;font-size: 0.3rem;text-align: center;line-height: 1rem;}
+.over_trip{margin-left: 0.7rem;float: left;}
+.want_trip{margin-right: 0.7rem;float: right;}
+
+/*二维码*/
+.want_mask{width: 6.7rem;border-radius: 0.2rem;position: fixed;z-index: 120;margin: -4.5rem 0 0 -3.35rem;top:50%;left: 50%;display: none;}
+.car_id{display:inline-block;font-size:0.4rem;line-height: 0.7rem;padding: 0 0.2rem;margin-left: 0.58rem;}
+.wm2{width: 5.5rem;border: 1px solid #aaa;margin: 0 auto;}
+.wm2 img{width: 5.06rem;margin: 0.2rem auto;display: block;}
+.wm2_btn{width: 5.5rem;font-size:0.3rem;line-height: 1rem;margin: 0.3rem auto 0.7rem;text-align: center;border-radius: 0.1rem;display: block;}
+
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.close_trip{position: fixed;width: 5.3rem;font-size:0.3rem;height: 5rem;left: 50%;top: 50%;margin:-2.5rem 0 0 -3.35rem;display:none;padding:0 0.7rem;border-radius:0.2rem;z-index: 200;}
+.close_top{width: 1.5rem;height: 1.5rem;border-radius: 50%;margin: 0.46rem auto 0;position: relative;}
+.chang{position: absolute;width: 0.09rem;height: 0.46rem;left: 0.7rem;top:0.4rem;}
+.dian{width: 0.12rem;height: 0.12rem;border-radius: 50%;position: absolute;bottom: -0.2rem;left: -0.01rem;}
+.close_trip p{text-align: center;font-size: 0.3rem;width: 100%;line-height: 0.9rem;}
+.close_trip a{display: inline-block;border: 2px solid #ff4f00;line-height: 1.02rem;width: 2.36rem;border-radius: 0.1rem;text-align: center;}
+.close_yes{margin-left: 0.4rem;}

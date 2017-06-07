@@ -1,0 +1,42 @@
+.select_line{padding: 1.92rem 0 2.8rem 0;}
+.select_top{font-size: 0.3rem;line-height: 1rem;overflow: hidden;border-bottom:1px solid #aaa;position: fixed;width: 7.5rem;margin: 0 auto;top: 0;z-index: 10;}
+.select_top p{text-align: center;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+
+.item_name{border-bottom: 1px solid #aaa;padding: 0.1rem 0 0.1rem 0.35rem;position:fixed;width: 7.15rem;top:1.02rem;z-index: 10;}
+.item_name .name_top{font-size: 0.24rem;line-height:0.34rem;}
+.item_name .name_bot{font-size: 0.28rem;line-height:0.38rem;}
+.item_name .car_id{display:block;font-size: 0.3rem;position: absolute;right: 0.3rem;top:0;line-height:0.92rem;}
+.station_list {position: relative;}
+body:before {content: "";display: block;border-left: 1px solid #aaa;height: 100%;position:fixed;left: 0.75rem;top:0;}
+.station_item {position: relative;margin-left: 0.75rem;border-left:1px solid #aaa;}
+.station_item p,.this_people{font-size:0.28rem;line-height: 0.84rem;}
+.station_item p{padding-left: 0.1rem;}
+.station_item .this_people{position: absolute;right:1.3rem;top: 0;}
+.station_item .yuan{width: 0.1rem;height:0.1rem;display:block;position: absolute;left:-0.09rem;top:0.33rem;border: 0.04rem solid #aaa;border-radius:50%;background-color: #fff;}
+.select_sel{display:inline-block;position:absolute;right:0.5rem;top:0.24rem;width:0.34rem;height: 0.33rem;background: url("../images/select__03.png") no-repeat left bottom;background-size: 0.33rem;}
+.select_select{background: url("../images/select__03.png") no-repeat left top;background-size: 0.33rem;}
+/*按钮*/
+.inspect_b{width: 7.5rem;margin: 0 auto;position:fixed;bottom: 0;z-index: 10;}
+.inspect_b a{display: block;width:2.7rem;line-height:0.9rem;font-size:0.3rem;text-align:center;border: 1px solid #ff4f00;border-radius: 0.1rem;position: absolute;bottom:0.9rem;right:0.56rem;}
+.inspect_b .local_btn{left: 0.56rem;}
+.btn_bg{width: 7.5rem;height:2.8rem;background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);position: fixed;bottom: 0;z-index: 3;}
+/*底部窗口*/
+.inspect_bot{position: fixed;width: 7.5rem;bottom: 0;margin: 0 auto;z-index: 200;display: none;}
+.mask_title{position: relative;}
+.title_txt{font-size: 0.3rem;line-height: 1rem;text-align: center;}
+.mask_title .close{width:0.22rem;position: absolute;top:0;right:0;padding: 0.4rem;}
+.mask_main{overflow: hidden;padding:0.4rem 0.4rem 1.2rem;}
+.letter_,.scan_btn,.scan_sure{display:inline-block;text-align:center;line-height:1.14rem;width:1.14rem;height: 1.14rem;border: 1px solid #aaa;border-radius:0.1rem;float:left;margin: 0 0.07rem;}
+.letter_{font-size:0.5rem;color: #ff4f00;}
+.scan_btn,.scan_sure{border:none;font-size: 0.3rem;text-align: center;float: right;}
+
+.scan_msg{clear: both;padding-top: 0.3rem;}
+.msg_txt{width:5.06rem;height: 1.14rem;line-height: 1.14rem;font-size: 0.28rem;float: left;text-align:center;margin: 0 0.07rem;}
+.msg_txt span{color:#ff4f00;font-size: 0.3rem;}
+.msg_txt i{font-style:normal;font-size: 0.3rem;}
+.num_btn{overflow: hidden;}
+.num_btn li{float: left;font-size: 0.4rem;color: #fff;width: 2.4rem;line-height:1.1rem;background-color: #000000;margin:0 0 0.07rem 0.07rem;text-align: center;}
+.num_btn .num0{width: 4.87rem;}
+.num_btn .clear_num{background-color: #0298ff;}

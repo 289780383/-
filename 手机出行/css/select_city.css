@@ -1,0 +1,50 @@
+﻿
+.select_line{}
+.select_top{font-size: 0.3rem;line-height: 1rem;overflow: hidden;border-bottom:1px solid #aaa;position: fixed;width: 7.5rem;margin: 0 auto;top: 0;z-index: 10;}
+.select_top p{text-align: center;}
+
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.select_item{margin-top: 0.24rem;border-top: 1px solid #aaa;border-bottom: 1px solid #aaa;padding-left: 0.26rem;}
+
+.item_name{font-size: 0.3rem;line-height:0.82rem;background: url("../images/loc_07.png") no-repeat 6.3rem center;background-size: 0.27rem;}
+.item_content{border-top: 1px solid #c7c7c7;border-bottom: 1px solid #c7c7c7;padding: 0.12rem 0;}
+.item_content li{line-height: 0.7rem;padding: 0 0.4rem 0 0.5rem;}
+.select_start{background: url("../images/start_end_03.png") no-repeat left center;background-size: 0.38rem;font-size: 0.28rem;}
+.select_cen{background: url("../images/start_end_06.png") no-repeat left center;background-size: 0.38rem;font-size: 0.24rem;}
+.select_cen p{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.select_end{background: url("../images/start_end_08.png") no-repeat left center;background-size: 0.38rem;font-size: 0.28rem;}
+.item_bot{line-height: 0.8rem;font-size: 0.28rem;}
+.item_bot span{font-size: 0.3rem;}
+
+/*选择出发地点*/
+.select_station{display: none;}
+.select_content{border-top:1px solid #aaa;border-bottom:1px solid #aaa;position: relative;z-index:0;}
+.select_content:before{content: "";display: block;position: absolute;height:100%;border-left: 1px solid #aaa;left: 0.98rem;z-index: 1;}
+.select_title{font-size:0.28rem;line-height: 1.12rem;margin-top: 1rem;border-bottom: 1px solid #aaa;padding-left: 0.3rem;background:#fff url("../images/loc_07.png") no-repeat 6.8rem center;background-size: 0.27rem;position:relative;z-index:2;}
+
+.up_car{position: absolute;display: block;left:-0.9rem;top:0;font-size: 0.26rem;}
+.select_go,.select_to{margin-left:0.97rem;padding:0.3rem 0 0.3rem 0.2rem;color:#333;position: relative;line-height: 0.7rem;font-size: 0.28rem;z-index: 2;}
+.select_go:before{content: "";display: block;position: absolute;height:100%;border-left: 1px solid #aaa;left: 0;top:0;z-index: -1;}
+.select_to:before{content: "";display: block;position: absolute;height:100%;border-left: 1px solid #aaa;left: 0;top:0;z-index: -1;}
+
+.select_go li,.select_to li{position: relative;}
+.select_position{color: #0096ff;}
+.select_go li span,.select_to li span{display: inline-block;}
+.select_go li p,.select_to li p{display: inline;margin-right: 0.1rem;}
+.select_yuan{display:inline-block;position:absolute;left:-0.28rem;top:0.26rem;width:0.1rem;height: 0.1rem;border-radius:50%; }
+.select_go .select_yuan{border:1px solid #199738;}
+.select_to .select_yuan{border:1px solid #ff4f00;}
+.select_sel{display:inline-block;position:absolute;right:0.4rem;top:0.18rem;width:0.34rem;height: 0.33rem;background: url("../images/select__03.png") no-repeat left bottom;background-size: 0.33rem;}
+.select_go .select_select,.select_to .select_select{background: url("../images/select__03.png") no-repeat left top;background-size: 0.33rem;}
+.zhan{position: absolute;width: 0.34rem;left:-0.8rem;top: 0.2rem;}
+.select_bot{font-size: 0.28rem;position: fixed;width: 7.5rem;bottom:0;margin: 0 auto;}
+.select_bot .select_m{width:3.75rem;text-align: center;line-height:1.07rem;display: inline-block;float: left;border-top:1px solid #aaa; }
+.select_bot .select_m span{display:inline-block;font-size: 0.36rem;}
+.select_bot a{width:3.75rem;display: inline-block;line-height: 1.1rem;text-align: center;float: right;border-top:1px solid #ff4f00; }
+
+
+
+/**地图*/
+.map_warp{width: 6.8rem;height: 10rem;position: fixed;margin: -5rem 0 0 -3.4rem;left:50%;top: 45%;z-index:200;border-radius:0.2rem;display: none;}
+#container{width: 6.4rem;height: 9.6rem;margin: 0.2rem;}
+.close_map{width:1.1rem;left: 2.75rem;bottom: -1.5rem;position: absolute;}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>教练注册</title>
+    <script type="text/javascript" src="js/drv/v1/html5shiv.js"></script>
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/register_teacher.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/register_teacher.js"></script>
+</head>
+<body class="bc_fff">
+<header>
+    <img src="images/drv/v1/fh.gif" onclick="history.go(-1)" class="head_fh">
+    <p>填写资料</p>
+    <span class="head_right">切换账号</span>
+</header>
+<ul class="main_list">
+    <li class="item_head">
+        <p>头像</p>
+        <img src="images/drv/v1/index_head.gif" class="head_pic">
+    </li>
+    <li>
+        <p>姓名</p>
+        <input type="text" placeholder="请输入您的姓名">
+    </li>
+    <li class="sel_xsj item_sex">
+        <p>性别</p>
+        <span>男</span>
+    </li>
+    <li>
+        <p>教龄</p>
+        <span class="age"><i>年</i><input type="tel" placeholder="请输入正整数"></span>
+    </li>
+    <li class="sel_xsj item_school_name">
+        <p>驾校</p>
+        <span>烟台·顺达驾校</span>
+    </li>
+    <li>
+        <p>训练场地名称</p>
+        <input type="text" placeholder="请输入训练场名称">
+    </li>
+    <li class="item_address">
+        <p>训练场地地址</p>
+        <span>选择地址</span>
+    </li>
+</ul>
+<a href="JavaScript:;" class="btn">发布陪练信息</a>
+<div class="mask_select mask_select_pic">
+    <p class="select_title">选择头像</p>
+    <div class="select1"><p class="select_pic">拍照</p></div>
+    <div class="select2"><p class="select_pic">从相册选择</p></div>
+</div>
+<div class="mask_select mask_select_sex">
+    <p class="select_title">选择性别</p>
+    <div class="select1"><div class="select_sex"><i></i><span>男</span></div></div>
+    <div class="select2"><div class="select_sex"><i></i><span>女</span></div></div>
+</div>
+</body>
+</html>

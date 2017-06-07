@@ -1,0 +1,5 @@
+.setting_top{font-size: 0.3rem;line-height: 1rem;padding: 0 0.42rem;overflow: hidden;position: relative;border-bottom: 1px solid #aaa;}
+.setting_top p{text-align: center;}
+.guide{line-height:1rem;padding-left:0.44rem;border-bottom: 1px solid #aaa;border-top:1px solid #aaa;font-size: 0.3rem;position: relative;margin-top: 0.28rem;}
+.guide img{width: 0.18rem;position: absolute;right:0.42rem;top: 0.34rem;}
+.quit{display:block;line-height:1rem;border-bottom: 1px solid #aaa;border-top:1px solid #aaa;text-align: center;font-size: 0.28rem;margin-top: 0.28rem;}

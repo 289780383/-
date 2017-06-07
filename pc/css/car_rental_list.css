@@ -1,0 +1,186 @@
+/**公共样式头开始*/
+.header_inner,.nav_inner,.banner_inner,.main_inner,.icon_inner,.help_inner,.footer_inner,.copy_inner{width: 1200px;margin: 0 auto;}
+/*header*/
+header{line-height: 40px;border-bottom: 1px solid #d5d5d5;}
+header h2{font-size:14px;float: left;}
+.header_right{float: right;}
+.header_right span{cursor: pointer;position: relative;z-index: 19;display: inline-block;}
+.header_right span div{display:none;cursor: pointer;position:absolute;border:1px solid #d5d5d5;width: 330px;height: 134px;top:40px;right: 0;background:#fff url("../images/top_2wm_03.jpg") no-repeat 207px center;background-size:113px;z-index: 20;}
+.header_right span div p{padding-left: 13px;width: 195px;font-size: 14px;line-height: 24px;margin-top:13px; }
+.header_right span div p span{font-size: 16px;}
+.header_right li{float: left;font-size: 12px;margin-left: 30px;}
+
+/*nav*/
+nav{height:128px;}
+.nav_left{float: left;padding: 38px 0 32px 0;}
+.nav_left h1{line-height:36px;font-size: 22px;cursor: pointer; color:#fd4f00;background:url("../images/logo.png") no-repeat left center;padding-left:40px;}
+.nav_left h2{line-height:22px;font-size: 12px;}
+.nav_tel{font-size: 12px;float: right;background:url("../images/tel.png") no-repeat left center;padding-left:40px;line-height: 128px;}
+.nav_nav{float: right;margin:50px 30px 0 0;text-align: center;}
+.nav_nav li{font-size:14px;line-height:30px;float: left;width: 104px;border-right:1px solid #ababab;cursor: pointer;}
+.nav_nav  .nav_active{color: #fd4f00;}
+.nav_nav li:hover{color: #fd4f00;}
+/**公共样式头结束*/
+
+/*banner*/
+.banner{height:400px;background:url("../images/yzc_bgx.jpg") no-repeat center;margin-bottom: 20px;}
+.banner_inner{position: relative;height: 400px;}
+.banner_title{line-height: 144px;text-align:center;font-size:46px;padding-top: 120px;padding-bottom: 30px;}
+/*main*/
+.main{margin-bottom: 20px;}
+.main_search{padding:50px 30px 0;background-color:#fff;border-radius: 5px;margin-bottom: 20px;}
+
+.banner_table{height:46px;padding:46px 24px;position: relative;border-top:2px solid #fd4f00;}
+.banner_table input{float:left;color:#535353;height: 14px;width:268px;border: 1px solid #aaa;font-size:14px;line-height: 14px;padding:16px 14px;margin-right: 10px;position: relative;z-index: 10;}
+.banner_table .banner_time{width:118px;color: #11a5e5;padding:16px 11px;}
+.yzc_type{position: absolute;top:-31px;left: 0;}
+.yzc_type span{display:block;width: 80px;line-height: 30px;font-size: 14px;float: left;cursor:pointer;text-align: center;margin-right: 4px;color: #363636;}
+.yzc_type .select_type{background-color: #fd4f00;font-size:16px;color: #fff;}
+.peo_warp{display:inline-block;background-color:#fff;float:left;margin-right:10px;width:141px;border: 1px solid #aaa;overflow: hidden;position:relative;z-index: 10;}
+.peo_warp img{float: left;display: block;width: 21px;padding: 13px;cursor: pointer;}
+.peo_warp .pin_peo{text-align:center;color: #11a5e5;font-size:14px;width: 47px;line-height:46px;display:block;float:left;}
+.search_pin_bao,.search_btn_zu{font-size: 16px;cursor:pointer;float:left;line-height: 46px;width:166px;border:1px solid #fd4f00;text-align:center;position: relative;z-index: 10;display:inline-block;color: #fff;background-color: #fd4f00;}
+.msg_btn{position: absolute;bottom: -30px;display: block;line-height: 30px;right: 0;color: #fd4f00;font-size:14px;z-index: 10;}
+.pin_car,.zu_car{display: none;}
+/***约租车搜索*/
+.banner_table .pin_car_item{float:left;color:#7c7c7c;position:relative;z-index:100;overflow: hidden;border: 1px solid #aaa;margin-right:10px;}
+.banner_table .pin_car_item p{width: 82px;font-size:16px;padding-left:15px;background:#fff url("../images/xsj_down.png") no-repeat 70px center; float: left;border-right:1px solid #d5d5d5;line-height: 46px;}
+.banner_table .pin_car_item input{width: 170px;color:#7c7c7c;float:left;background-color: #fafafa;border:none;margin-right:0;}
+/*约租车包车出发地*/
+.yzc_c_list,.yzc_e_list{display:none;height: 300px;width: 296px;overflow: auto;position: absolute;top:93px;left:24px;border: 1px solid #d5d5d5;z-index:300;background-color: #fff;}
+.yzc_c_list .yzc_p_title,.yzc_e_list .yzc_p_title{border-bottom:1px solid #d5d5d5;line-height:38px;font-size: 12px;color: #fd4f00;margin: 0 12px;}
+.yzc_c_list .yzc_p_item,.yzc_e_list .yzc_p_item{border-bottom:1px solid #d5d5d5;line-height:46px;font-size: 14px;color: #363636;margin: 0 12px;padding-left:12px;}
+.yzc_c_list .yzc_p_item:hover,.yzc_e_list .yzc_p_item:hover{background-color:#fd4f00;cursor: pointer;color: #fff;}
+.yzc_e_list{left:332px;}
+/*约拼车包车目的地*/
+.yzc_d_list,.yzc_f_list{display:none;height: 300px;width: 296px;overflow: auto;position: absolute;top:93px;left:332px;border: 1px solid #d5d5d5;z-index:100;background-color: #fff;}
+.yzc_d_list .yzc_p_title,.yzc_f_list .yzc_p_title{border-bottom:1px solid #d5d5d5;line-height:38px;font-size: 12px;color: #fd4f00;margin: 0 12px;}
+.yzc_d_list .yzc_p_end,.yzc_f_list .yzc_p_end{border-bottom:1px solid #d5d5d5;line-height:20px;font-size: 14px;color: #363636;margin: 0 12px;padding:10px 12px;}
+.yzc_d_list .yzc_p_end:hover,.yzc_f_list .yzc_p_end:hover{background-color:#fd4f00;cursor: pointer;}
+.yzc_d_list .yzc_p_end:hover p,.yzc_f_list .yzc_p_end:hover p{color: #fff;}
+.yzc_d_list .yzc_p_end:hover span,.yzc_f_list .yzc_p_end:hover span{color: #fff;}
+.yzc_d_list .yzc_p_end span,.yzc_f_list .yzc_p_end span{display:block;font-size:12px;line-height:14px;color:#999;}
+.yzc_d_list{left:24px;}
+/*重写高德提示*/
+body .amap-sug-result{display:block;width:294px;height:400px;overflow:auto;border: 1px solid #d5d5d5;margin-left: -97px;margin-top: -1px;}
+body .amap-sug-result .auto-item{border-bottom:1px solid #d5d5d5;font-size:14px;line-height:20px;color:#363636;margin: 0 12px;padding:10px 12px;}
+body .amap-sug-result .auto-item .auto-item-span{display:block;font-size:12px;line-height:14px;color:#999;}
+body .amap_lib_placeSearch{display:block;width:294px;border: none;}
+body .amap_lib_placeSearch_page{display:none;}
+body .amap_lib_placeSearch_poi,body .poi-more,body .poi-tel{display:none;}
+.amap_lib_placeSearch .poibox.active, .amap_lib_placeSearch .poibox.hover, .amap_lib_placeSearch .poibox:hover{background-color: #fff;}
+
+/*约租车出发地*/
+.yzc_z1l_list,.yzc_z2l_list{display:none;height: 300px;width: 296px;overflow: auto;position: absolute;top:93px;left:24px;border: 1px solid #d5d5d5;z-index:300;background-color: #fff;}
+.yzc_z1l_list .yzc_p_title,.yzc_z2l_list .yzc_p_title{border-bottom:1px solid #d5d5d5;line-height:38px;font-size: 12px;color: #fd4f00;margin: 0 12px;}
+.yzc_z1l_list .yzc_p_item,.yzc_z2l_list .yzc_p_item{border-bottom:1px solid #d5d5d5;line-height:46px;font-size: 14px;color: #363636;margin: 0 12px;padding-left:12px;}
+.yzc_z1l_list .yzc_p_item:hover,.yzc_z2l_list .yzc_p_item:hover{background-color:#fd4f00;cursor: pointer;color: #fff;}
+.yzc_z2l_list{left:332px;}
+/*约租车目的地*/
+.yzc_z1r_list,.yzc_z2r_list{display:none;height: 300px;width: 296px;overflow: auto;position: absolute;top:93px;left:24px;border: 1px solid #d5d5d5;z-index:100;background-color: #fff;}
+.yzc_z1r_list .yzc_p_title,.yzc_z2r_list .yzc_p_title{border-bottom:1px solid #d5d5d5;line-height:38px;font-size: 12px;color: #fd4f00;margin: 0 12px;}
+.yzc_z1r_list .yzc_p_end,.yzc_z2r_list .yzc_p_end{border-bottom:1px solid #d5d5d5;line-height:20px;font-size: 14px;color: #363636;margin: 0 12px;padding:10px 12px;}
+.yzc_z1r_list .yzc_p_end:hover,.yzc_z2r_list .yzc_p_end:hover{background-color:#fd4f00;cursor: pointer;}
+.yzc_z1r_list .yzc_p_end:hover p,.yzc_z2r_list .yzc_p_end:hover p{color: #fff;}
+.yzc_z1r_list .yzc_p_end:hover span,.yzc_z2r_list .yzc_p_end:hover span{color: #fff;}
+.yzc_z1r_list .yzc_p_end span,.yzc_z2r_list .yzc_p_end span{display:block;font-size:12px;line-height:14px;color:#999;}
+.yzc_z2r_list{left: 332px;}
+/**result*/
+.main_result{background-color: #f6f6f6;overflow: hidden;}
+.result_left{float:left;width:930px;border-right: 1px solid #7c7c7c;background-color: #fff;padding:12px 30px;min-height: 480px;height: expression_r( document.body.clientWidth < 481 ?"480px" : "auto" );}
+.result_top,.show_top{border-bottom: 2px solid #fd4f00;overflow: hidden;}
+.result_title,.show_title{font-size:14px;float:left;line-height:40px;}
+.result_date,.show_type{float: right;}
+.result_date li,.show_type li{float: left;cursor:pointer;width:52px;line-height: 34px;margin-left: 4px;font-size: 14px;text-align: center;color: #363636;}
+.result_date .select_time,.show_type .sel_show_type{color: #fff;background-color:#fd4f00;}
+.result1_title{font-size: 12px;color:#aaa;line-height: 20px;background-color: #f0f0f0;padding-left: 6px;}
+.result1_item{padding-left: 90px;overflow:hidden;border-bottom:1px solid #c7c7c7;background: url("../images/dian_03.png") no-repeat 76px center;position: relative;}
+.result1_item .trip_time{position: absolute;top:0;left:0;font-size:18px;color:#0c9ef1;padding-left:10px;line-height:98px;}
+.trip_line{float: left;padding: 10px 0;width: 530px;}
+.trip_line .start_city{font-size: 14px;color: #535353;line-height: 26px;}
+.trip_line .pass_city{font-size: 12px;color: #535353;line-height: 24px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.trip_line .end_city{font-size: 16px;color: #101010;line-height: 28px}
+.trip_other{float: left;padding-top: 27px;padding-left: 58px;}
+.trip_other .trip_money{font-size:12px;color: #535353;line-height: 22px;}
+.trip_other .trip_money span{font-size:18px;}
+.trip_other .trip_seat{font-size:12px;color: #7c7c7c;line-height: 28px;}
+.trip_other .trip_seat span{font-size:18px;color: #363636;}
+.sao{float: right;cursor: pointer;}
+.sao p{background:url("../images/sao_03.png") no-repeat left center;font-size:14px;line-height: 24px;padding: 2px 18px 2px 63px;color: #7c7c7c;}
+.result1_item .sao p{margin-top: 24px;}
+.result2{padding-top: 40px;}
+.result2 .trip_other .trip_money{line-height: 40px;}
+.main_more{font-size: 16px;line-height: 40px;color: #7c7c7c;background-color: #f6f6f6;cursor:pointer;width:370px;text-align: center;margin: 40px auto 34px;}
+.main_more:hover{color: #fff;background-color: #fd4f00;}
+
+/**租车结果*/
+.zu_list{/*overflow: hidden;*/}
+.zu_item{padding: 12px 10px;border-bottom: 1px solid #d5d5d5;overflow: hidden;}
+.zu_item .zu_img{display: block;border: 1px solid #d5d5d5;float: left;width: 178px;height: 118px;}
+.zu_car_type{margin-left:10px;float: left;width: 382px;}
+.zu_car_type .car_name{display: block;font-size: 18px;line-height: 30px;color: #0c9ef1;padding-top: 31px;}
+.zu_car_type .car_parameter{display: block;font-size: 16px;line-height: 28px;color: #7c7c7c;}
+.zu_item .trip_money{text-align: right;}
+.zu_list .zu_item .sao p{margin-top: 35px;}
+.zu_list .zu_item .trip_other{padding-top:38px; }
+/**包车结果*/
+.bc_item{padding:20px 0 20px 10px;border-bottom: 1px solid #d5d5d5}
+.bc_type{float:left;border: 2px solid #e5e5e5;width: 218px;}
+.bc_type .bc_img{display: block;width: 218px;height: 158px;}
+.bc_type .bc_num{font-size: 14px;float:left;width: 218px;line-height: 48px;color:#363636;text-align: center;border-top: 2px solid #e5e5e5;background-color: #f6f6f6;}
+.bc_right{float:right;width: 686px;}
+.bc_r_top{}
+.dan_or {padding-top: 5px;float: left;}
+.dan_or li{width: 450px;cursor:pointer;border: 1px solid #c7c7c7;overflow: hidden;font-size:14px;padding:0 20px;height: 40px;line-height: 40px;margin-top:10px;}
+.dan_or .sel_dan{border: 1px solid #fd4f00;}
+.dan_or li .dan_l{float: left;}
+.dan_or li .dan_r{float: right;}
+.dan_or li .dan_r span{font-size: 18px;}
+.dan_or li .dan_r .sel_dan2{color: #fd4f00;}
+.bc_list .sao p{margin-top: 35px;}
+.bc_r_bot{padding:14px 20px 14px;position: relative;border-bottom:1px solid #e0e0e0;background: url("../images/bc_dian_03.png") no-repeat 5px center;}
+.bc_r_bot .bc_start{font-size: 14px;line-height: 28px;color:#7c7c7c;}
+.bc_r_bot .bc_end{font-size: 16px;line-height: 28px;color:#101010;}
+.bc_r_bot .bc_money,.bc_r_bot .bc_money1,.bc_r_bot .bc_money2{font-size: 12px;line-height: 20px;color:#535353;position: absolute;top:10px;right:20px;}
+.bc_r_bot .bc_money i,.bc_r_bot .bc_money1 i,.bc_r_bot .bc_money2 i{font-size: 12px;line-height: 20px;color:#fd4f00;}
+.bc_r_bot .bc_money1{top:30px;}
+.bc_r_bot .bc_money2{top:52px;font-size: 14px;line-height: 24px;}
+.bc_r_bot .bc_money2 i{font-size: 18px;}
+.get_hour{padding:10px;display:block;position:absolute;background-color:#fff;top:87px;left: 0;width: 302px;border: 1px solid #d5d5d5;z-index: 50;}
+.get_hour i{float: left;display:block;line-height: 24px;font-size: 14px;width: 63px;border:1px solid #d5d5d5;margin: 3px 5px;text-align: center;background-color: #f0f0f0;color: #535353;}
+.get_hour i:hover{background-color: #fd4f00;color: #fff;cursor: pointer;border: 1px solid #fd4f00;}
+/**右侧2维码*/
+.result_right{float: right;text-align: center;width: 207px;padding-top: 20px;}
+.result_right img{vertical-align:top;}
+.result_right p{font-size: 14px;line-height: 38px;color: #fd4f00;}
+.result_right .gzh_txt{padding-bottom:35px;}
+/**公用底部*/
+/*help*/
+.help{padding: 34px 0;margin-bottom: 20px;}
+.help_inner li{width: 123px;padding-left:76px;border-right: 1px solid #d5d5d5;float: left;height: 100px;background: url("../images/help1.png") no-repeat 40px 9px;}
+.help_inner li span{font-size: 14px;line-height:26px;color: #363636;}
+.help_inner li p{font-size: 12px;line-height:20px;clear:both;color: #535353;cursor: pointer;}
+.help_inner li p:hover{color: #fd4f00;}
+.help_inner .help2{background-image:url("../images/help2.png");}
+.help_inner .help3{background-image:url("../images/help3.png");}
+.help_inner .help4{background-image:url("../images/help4.png");}
+.help_inner .help5{background-image:url("../images/help5.png");}
+.help_inner .help6{background-image:url("../images/help6.png");border: none;}
+/*footer*/
+footer{padding: 30px 0 ;}
+.footer_inner li{float: left;width:284px;height:240px;padding-left:115px;border-right: 1px solid #d5d5d5;}
+.footer_inner li span{font-size:16px;line-height: 42px;color: #fff;}
+.footer_inner li p{font-size:14px;line-height: 30px; color:#c7c7c7;cursor: pointer;}
+.footer_inner li p:hover{color:#fff;}
+.footer_inner .footer_last{border: none;}
+.footer_inner .footer_last p{cursor:default;position: relative;}
+.footer_inner .footer_last p img{position: absolute;top: 10px;left: 70px;}
+
+/*copy*/
+.copy_inner{text-align: center;padding: 26px 0 17px 0;border-bottom: 1px solid #d5d5d5;}
+.copy_inner p,.copy_inner span{font-size: 12px;line-height: 22px;color: #e5e5e5;}
+.copy_inner .police{padding-left: 25px;background: url("../images/police.png") no-repeat left center;display: inline-block;}
+.copy_pic{text-align: center;padding: 20px 0;width: 1200px;margin: 0 auto;}
+.copy_pic img{display:inline-block;margin-right:20px;vertical-align: bottom;}
+.copy_pic .c_p_last{margin: 0;}
+/**公用底部*/

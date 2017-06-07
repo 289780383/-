@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--uc强制竖屏-->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>完成行程及评价</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/driver_success.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_fff">
+<div class="driver_S_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">完成行程及评价</p><a href="complain.html"><span class="c_or">投诉</span></a>
+</div>
+
+<div class="driver bc_fff">
+    <p class="driver_name">张师傅</p>
+    <p class="driver_info"><span class="driver_car">鲁F12345</span>济宁交运集团</p>
+    <img src="images/sj_07.png" class="driver_head">
+    <a href="tel:17076157998"><img src="images/sj2_10.png" class="driver_tel"></a>
+    <ul class="driver_xx">
+        <li class="sjxx"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+
+<div class="zffs"><i class="f_l"></i><span class="zffs_txt bc_fff">09月20日20:00济宁—济南</span><i class="f_r"></i></div>
+<p class="zf_big c_or">本次行程已经完成</p>
+<p class="zf_sm c_333">期待下次与您同行！</p>
+<div class="zffs"><i class="f_l"></i><span class="zffs_txt">评价师傅</span><i class="f_r"></i></div>
+<ul class="server_xx">
+    <li class="ser_xx"></li>
+    <li class="ser_xx"></li>
+    <li class="ser_xx"></li>
+    <li class="ser_xx"></li>
+    <li></li>
+</ul>
+<p class="server_over c_333">"挺好"</p>
+<a class="success_go c_fff bc_or" onclick="success_go();">提交</a>
+<div class="mask"></div>
+<div class="thanks bc_fff">
+    <img class="thanks_img" src="images/good_06.png">
+    <p class="thanks_txt c_333">感谢您完成行程评价！</p>
+    <a class="thanks_btn bc_or c_fff" onclick="thanks_btn();">好</a>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    function success_go(){
+        $(".thanks").show();
+        $(".mask").show();
+    }
+    function thanks_btn(){
+        $(".thanks").hide();
+        $(".mask").hide();
+    }
+
+
+/*
+    $(".driver_xx li").click(function(){
+        $(".driver_xx li").removeClass("sjxx");
+        for(var i=0;i<$(this).index()+1;i++){
+            $(".driver_xx li").eq(i).addClass("sjxx");
+        }
+    });
+*/
+
+    $(".server_xx li").click(function(){
+        $(".server_xx li").removeClass("ser_xx");
+        for(var i=0;i<$(this).index()+1;i++){
+            $(".server_xx li").eq(i).addClass("ser_xx");
+        }
+        switch ($(this).index()){
+            case 0:
+                $(".server_over").text('"一般般"');
+                break;
+            case 1:
+                $(".server_over").text('"较好"');
+                break;
+            case 2:
+                $(".server_over").text('"好"');
+                break;
+            case 3:
+                $(".server_over").text('"挺好"');
+                break;
+            default:
+                $(".server_over").text('"非常好"');
+
+        }
+    });
+</script>
+
+</html>

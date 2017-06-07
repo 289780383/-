@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>订单确认</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/order_confirmation_bc.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">订单确认</p>
+    <span>取消</span>
+</div>
+<div class="order_top">
+    <p class="order_time"><span>2016-11-11 <i>08:00</i></span><i class="order_peo">18人</i></p>
+    <p class="order_start">德州市 · 德州汽车总站南翼楼金桥国际旅行社</p>
+    <p class="order_end">青州市 · 侯王-柿子沟-青州古镇</p>
+</div>
+<div class="order_bot">
+<ul class="order_type clearfix">
+    <li class="sel_li"><i></i></li>
+    <li><i class="car1"></i></li>
+    <li><i class="car2"></i></li>
+    <li><i class="car3"></i></li>
+</ul>
+    <div class="order_bus_type"><p class="bus_type1"><span>小巴</span> : 准乘16人</p><p class="bus_type2">起步价 : <span>120</span>元</p></div>
+    <div class="order_money"><p>单程 : 55km</p><p class="money_r"><span class="sel_span">+300</span>元</p><i class="select_sel"></i></div>
+    <div class="order_money double_trip"><p>往返 : 110km</p><p class="money_r"><span>+600</span>元</p><i class="select_sel"></i></div>
+</div>
+<div class="pay_bot">
+    <p class="c_333 bc_fff">共计：<span class="c_or all_money"></span>元</p><span class="go_pay bc_or c_fff">确认</span>
+</div>
+
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    $(function(){
+        $(".order_type").on("click","li",order_type);
+        $(".order_money").on("click",order_money);
+        /**初始化*/
+        bus_type("0");
+        $(".order_money").eq(0).find("i").addClass("select_select");
+        $(".order_money").eq(0).find(".money_r span").addClass("sel_span");
+        all_money();
+    });
+    /**初始化选中第一种车型*/
+    function bus_type(a){
+        $(".order_type li").eq(a).css("border-bottom","1px solid #fd4e00");
+        $(".order_type li").eq(a).find("i").css("background-position-y","bottom");
+
+    }
+    /**选择车型*/
+    function order_type(){
+        $(".order_type li").css("border-bottom","1px solid #c7c7c7");
+        $(".order_type li").find("i").css("background-position-y","top");
+        $(this).css("border-bottom","1px solid #fd4e00");
+        $(this).find("i").css("background-position-y","bottom");
+        all_money();
+    }
+    /**选择是否往返*/
+    function order_money(){
+        $(".order_money i").removeClass("select_select");
+        $(".order_money .money_r span").removeClass("sel_span");
+        $(this).find("i").addClass("select_select");
+        $(this).find(".money_r span").addClass("sel_span");
+        all_money();
+    }
+    /**总钱数计算*/
+    function all_money(){
+        $(".all_money").text(parseInt($(".bus_type2 span").text())+parseInt($(".sel_span").text().substring(1)))
+    }
+</script>
+
+</html>

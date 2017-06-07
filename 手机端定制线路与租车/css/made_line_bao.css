@@ -1,0 +1,19 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;background-color: #f5f5f5;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 2;}
+.pay_top p{text-align: center;color: #ff4f00;}
+.pay_top span{position:absolute;right:0;top:0;font-size: 0.26rem;padding:0 0.5rem;display: inline-block;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+.main{padding: 0 0.34rem;margin: 1.4rem 0 0;}
+.main_top{text-align: center;margin-bottom: 0.4rem;}
+.main_top span{font-size: 0.26rem;line-height: 0.46rem;color:#5e5e5e;display: block;}
+.main_msg{padding:0.1rem 0.44rem 0.86rem 0.44rem;}
+.main_msg input{background:url("../images/dz_icon_05.png") no-repeat 0.2rem center; background-size:0.33rem 0.3rem;width:100%;border:none;border-bottom: 1px solid #c7c7c7;font-size: 0.28rem;color: #535353;line-height: 0.32rem;padding: 0.25rem 0 0.21rem 0.6rem;display:block;}
+.main_msg div{border:1px solid #c7c7c7;background-color:#fff;border-radius: 0.1rem;overflow: hidden;}
+.main_point{margin-bottom: 0.2rem;}
+.main_msg .the_name {background-image: url("../images/peo__03.gif");}
+.main_msg .the_tel{background-image:url("../images/peo__06.gif"); }
+.main_msg .end_point {background-image: url("../images/dz_icon_08.png");}
+.main_msg .start_time{border-bottom: none;background-image:url("../images/dz_icon_11.png"); }
+.main_ts{font-size: 0.24rem;color: #7c7c7c;line-height: 0.44rem;}
+.main_btn{display: block;margin:0 auto;width:6.6rem;background-color: #ff4f00;border-radius: 0.1rem;text-align:center;line-height: 0.88rem;color: #fff;font-size: 0.3rem;}

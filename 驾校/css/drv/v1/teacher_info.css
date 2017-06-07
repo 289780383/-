@@ -1,0 +1,55 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color: #24b4ff;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.28rem;}
+header .head_tel{display:block;padding:0.18rem 0.24rem;position: absolute;right:0;top: 0;width: 0.44rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+
+/**main_top*/
+.main_top{border-top: 1px solid #fff;padding-top: 0.8rem;}
+.teacher_info{overflow: hidden;width: 7.02rem;position:relative;padding: 0.3rem 0.24rem;background-color: #fff;}
+.show_pic{width: 1.8rem;height: 1.2rem;display: block;float: left;}
+.show_msg{float: left;margin-left: 0.2rem;}
+.show_msg .the_name{overflow: hidden;font-size: 0.28rem;}
+.show_msg .the_name span{display:block;line-height: 0.5rem;color: #333;float:left;max-width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.show_msg .the_name .vip_pic{width: 0.28rem;height: 0.28rem;margin:0.05rem 0 0 0.1rem;float: left;}
+.show_msg .the_name i{display: block;float: left;font-size:0.2rem;border: 1px solid #24b4ff;font-style:normal;color:#24b4ff;border-radius: 0.05rem;padding-top:0.02rem;margin: 0.05rem 0 0 0.1rem;}
+.show_msg .the_star{overflow: hidden;}
+.show_msg .the_star img{display:block;width: 0.28rem;height: 0.28rem;float: left;}
+.show_msg .the_site{font-size: 0.24rem;line-height: 0.4rem;color: #555;}
+.the_price{font-size: 0.26rem;color: #ff6022;line-height: 1.3rem;position: absolute;top: 0.3rem;right: 1rem;}
+.line_hui{height: 0.18rem;width:7.5rem;background-color: #f0f0f0;clear:both;}
+/**main_bot*/
+.main_bot_{padding-top: 0.8rem;}
+.bot_nav{width: 7.5rem;overflow: hidden;}
+.bot_nav_fixed{position:fixed;top:0.88rem;left:50%;transform: translateX(-50%);z-index: 20;}
+.bot_nav li{width: 25%;float:left;text-align: center;background-color:#fff;font-size: 0.26rem;line-height: 0.8rem;color: #333;border-bottom: 1px solid #e5e5e5;}
+.bot_nav .sel_nav{color:#24b4ff;border-bottom: 1px solid #24b4ff;}
+.bot-info{margin-bottom: 1.2rem;background-color: #fff;}
+.school_msg{padding: 0.2rem 0;}
+.school_msg p{font-size: 0.28rem;line-height: 0.5rem;color: #333;padding:0 0.24rem;text-indent: 2em;}
+.course_type{}
+.course_type .course_item{position: relative;padding:0.22rem 0.24rem;border-bottom:1px solid #e5e5e5;background: #fff url("../../../images/drv/v1/l_xsj.gif") no-repeat 6.9rem center;background-size:0.28rem; }
+.course_type .course_title{overflow: hidden;}
+.course_type .course_title p{font-size: 0.28rem;line-height: 0.42rem;color: #333;float: left;}
+.course_type .course_title i{display: block;float: left;font-size:0.2rem;border: 1px solid #24b4ff;font-style:normal;color:#24b4ff;border-radius: 0.05rem;padding-top:0.02rem;margin: 0.02rem 0 0 0.1rem;}
+.course_type .course_title span{display: block;float: left;font-size:0.2rem;padding-top: 0.07rem;color:#24b4ff;margin-left: 0.2rem;}
+.course_type .course_info{font-size: 0.24rem;line-height: 0.4rem;color: #777;width: 4.3rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.course_type .course_money{font-size: 0.32rem;line-height: 1.3rem;color: #ff3535;position: absolute;top:0;left: 4.6rem;}
+.environment{padding:0.15rem 0.1rem 0;overflow: hidden;}
+.environment img{display: block;float: left;width:3.35rem;height: 2rem;margin: 0.15rem;}
+.evaluate_item{position: relative;border-bottom: 1px solid #e5e5e5;padding-bottom: 0.22rem;}
+.evaluate_pic{display:block;width:1.06rem;height:1.06rem;position: absolute;left:0.24rem;top:0.3rem;}
+.evaluate_msg{padding:0.22rem 0.24rem 0 1.46rem;}
+.msg1,.msg2,.msg3{overflow: hidden;}
+.evaluate_msg .msg1 p{font-size: 0.24rem;color:#555;line-height: 0.4rem;float: left;}
+.evaluate_msg .msg1 i{font-style:normal;font-size: 0.24rem;color:#555;line-height: 0.4rem;float: right;}
+.evaluate_msg .msg2{height: 0.68rem;overflow:hidden;}
+.evaluate_msg .msg2 p{font-size: 0.26rem;color:#333;line-height: 0.34rem;display: -webkit-box!important;overflow: hidden;text-overflow: ellipsis;word-break:break-all;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+.evaluate_msg .msg3{padding-top: 0.16rem;}
+.evaluate_msg .msg3 li{width:2.87rem;float: left;overflow: hidden;}
+.evaluate_msg .msg3 li p{width:1.2rem;padding-right:0.1rem;font-size: 0.24rem;color:#555;line-height: 0.4rem;text-align: right;float: left;}
+.evaluate_msg .msg3 li img{width:0.28rem;height: 0.28rem;display: block;float: left;padding-top:0.03rem;}
+.footer_tishi{display:none;margin-bottom: 1rem;font-size: 0.24rem;line-height:0.8rem;color: #777;text-align: center;}
+
+/**footer*/
+footer{width:7.5rem;position:fixed;bottom: 0;left: 50%;transform: translateX(-50%);background-color: #fff;overflow: hidden;border-top: 1px solid #e5e5e5;}
+footer a{display: block;width:6.5rem;font-size:0.32rem;line-height:0.9rem;color:#fff;background-color:#24b4ff;border-radius:0.1rem;margin:0.16rem auto;text-align: center;}

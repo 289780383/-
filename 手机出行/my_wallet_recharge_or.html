@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>确认充值</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/my_wallet_recharge_or.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">支付宝支付</p>
+</div>
+<div class="wallet_main">
+<img src="images/wallet_03.png" class="main_img">
+    <p class="zh_title">本次消费金额</p>
+    <p class="wallet_money">￥120.0</p>
+
+</div>
+<a href="javascript:;" class="pay_btn" onclick="recharge();">支付</a>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    function recharge(){
+        alert("我要支付");
+    }
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color: #24b4ff;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.28rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+
+/**main*/
+.main{border-top: 1px solid #fff;padding-top:0.88rem;}
+.main>li{overflow:hidden;margin-bottom: 0.18rem;background-color:#fff;}
+.course_type{overflow: hidden;border-bottom: 1px solid #aaa;padding:0 0 0 0.24rem;}
+.course_type p{font-size: 0.3rem;line-height: 1rem;color: #333;float: left;}
+.course_type i{display:block;float:right;margin:0.26rem 0.36rem 0 0;width: 0.52rem;height: 0.52rem;background: url("../../../images/drv/v1/select_17.png") no-repeat right center;background-size: 1.06rem;}
+.course_type .sel_type{background: url("../../../images/drv/v1/select_17.png") no-repeat left center;background-size: 1.06rem;}
+.course_info{display: none;}
+.course_info li{overflow: hidden;padding: 0 0.32rem 0 0.36rem;border-bottom: 1px solid #e5e5e5;}
+.course_info li p{font-size: 0.3rem;color: #777;line-height: 1rem;float: left;}
+.course_info li span{font-size: 0.3rem;color: #333;line-height: 1rem;float: right;}
+.course_info li i{width:5.2rem;font-size: 0.3rem;color: #555;line-height:0.42rem;float:left;margin: 0.2rem 0 0.2rem 0.3rem;}
+.other_text{background-color: #fff;margin-bottom: 1.24rem;}
+.other_text p{font-size: 0.3rem;line-height: 1rem;color: #333;text-align: center;}
+.other_text span{text-indent:2em;display:block;font-size: 0.28rem;line-height: 0.5rem;padding: 0 0.2rem;border:1px solid #e5e5e5; }
+/**footer*/
+.btn_warp{width:7.5rem;position:fixed;bottom: 0;left: 50%;transform: translateX(-50%);background-color: #fff;overflow: hidden;border-top: 1px solid #e5e5e5;}
+.btn_warp p{display: block;width:6.5rem;font-size:0.32rem;line-height:0.9rem;color:#fff;background-color:#24b4ff;border-radius:0.1rem;margin:0.16rem auto;text-align: center;}

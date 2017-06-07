@@ -1,0 +1,16 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.recharge_num{width:6.68rem;border:1px solid #c7c7c7;overflow: hidden;background-color: #fff;margin: 1.5rem auto 0.4rem;}
+.recharge_num span{font-size: 0.28rem;color: #535353;line-height:0.82rem;display: block;float: left;padding:  0.02rem 0.24rem 0;}
+.recharge_num input{font-size: 0.26rem;color: #7c7c7c;width:5rem;line-height:0.3rem;padding:0.27rem 0;height:0.3rem;float:left;border: none;}
+.recharge_way{border: 1px solid #c7c7c7;width: 6.68rem;margin: 0 auto;background-color: #fff;}
+.recharge_way li{position: relative;height: 0.84rem;}
+.recharge_way li span{font-size: 0.28rem;color: #535353;line-height:0.84rem;height:0.84rem;display: block;padding:  0 0.7rem;background: url("../images/pay_08.png") no-repeat 0.24rem 0.22rem;background-size:0.4rem; }
+.way_zfb{border-bottom:1px solid #c7c7c7;}
+.recharge_way .way_zfb span{background: url("../images/pay_03.png") no-repeat 0.24rem 0.22rem;background-size:0.4rem;}
+
+.select_sel{display:inline-block;position:absolute;right:0.4rem;top:0.25rem;width:0.34rem;height: 0.33rem;background: url("../images/select__03.png") no-repeat left bottom;background-size: 0.33rem;}
+.select_select{background: url("../images/select__03.png") no-repeat left top;background-size: 0.33rem;}
+.pay_btn{display: block;font-size: 0.28rem;overflow:hidden;text-align: center;width:6rem;height: 1rem;line-height: 1rem;color: #fff;background-color: #fd4e00;border-radius: 0.1rem;margin:0.66rem auto 1rem; }

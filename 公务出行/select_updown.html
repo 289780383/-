@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>选择上车点与下车点</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/select_updown.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/map_line.js"></script>
+</head>
+<body class="bc_f5">
+<!--地图路线-->
+<div class="mask"></div>
+<div class="map_warp bc_fff">
+    <div id="container"></div>
+    <div id="panel" style="display:none;">
+    </div>
+    <img src="images/close__14.png" class="close_map" onclick="close_map();">
+</div>
+<div class="select_station">
+    <div class="select_top bc_f5">
+        <p class="c_333 bc_fff">选择上车点与下车点</p><img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip"><!--<img src="images/loc_07.png" class="show_map" onclick="open_map(this);">-->
+    </div>
+    <div class="select_content bc_fff">
+        <p class="select_title"><span class="title_l">济宁->济南</span><span class="title_r">1号线</span></p>
+        <ul class="select_go">
+            <li onclick="select_station(this);"><p>济宁-南池公园</p><span>7:20 8:20 11:20 12:20</span><i class="select_yuan bc_fff"></i></li>
+            <li onclick="select_station(this);"><p>济宁-南池公园</p><i class="select_yuan bc_fff"></i></li>
+            <li onclick="select_station(this);"><!--<img src="images/select__07.png" class="zhan">--><p>济宁-南池公园</p><span>7:20</span><i class="select_yuan bc_fff"></i></li>
+            <li onclick="select_station(this);"><p>济宁-南池公园</p><i class="select_yuan bc_fff"></i></li>
+        </ul>
+        <ul class="select_to">
+            <li onclick="select_station(this);"><p>济宁-南池公园</p><span>7:20 8:20 11:20 12:20</span><i class="select_yuan bc_fff"></i></li>
+            <li onclick="select_station(this);"><p>济宁-南池公园</p><i class="select_yuan bc_fff"></i></li>
+            <li onclick="select_station(this);"><p>济宁-南池公园</p><i class="select_yuan bc_fff"></i></li>
+            <li onclick="select_station(this);"><p>济宁-南池公园</p><span>7:20</span><i class="select_yuan bc_fff"></i></li>
+
+        </ul>
+
+    </div>
+    <div class="select_bot">
+        <p class="c_7c select_m bc_fff"><span class="c_or">120.00</span>元/人</p>
+        <a href="JavaScript:;" onclick="goto_index();" class="bc_or c_fff">下一步</a>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    /**用于控制第一个列表距离顶部的距离*/
+    $(".select_item").eq(0).css("margin-top","1.24rem");
+    /**初起化选择第一个*/
+    reset_select();
+    function reset_select(){
+        $(".select_go li").eq(1).addClass("select_position");
+        $(".select_go li").eq(1).find(".select_yuan").text("上");
+        $(".select_go li").eq(1).find(".select_yuan").addClass("select_yuan_up");
+        $(".select_to li").eq($(".select_to li").length-2).addClass("select_position");
+        $(".select_to li").eq($(".select_to li").length-2).find(".select_yuan").text("下");
+        $(".select_to li").eq($(".select_to li").length-2).find(".select_yuan").addClass("select_yuan_down");
+        $(".select_go li").eq(0).find(".select_yuan").text("起");
+        $(".select_go li").eq(0).find(".select_yuan").addClass("select_yuan_s");
+        $(".select_to li").eq($(".select_to li").length-1).find(".select_yuan").text("终");
+        $(".select_to li").eq($(".select_to li").length-1).find(".select_yuan").addClass("select_yuan_e");
+    }
+    /**选择具体乘车点*/
+    function select_station(obj){
+        $(obj).parent().find(".select_yuan").text("");
+        $(obj).parent().find(".select_yuan").removeClass("select_yuan_up");
+        $(obj).parent().find(".select_yuan").removeClass("select_yuan_down");
+        $(obj).parent().find("li").removeClass("select_position");
+        $(obj).addClass("select_position");
+        if($(obj).parent().attr("class")=="select_go"){
+            $(".select_go li").eq(0).find(".select_yuan").text("起");
+            $(".select_go li").eq(0).find(".select_yuan").addClass("select_yuan_s");
+            $(obj).find(".select_yuan").text("上");
+            $(obj).find(".select_yuan").addClass("select_yuan_up");
+        }else {
+            $(".select_to li").eq($(".select_to li").length-1).find(".select_yuan").text("终");
+            $(".select_to li").eq($(".select_to li").length-1).find(".select_yuan").addClass("select_yuan_e");
+            $(obj).find(".select_yuan").text("下");
+            $(obj).find(".select_yuan").addClass("select_yuan_down");
+        }
+    }
+    /*去选择具体出发地点*/
+    function select_dian(obj){
+        $(".select_line").hide();
+        $(".select_station").show();
+    }
+    /*返回选择线路*/
+    function go_select_line(){
+        $(".select_line").show();
+        $(".select_station").hide();
+    }
+
+    function goto_index(){
+        $.ajax({
+            type: "POST", //GET
+            url: "***.action",
+            data: {
+                start_station:$(".select_go .select_position p").text(),
+                end_station:$(".select_to .select_position p").text()
+            }, //组装参数
+            dataType: "json",
+            success: function (data) {
+
+
+            },
+            error: function (data) {
+
+
+            }
+        });
+        /**flag2用于判断用户现在的登录状态*/
+        var flag2 = false;
+
+        if (flag2) {
+            window.open("---------选择乘车人信息-------.html", "_self", "");
+        } else {
+            window.open("index_1g.html", "_self", "");
+            /**在首页执行user_login(obj)；函数显示出登录框*/
+        }
+
+    }
+    /**地图*/
+    function open_map(){
+        var map_city=[];
+        var city_list=["烟台汽车总站","烟台科技创业大厦","黄海学院", "大明湖"];
+        var city_li=["烟台","烟台","青岛","济南"];
+
+        $(".mask").show();
+        $(".map_warp").show();
+        for(var i=0;i<4;i++){
+            var tmp_city = {};
+            tmp_city.keyword=city_list[i];
+            tmp_city.city=city_li[i];
+            map_city.push(tmp_city);
+        }
+        map1(map_city);
+    }
+    function close_map(){
+        $(".mask").hide();
+        $(".map_warp").hide();
+    }
+</script>
+</html>

@@ -1,0 +1,13 @@
+
+.header{font-size: 0.34rem;background-color:#ec584e;line-height: 0.88rem;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 0.88rem;z-index: 10;}
+.header p{text-align: center;color:#fff;}
+.fh_btn{width: 0.18rem;position: absolute;padding:0.26rem 0.44rem;left:0;top: 0;}
+/**main*/
+.box1{padding-top: 1.06rem;background-color:#fff;overflow: hidden;padding-bottom: 0.22rem;margin-bottom:0.14rem;}
+.box2{padding-top: 0.2rem;background-color:#fff;overflow: hidden;padding-bottom: 0.22rem;margin-bottom:0.14rem;}
+.box_type{font-size: 0.28rem;color: #363636;line-height:0.28rem;border-left: 0.08rem solid #ec584e;padding: 0.02rem 0 0 0.06rem;margin-left: 0.14rem;}
+/**nav导航*/
+.nav{background-color:#fff;width: 7.2rem;overflow: hidden;padding:0.1rem 0.15rem 0;}
+.nav li{float:left;text-align:center;width:1.44rem;padding-top: 0.2rem;}
+.nav li img{display:block;width:0.8rem;height:0.8rem;margin: 0 auto;}
+.nav li p{font-size: 0.24rem;line-height: 0.46rem;color: #666;}

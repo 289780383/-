@@ -1,0 +1,24 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+.pay_title{font-size: 0.28rem;line-height: 1.04rem;color: #535353;text-align: center;padding-top:1rem;}
+.pay_2wm_main{width: 6.8rem;border: 1px solid #aaa;margin: 0 auto;text-align: center;}
+.pay_2wm_img{display:block;width: 5rem;margin: 0.6rem auto 0;}
+.pay_2wm_msg1{font-size: 0.32rem;line-height:1.16rem;color: #fd4e00;}
+.pay_2wm_msg2{font-size: 0.28rem;line-height:1.3rem;color: #aaa;border-top: 1px dashed #c7c7c7;position: relative;}
+.pay_2wm_msg2 i{display: block;width: 0.2rem;height: 0.4rem;border: 1px solid #aaa;position: absolute;top:-0.2rem;z-index: 10;background-color: #f5f5f5;}
+.pay_2wm_msg2 .y1{border-left:none;border-top-right-radius:0.2rem;border-bottom-right-radius:0.2rem;left:-0.03rem;}
+.pay_2wm_msg2 .y2{border-right:none;border-top-left-radius:0.2rem;border-bottom-left-radius:0.2rem;right: -0.03rem;}
+.new_2wm{font-size: 0.3rem;line-height: 1.56rem;color: #ff4f00;text-align: center;}
+.new_2wm_img{display:inline-block;width: 0.43rem;vertical-align: middle;margin-right: 0.18rem;}
+.zhuan{animation: xz 0.5s infinite linear;}
+@keyframes xz {
+0%{
+    transform:rotate(0deg);
+}
+100%{
+    transform:rotate(360deg);
+}
+}

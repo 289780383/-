@@ -1,0 +1,20 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color: #24b4ff;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.28rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+.find_teacher{margin-top: 0.88rem;}
+.find_teacher li{background-color: #fff;overflow: hidden;width: 7.02rem;position:relative;padding: 0.3rem 0.24rem;margin-bottom:0.18rem;}
+.show_pic{width: 1.8rem;height: 1.2rem;display: block;float: left;}
+.show_msg{float: left;margin-left: 0.2rem;}
+.show_msg .the_name{overflow: hidden;font-size: 0.28rem;}
+.show_msg .the_name span{display:block;line-height: 0.5rem;color: #333;float:left;max-width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.show_msg .the_name i{display: block;float: left;font-size:0.2rem;border: 1px solid #24b4ff;font-style:normal;color:#24b4ff;border-radius: 0.05rem;padding-top:0.02rem;margin: 0.05rem 0 0 0.1rem;}
+.show_msg .the_star{overflow: hidden;}
+.show_msg .the_star img{display:block;width: 0.28rem;height: 0.28rem;float: left;}
+.show_msg .the_money{font-size: 0.3rem;color: #ff3535;line-height: 0.48rem;}
+.the_price{font-size: 0.26rem;color: #ff6022;line-height: 1.3rem;position: absolute;top: 0.4rem;right: 1rem;}
+.evaluate{font-size: 0.24rem;color: #777;line-height: 0.3rem;clear: both;padding-top: 0.05rem;width:6.4rem;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+/**footer*/
+.btn_warp{width:7.5rem;position:fixed;bottom: 0;left: 50%;transform: translateX(-50%);background-color: #fff;overflow: hidden;border-top: 1px solid #e5e5e5;}
+.btn_warp p{display: block;width:6.5rem;font-size:0.32rem;line-height:0.9rem;color:#fff;background-color:#24b4ff;border-radius:0.1rem;margin:0.16rem auto;text-align: center;}
+.find_teacher .sel{display:block;float:right;margin:0.46rem 0.36rem 0 0;width: 0.52rem;height: 0.52rem;background: url("../../../images/drv/v1/select_17.png") no-repeat right center;background-size: 1.06rem;}
+.find_teacher .sel_type{background: url("../../../images/drv/v1/select_17.png") no-repeat left center;background-size: 1.06rem;}

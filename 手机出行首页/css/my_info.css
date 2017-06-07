@@ -1,0 +1,40 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color: #ec584e;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+
+/**main_list*/
+.main_list{padding: 0.88rem 0 0 0;}
+.main_list li{padding-left:0.24rem;background-color: #fff;overflow: hidden;}
+.main_list .margin_bot{margin-bottom:0.14rem;}
+.main_list li div{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.main_list li .no_border{border: none;}
+.main_list .sel_xsj{background:url("../images/r_xsj.gif") no-repeat 6.7rem 0.28rem;background-size: 0.28rem 0.44rem;}
+.main_list .item_head{padding-top: 0.2rem;}
+.main_list .item_head div{background-position: 6.7rem 0.16rem;}
+.main_list li p{font-size: 0.3rem;line-height: 1rem;color: #555;float: left;}
+.main_list li input{width:4.6rem;padding-right:0.7rem;font-size: 0.3rem;background-color:transparent;line-height: 1rem;color: #555;float:right;border: none;text-align: right;}
+.main_list li span{font-size: 0.3rem;padding-right:0.7rem;line-height: 1rem;color: #555;float:right;width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: right;}
+.main_list li .head_pic{width:0.8rem;margin-right:0.7rem;height: 0.8rem;border-radius: 50%;float: right;}
+.main_list li .age input{width:2.5rem;border: none;font-size: 0.3rem;line-height: 0.88rem;color: #555;float: right;margin-right: 0.1rem;}
+.main_list li .age i{display:block;float:right;font-size: 0.3rem;line-height: 1rem;color: #555;}
+
+.btn{display:block;text-align:center;border:none;width: 6.5rem;font-size: 0.32rem;line-height: 0.9rem;color: #fff;background-color: #ec584e;margin: 0.66rem auto 0;border-radius:0.1rem;}
+/**mask_select*/
+.mask_select{display:none;background-color:#fff;border-radius:0.2rem;width:6.5rem;overflow: hidden;position: fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index: 200;}
+.mask_select .select_title{font-size: 0.3rem;color: #555;line-height: 0.8rem;padding-left: 0.3rem;}
+.mask_select .select1{overflow:hidden;font-size: 0.3rem;color: #333;line-height: 1rem;border-bottom: 1px solid #e5e5e5;padding-left: 0.46rem;}
+.mask_select .select2{overflow:hidden;font-size: 0.3rem;color: #333;line-height: 1rem;padding-left: 0.46rem;}
+.mask_select .select_sex{overflow: hidden;}
+.mask_select .select_sex i{display: block;width: 0.34rem;margin-top:0.34rem;height: 0.34rem;background:url("../images/sel_d_03.gif") no-repeat right center;background-size:0.76rem;float: left;}
+.mask_select .select_sex .sel_sex{background:url("../images/sel_d_03.gif") no-repeat left center;background-size:0.76rem;}
+.mask_select .select_sex span{float:left;font-size: 0.3rem;color: #333;line-height: 1rem;padding-left: 0.14rem;}
+/**修改手机号*/
+.mask_select .the_type{float: left;width:1.8rem;}
+.new_tel,.pwd_now,.pwd_new1,.pwd_new2{float:left;font-size: 0.28rem;line-height: 0.96rem;color: #999;width: 4rem;border: none;}
+.mask_select .the_yzm{float:left;font-size: 0.28rem;line-height: 0.96rem;color: #999;width: 2rem;border: none;}
+.mask_select .send_yzm{display:block;float:left;font-size: 0.28rem;line-height: 0.54rem;color: #fff;padding: 0.02rem 0.2rem 0;margin-top:0.22rem;border-radius:0.06rem;background-color: #f0f0f0;}
+.mask_select .send_yzm_on{background-color: #ec584e;}
+.mask_select .revise_btn{position:relative;border-top:1px solid #e5e5e5;}
+.mask_select .revise_btn:after{position:absolute;content: "";width: 0;height: 0.9rem;border-left:1px solid #e5e5e5;left: 3.25rem;top:0;}
+.mask_select .revise_btn a{display:block;width:50%;float: left;font-size: 0.28rem;line-height:0.9rem;color:#333;text-align: center;}
+.mask_select .revise_btn .rev_sure,.mask_select .revise_btn .pwd_sure{color:#ec584e;}

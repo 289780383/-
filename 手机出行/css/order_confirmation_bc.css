@@ -1,0 +1,36 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.pay_top span{position:absolute;right:0;top:0;font-size: 0.26rem;padding:0 0.5rem;display: inline-block;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+.order_top{padding: 1.28rem 0.38rem 0.26rem;line-height: 0.6rem;margin-bottom:0.2rem;background-color: #fff;border-bottom: 1px solid #aaa;}
+.order_top p{font-size: 0.28rem;padding-left: 0.38rem;background: url("../images/yuan_03.png") no-repeat 0.1rem center;background-size: 0.22rem;}
+.order_top .order_time i{ color: #ff4f00;font-style: normal;font-size: 0.32rem;}
+.order_top .order_peo{float: right;}
+.order_top .order_start{background-image: url("../images/yuan_06.png");}
+.order_top .order_end{background-image: url("../images/yuan_08.png");}
+
+.order_bot{overflow: hidden;background-color: #fff;border-top:1px solid #aaa;border-bottom:1px solid #aaa;margin-bottom: 2rem;}
+.order_type{background-color: #fff;width:7.48rem;margin: 0 auto;border-bottom: 1px solid #c7c7c7;}
+.order_type li{float: left;width: 1.87rem;border-bottom: 1px solid #c7c7c7;position: relative;bottom: -0.02rem;background-color: #fff;}
+.order_type li i{display:block;width: 1.1rem;margin:0.42rem auto;height: 0.36rem;background:url("../images/four_car_02.png") no-repeat left top;background-size:4.8rem; }
+.order_type li .car1{background:url("../images/four_car_02.png") no-repeat -1.3rem top;background-size:4.8rem; }
+.order_type li .car2{background:url("../images/four_car_02.png") no-repeat -2.4rem top;background-size:4.8rem; }
+.order_type li .car3{background:url("../images/four_car_02.png") no-repeat right top;background-size:4.8rem; }
+.order_bus_type,.order_money{font-size: 0.28rem; line-height: 0.88rem;color: #535353;border-bottom: 1px solid #c7c7c7;}
+.double_trip{border-bottom: 0;}
+.order_bot div{margin-left:0.26rem;padding: 0 1rem 0 0.1rem;position: relative;}
+.order_bot p{display: inline-block;}
+.bus_type1 span{color: #0c9ef1;}
+.bus_type2{float: right;}
+.bus_type2 span{color: #fd4e00;}
+.money_r{float: right;}
+.money_r .sel_span{color: #fd4e00;}
+.select_sel{display:inline-block;position:absolute;right:0.4rem;top:0.25rem;width:0.33rem;height: 0.34rem;background: url("../images/select__03.png") no-repeat left bottom;background-size: 0.33rem;}
+.select_select{background: url("../images/select__03.png") no-repeat left top;background-size: 0.33rem;}
+
+.pay_bot{position: fixed;bottom: 0;width: 7.5rem;margin: 0 auto;font-size: 0.3rem;}
+.pay_bot p{line-height: 1.08rem;border-top: 1px solid #aaa;text-align: center;display: inline-block;width: 3.75rem;}
+.pay_bot .all_money{font-size: 0.35rem;line-height: 1rem;display: inline-block;}
+.pay_bot .go_pay{border-top: 1px solid #fd4e00;width: 3.75rem;line-height: 1.08rem;display: inline-block;text-align: center;}

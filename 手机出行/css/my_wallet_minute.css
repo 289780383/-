@@ -1,0 +1,13 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.26rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.pay_top p span{display:inline-block;background-color:#e2e2e2;line-height:0.58rem;padding-top:0.02rem;text-align: center;border: 1px solid #e2e2e2;}
+.pay_top p .select_minute{background-color: #fff;color: #ff4f00;}
+.minute1{border-bottom-left-radius: 0.3rem;border-top-left-radius: 0.3rem;padding: 0 0.2rem 0 0.25rem;}
+.minute2{border-bottom-right-radius: 0.3rem;border-top-right-radius: 0.3rem;padding: 0 0.25rem 0 0.2rem;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.minute_main{margin-top: 1.01rem;}
+.minute_main li{padding: 0.22rem 0.4rem;position:relative;height: 0.66rem;border-bottom:1px solid #e5e5e5;}
+.minute_main .minute_where{font-size:0.28rem;line-height: 0.38rem;color: #363636;}
+.minute_main .minute_time{font-size:0.26rem;line-height: 0.28rem;color: #7c7c7c;}
+.minute_main .minute_money{font-size:0.28rem;line-height:1.1rem;color: #fd4e00;position: absolute;right: 0.38rem;top: 0;}

@@ -1,0 +1,19 @@
+.pay_top{font-size: 0.3rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.pay_msg {overflow:hidden;border-bottom: 1px solid #aaa;margin-bottom:0.3rem;padding-top: 1.03rem;}
+.msg_top {font-size: 0.3rem;line-height: 0.9rem;overflow: hidden;padding:0 0.5rem;}
+.pay_num{font-size: 0.24rem;}
+.msg_mid {font-size: 0.26rem;line-height: 0.5rem;border-top: 1px solid #aaa;border-bottom: 1px solid #aaa;overflow: hidden;margin-left:0.26rem;padding:0.2rem 0.5rem 0.2rem 0.24rem;position: relative;}
+.msg_mid p,.msg_mid .up{display: inline-block;float: left;}
+.msg_mid .up{margin-right:0.4rem;}
+.msg_mid p{padding-left: 0.5rem;}
+.msg_mid p span{font-size: 0.28rem;}
+.msg_mid .pay_start{background: url("../images/index_13.png") no-repeat left 0.12rem;background-size: 0.25rem;}
+.msg_mid .pay_end{background: url("../images/index_16.png") no-repeat left 0.12rem;background-size: 0.25rem;}
+.msg_mid .pay_line{position: absolute;height: 0.5rem;display: block;border-left: 1px dashed #aaa;top: 0.7rem;left: 1.28rem;}
+.msg_bot{font-size: 0.26rem;padding: 0 0.5rem;line-height: 1rem;}
+.pay_money span{font-size: 0.35rem;}
+.msg_bot p span{font-size: 0.35rem;}
+
+.pay_btn{display: block;font-size: 0.28rem;text-align: center;width:6rem;height: 1rem;line-height: 1rem;color: #fff;background-color: #fd4e00;border-radius: 0.1rem;margin:1rem auto 0; }

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>城际约车</title>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=8a6d35c2fd8c2878290e67fda811c718&plugin=AMap.Autocomplete,AMap.PlaceSearch"></script>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/city_yue.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/city_yue.js"></script>
+</head>
+
+<body class="bc_f5">
+    <div class="pay_top">
+        <img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip">
+        <p id="ppp">城际约车</p>
+        <img src="images/map_01.png" class="open_map">
+    </div>
+    <ul class="main_list">
+        <li class="sel_xsj line_id">
+            <p class="">线路</p>
+            <span>选择线路</span>
+        </li>
+        <li class="sel_xsj start_poi">
+            <p>出发</p>
+            <span>选择出发地</span>
+        </li>
+        <li class="sel_xsj end_poi">
+            <p>到达</p>
+            <span>选择目的地</span>
+        </li>
+        <li class="sel_xsj the_date">
+            <p>日期</p>
+            <span>选择日期</span>
+        </li>
+        <li class="sel_xsj the_time">
+            <p>时间</p>
+            <span>选择时间</span>
+        </li>
+        <li class="sel_xsj peo_num">
+            <p>人数</p>
+            <span>选择人数</span>
+        </li>
+    </ul>
+    <ul class="ride_list ">
+        <li class="w_pin sel_way" onclick="ride_way(this);">
+            <p>拼座</p><span><i>15</i>元/人</span></li>
+        <li class="w_jj" onclick="ride_way(this);">
+            <p>经济型包车</p><span><i>50</i>元/单程</span></li>
+        <li class="w_sw" onclick="ride_way(this);">
+            <p>商务型包车</p><span><i>50</i>元/单程</span></li>
+    </ul>
+    <div class="talk_msg sel_xsj">
+        <p>捎句话</p>
+        <span>选择备注</span></div>
+    <div class="yue_btn">
+        <button onclick="go_yue();">马上预约</button>
+    </div>
+    <!--浮层-->
+    <div class="mask"></div>
+    <div class="sel_box">
+        <div class="sel_top">
+            <p class="sel_title">选择线路</p>
+            <span class="sel_cancle" onclick="sel_cancle();">取消</span>
+        </div>
+        <ul class="sel_list">
+            <li>
+                <i class="sel_item"></i>
+                <p>鱼台->济宁</p>
+                <span>2人预约</span>
+            </li>
+            <li>
+                <i></i>
+                <p>鱼台->济宁</p>
+            </li>
+        </ul>
+    </div>
+    <!--选择城市列表-->
+    <div class="city_select bc_fff">
+        <div class="city_top">
+            <span class="city_fh" onclick="city_fh();">取消</span>
+            <span class="city_sel">烟台市</span>
+            <input type="text" class="city_title" id="tipinput" onfocus="tishi();" placeholder="您从哪上车" />
+        </div>
+        <div id="input_auto">
+            <div class="amap-sug-result">
+                <div class="auto-item"><span class="auto-item-span"></span></div>
+            </div>
+        </div>
+        <div id="panel">
+            <div class="amap-sug-result">
+                <div class="auto-item">DIF.美甲美睫<span class="auto-item-span">山东省烟台市芝罘区</span></div>
+            </div>
+        </div>
+    </div>
+    <!--捎句话-->
+    <div class="talk">
+        <div class="talk_head">
+            <img src="images/fh_03.png" class="head_fh close_talk">
+            <p>捎句话</p>
+        </div>
+        <p class="want_talk">有行李，需要后备箱；需中途上下人。</p>
+        <div class="talk_main">
+            <ul class="talk_list">
+                <li>有行李，需要后备箱</li>
+                <li>请走高速</li>
+                <li>有孕妈，请照顾</li>
+                <li>只限同性乘客</li>
+                <li>带萌宠，会管好的</li>
+                <li class="sel_talk">需中途上下人</li>
+                <li>有点累，不想聊天</li>
+                <li>有小孩</li>
+                <li>有老人，请照顾</li>
+                <li>赶时间，别兜圈</li>
+                <li>替他人下单</li>
+            </ul>
+            <p class="notice">*&nbsp;最多可以给司机捎2句话哦</p>
+        </div>
+        <div class="talk_btn">
+            <button onclick="talk_save();">确定</button>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+     wx.config({
+     debug: false,
+     appId: 'wx7b127b4b9f210133',
+     timestamp: 1491895019,
+     nonceStr: 'Jh20xaW9kqMeld8P',
+     signature: 'b7a2c3920688098bb47bd6a6ca4306a0ce839ca3',
+     jsApiList: [
+       'checkJsApi',
+       'onMenuShareTimeline',
+       'onMenuShareAppMessage',
+       'onMenuShareQQ',
+       'onMenuShareWeibo',
+       'hideMenuItems',
+       'showMenuItems',
+       'hideAllNonBaseMenuItem',
+       'showAllNonBaseMenuItem',
+       'translateVoice',
+       'startRecord',
+       'stopRecord',
+       'onRecordEnd',
+       'playVoice',
+       'pauseVoice',
+       'stopVoice',
+       'uploadVoice',
+       'downloadVoice',
+       'chooseImage',
+       'previewImage',
+       'uploadImage',
+       'downloadImage',
+       'getNetworkType',
+       'openLocation',
+       'getLocation',
+       'hideOptionMenu',
+       'showOptionMenu',
+       'closeWindow',
+       'scanQRCode',
+       'chooseWXPay',
+       'openProductSpecificView',
+       'addCard',
+       'chooseCard',
+       'openCard'
+     ]
+ });
+wx.error(function(res){
+    alert(JSON.stringify(res));
+});
+  var images = {
+    localId: [],
+    serverId: []
+  };
+  document.querySelector('#ppp').onclick = function () {
+    alert(1);
+    wx.chooseImage({
+      success: function (res) {
+        images.localId = res.localIds;
+        alert('已选择 ' + res.localIds.length + ' 张图片');
+      }
+    });
+  };
+
+</script>
+</html>

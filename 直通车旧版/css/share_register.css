@@ -1,0 +1,11 @@
+body{background-color: #fff;}
+.the_head{height: 6rem;padding-top:0.6rem;text-align: center;background: url(../images/share_register_bg_02.gif) no-repeat center; background-size: 100% ;}
+.the_head .text1{font-size: 0.34rem;line-height: 0.52rem;color: #fff;text-shadow: 0.01rem 0 0 #000;}
+.the_head .text2{font-size: 0.5rem;line-height: 0.68rem;color: #fff;text-shadow: 0.02rem 0.01rem 0.01rem #000;}
+.the_from{margin: 0.3rem 0.5rem 0.6rem;}
+.the_from li{border-bottom: 1px solid #e5e5e5;overflow: hidden;position: relative;}
+.the_from li p{width: 1.4rem;font-size: 0.3rem;color: #333;line-height: 1.1rem;float: left;padding-left: 0.18rem;}
+.the_from li input{width:4.8rem;display: block;border:none;background-color: transparent;height: 1.08rem;font-size: 0.3rem;line-height: 1.08rem;color: #333;}
+.the_from li .the_yzm{width: 3rem;}
+.the_from li .yzm_btn{width:1.7rem;text-align: center;font-size: 0.28rem;line-height: 0.58rem;color: #fff;background-color: #ec584e;border-radius: 0.04rem;position: absolute;right: 0;top:0.26rem;}
+.register_btn{font-size: 0.3rem;line-height:0.9rem;width: 6.5rem;text-align: center;color: #fff;border-radius: 0.06rem;margin: 0 auto;background-color: #ec584e;}

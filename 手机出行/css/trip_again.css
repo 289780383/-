@@ -1,0 +1,14 @@
+.trip_A_mid {padding:0 0.5rem;overflow:hidden;border-bottom: 1px solid #aaa;}
+.trip_A_mid .trip_A_left{width:6.5rem;font-size: 0.3rem;padding:0.3rem 0 0.1rem;line-height: 0.5rem;}
+.trip_A_left li{padding-left:0.5rem;overflow: hidden;text-overflow: ellipsis;white-space:nowrap;}
+.trim_time{background: url("../images/trip_03.png") no-repeat left center;background-size: 0.3rem;}
+.trip_A_start{background: url("../images/index_13.png") no-repeat 0.03rem center;background-size: 0.25rem;}
+.trip_A_end{background: url("../images/index_16.png") no-repeat 0.03rem center;background-size: 0.25rem;}
+.trip_A_right{font-size: 0.28rem;line-height: 0.5rem;width: 100%;padding-bottom: 0.3rem;overflow: hidden;}
+.trip_A_right p:nth-child(1){display:inline;float: left;padding-left: 0.5rem;}
+.trip_A_right p:nth-child(2){display:inline;float: right;}
+.trip_A_right .trip_A_money{display:inline-block;font-size:0.45rem;}
+.trip_A_bot .prompt{text-align: center;line-height: 0.5rem;font-size: 0.3rem;padding-top: 0.55rem;}
+.cry{width:3.2rem;height: 3.2rem;border-radius:50%;margin:0.8rem auto 1.4rem;border: 0.1rem solid #d0d0d0;background: url("../images/cry_03.png") no-repeat center;background-size:1.06rem;}
+.train_again{width:5.7rem;display:block;border-radius:0.1rem;margin:0 auto;font-size: 0.3rem;line-height: 1rem;text-align: center; }
+

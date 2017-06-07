@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>钱包明细</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/my_wallet_minute.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333"><span class="minute1 select_minute">充值</span><span class="minute2">消费</span></p>
+</div>
+<ul class="minute_main">
+    <li>
+        <p class="minute_where">使用支付宝充值</p>
+        <p class="minute_time">2016-11-26 23:33:23</p>
+        <span class="minute_money">+1200</span>
+    </li>
+    <li>
+        <p class="minute_where">使用支付宝充值</p>
+        <p class="minute_time">2016-11-26 23:33:23</p>
+        <span class="minute_money">+1200</span>
+    </li>
+    <li>
+        <p class="minute_where">使用支付宝充值</p>
+        <p class="minute_time">2016-11-26 23:33:23</p>
+        <span class="minute_money">+1200</span>
+    </li>
+    <li>
+        <p class="minute_where">使用支付宝充值</p>
+        <p class="minute_time">2016-11-26 23:33:23</p>
+        <span class="minute_money">+1200</span>
+    </li>
+</ul>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    $(function(){
+        $(".pay_top p span").on("click",minute_type);
+    });
+    function minute_type(){
+        $(".pay_top p span").removeClass("select_minute");
+        $(this).addClass("select_minute");
+        if($(this).index()==0){
+            $(".minute_money").css("color","#ff4f00");
+        }else {
+            $(".minute_money").css("color","#0c9ef1");
+        }
+    }
+</script>
+
+</html>

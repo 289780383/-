@@ -1,0 +1,11 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.pay_top span{position:absolute;right:0;top:0;font-size: 0.26rem;padding:0 0.5rem;display: inline-block;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.wallet_main{width: 6.7rem;height: 3.6rem;margin: 1.48rem auto 0;border: 1px solid #aaa;border-radius: 0.2rem;background-color: #fff;}
+.main_img{display:block;width:1.28rem;height: 1.28rem;margin: 0.66rem auto 0.08rem;}
+.zh_title{font-size:0.3rem;line-height:0.54rem;color:#535353;text-align: center;}
+.wallet_money{font-size:0.36rem;line-height:0.52rem;color:#fd4e00;text-align: center;}
+
+.pay_btn{display: block;font-size: 0.28rem;text-align: center;width:6rem;height: 1rem;line-height: 1rem;color: #fff;background-color: #fd4e00;border-radius: 0.1rem;margin:0.66rem auto 1rem; }

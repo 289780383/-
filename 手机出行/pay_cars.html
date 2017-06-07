@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>支付车费</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/pay_cars.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pay_cars.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_or">支付车费</p><span class="c_333" onclick="close_trip();">取消</span>
+</div>
+<div class="mask"></div>
+<div class="close_trip bc_f7">
+    <div class="bc_a close_top"><span class="chang bc_or"><span class="dian bc_or"></span></span></div>
+    <p class="c_333">您确认取消支付？</p>
+    <a class="close_no bc_fff c_333" onclick="close_no();" href="javascript:;">不</a><a class="close_yes bc_or c_fff" onclick="close_yes();" href="javascript:;">是</a>
+</div>
+
+<div class="pay_msg bc_fff">
+    <div class="msg_top bc_fff">
+        <p class="pay_time f_l c_333">09月08日<span class="c_or">80:00</span></p>
+        <p class="c_a f_r"><span class="pay_number">1人</span>·<span class="pay_pin">拼座</span></p>
+    </div>
+    <div class="msg_mid c_333">
+        <span class="up">上车</span><p class="pay_start">济宁<br><span>太白楼</span></p>
+        <div style="clear: both;"></div>
+        <span class="up">下车</span><p class="pay_end">济宁<br><span>太白楼</span></p>
+        <span class="pay_line"></span>
+    </div>
+</div>
+<div class="ride_way bc_fff">
+<p class="ride_title c_95">乘坐方式</p>
+    <ul class="ride_list c_333">
+        <li onclick="ride_way(this);"><p>拼座</p><span class="selected"></span><i>¥150</i></li>
+        <li onclick="ride_way(this);"><p>经济型（包车）</p><span></span><i>¥380</i></li>
+        <li onclick="ride_way(this);"><p>商务型（包车）</p><span></span><i>¥600</i></li>
+    </ul>
+</div>
+<div class="pay_way bc_fff">
+<p class="way_title c_95">选择支付方式</p>
+    <ul class="way_list c_333">
+        <li class="wx" onclick="pay_way(this);"><p>微信支付</p><span class="selected"></span></li>
+    </ul>
+</div>
+<div class="ticket bc_fff" onclick="ticket_way(this);">
+    <p class="f_l c_95">需要车票报销</p><span class="f_r"></span>
+</div>
+<div class="pay_bot">
+    <p class="c_333 bc_fff">应付：<span class="c_or all_money">150.00</span>元</p><span class="go_pay bc_or c_fff">去支付</span>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+
+</script>
+
+</html>

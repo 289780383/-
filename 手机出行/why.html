@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--uc强制竖屏-->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>取消用车</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/why.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pay.js"></script>
+
+</head>
+<body class="bc_f5">
+<div class="why_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">取消用车</p><span class="c_333" onclick="miss();">爽约规定</span>
+</div>
+<div class="mask"></div>
+<div class="miss bc_f5">
+
+    <h4>爽约规定</h4>
+    <div class="miss_txt bc_fff c_333">1<br>231<br>231<br>231<br>23</div>
+    <div>
+        <img src="images/close__14.png" class="miss_close" onclick="miss_close();">
+    </div>
+</div>
+<div class="why_main">
+    <p class="why_title c_333">取消用车? 告诉我们原因吧!</p>
+    <div class="words bc_fff"  onclick="pay_way(this);">
+        <p class="words_item bc_f5 c_333">协商达成一致，取消订单<span class="selected"></span></p>
+        <textarea class="c_a" onfocus="words_txt(this);">还有需要补充的? (选填)</textarea>
+    </div>
+    <p class="words_item else bc_f5 c_333" onclick="pay_way(this);">去意已决，我不需要用车了<span></span></p>
+    <p class="words_item else bc_f5 c_333" onclick="pay_way(this);">去意已决，我不需要用车了<span></span></p>
+    <p class="words_item else bc_f5 c_333" onclick="pay_way(this);">去意已决，我不需要用车了<span></span></p>
+    <p class="words_item else bc_f5 c_333" onclick="pay_way(this);">去意已决，我不需要用车了<span></span></p>
+    <a href="javascript:;" class="why_sub bc_or c_fff">提交</a>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    $(".words").css("border","1px solid #fd4e00");
+    function miss() {
+        $(".mask").show();
+        $(".miss").show();
+    }
+    function miss_close() {
+        $(".mask").hide();
+        $(".miss").hide();
+    }
+    function pay_way(obj){
+        $(".why_main span").removeClass("selected");
+        $(obj).find("span").toggleClass("selected",'');
+        $(".complain_item").css("border","");
+        $(".words_item").css("border","");
+        $(".words").css("border","");
+        $(obj).css("border","1px solid #fd4e00");
+    }
+    function words_txt(obj){
+        if($(obj).val().trim()=="还有需要补充的? (选填)"){
+            $(obj).val('');
+        }
+        $(obj).blur(function(){
+            if($(obj).val().trim()==""){
+                $(obj).val("还有需要补充的? (选填)");
+            }
+        })
+    }
+</script>
+
+</html>

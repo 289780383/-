@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我是模板</title>
+    <!--[if lt IE9]> 
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <style type="text/css">
+    	.head{font-size: 0.32rem;text-align: center;line-height: 1rem;background-color: #ccc;width: 100%;}
+    	.center{font-size: 0.24rem;width: 100%;overflow: hidden;}
+    </style>
+</head>
+
+<body>
+    <div class="head">123woshi </div>
+    <div class="center">越来越多的站点开始使用 HTML5 标签，但是目前的情况是还有很多人在使用IE6、IE7、IE8。为了让所有浏览者都可以正常的访问，解决方案有下面两个： 
+
+1.为网站创建多套模板，通过程序对User-Agent的判断为不同的浏览器用户显示不同的页面，例如：优酷网。 
+
+2.使用Javascript来使不支持HTML5的浏览器支持HTML标签。 
+
+针对IE比较好的解决方案是html5shiv。htnl5shiv主要解决HTML5提出的新的元素不被IE6-8识别，这些新元素不能作为父节点包裹子元素，并且不能应用CSS样式。让CSS 样式应用在未知元素上只需执行 document.createElement(elementName) 即可实现。html5shiv就是根据这个原理创建的。 
+
+html5shiv的使用非常的简单，考虑到IE9是支持html5的，所以只需要在页面head中添加如下代码即可： 
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+$(".head").click(function () {
+	msg_show1(123123);
+	alert(doc)
+});
+
+});
+	 
+</script>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>选择车型</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/select_car1_zc.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/select_car1_zc.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top">
+    <img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip">
+    <p>选择车型</p>
+</div>
+
+<div class="pay_msg">
+    <div class="get_car">
+        <span class="car_way">取车</span>
+        <p class="car_time">2016-11-11 <span class="c_or">08:00</span></p>
+        <p class="car_site">德州市 · 德州汽车总站南翼楼金桥国际旅行社</p>
+    </div>
+    <div class="lose_car">
+        <span class="car_way">还车</span>
+        <p class="car_time">2016-11-11 <span class="c_or">08:00</span></p>
+        <p class="car_site">德州市 · 德州汽车总站南翼楼金桥国际旅行社</p>
+    </div>
+</div>
+<div class="result">
+    <div class="result_box">
+        <div class="result_top_warp">
+            <ul class="result_top">
+                <li>全部</li>
+            </ul>
+        </div>
+    </div>
+    <ul class="result_list">
+        <li class="result_item">
+                <img src="images/zu_05.jpg" class="car_img">
+                <p class="car_type">宝马740i<br><span>空调，wifi等车内设施</span></p>
+                <p class="car_price">日租价<br><span><i>123.0</i>元</span></p>
+        </li>
+        <li class="result_item">
+                <img src="images/zu_05.jpg" class="car_img">
+                <p class="car_type">宝马740i<br><span>空调，wifi等车内设施</span></p>
+                <p class="car_price">日租价<br><span><i>101.0</i>元</span></p>
+        </li>
+        <li class="result_item">
+                <img src="images/zu_05.jpg" class="car_img">
+                <p class="car_type">宝马740i<br><span>空调，wifi等车内设施</span></p>
+                <p class="car_price">日租价<br><span><i>108.0</i>元</span></p>
+        </li>
+        <li class="result_item">
+                <img src="images/zu_05.jpg" class="car_img">
+                <p class="car_type">宝马740i<br><span>空调，wifi等车内设施</span></p>
+                <p class="car_price">日租价<br><span><i>115.0</i>元</span></p>
+        </li>
+        <li class="result_item">
+                <img src="images/zu_05.jpg" class="car_img">
+                <p class="car_type">宝马740i<br><span>空调，wifi等车内设施</span></p>
+                <p class="car_price">日租价<br><span><i>121.0</i>元</span></p>
+        </li>
+        <li class="result_item">
+                <img src="images/zu_05.jpg" class="car_img">
+                <p class="car_type">宝马740i<br><span>空调，wifi等车内设施</span></p>
+                <p class="car_price">日租价<br><span><i>130.0</i>元</span></p>
+        </li>
+        <li class="result_item">
+                <img src="images/zu_05.jpg" class="car_img">
+                <p class="car_type">宝马740i<br><span>空调，wifi等车内设施</span></p>
+                <p class="car_price">日租价<br><span><i>110.0</i>元</span></p>
+        </li>
+    </ul>
+</div>
+<div class="select_footer">
+    <p class="car_sort">价格由低到高<i></i></p>
+    <p class="car_filter">车型筛选</p>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+
+</script>
+
+</html>

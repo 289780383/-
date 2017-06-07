@@ -1,0 +1,21 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+/**banner*/
+.banner{overflow: hidden;padding-top:0.88rem;}
+.banner img{width: 7.5rem;display: block;}
+.banner_bot_line{width: 7.5rem;height: 0.14rem;background-color: #f0f0f0;display: block;}
+/**oil_list*/
+.oil_list{width:7.2rem;overflow: hidden;margin: 0 auto 1.1rem;}
+.oil_list li{width:3.4rem;height: 1.7rem;background-color: #ec584e;border-radius: 0.1rem;position: relative;float: left;margin: 0.1rem;}
+.oil_list li p{font-size: 0.26rem;line-height: 0.66rem;color: #fff;background: url("../../../images/drv/v1/oi_ico_03.gif") no-repeat 0.2rem center;background-size:0.34rem;padding-left: 0.64rem;}
+.oil_list li span{display:block;font-size: 0.5rem;line-height: 0.84rem;color: #fff;text-align: center;}
+.oil_list li i{display:block;width: 0.44rem;height: 0.5rem;position: absolute;right: 0.16rem;top: 0.6rem;background: url("../../../images/drv/v1/jy_05.jpg") no-repeat left top; background-size:0.44rem;}
+.oil_list li .sel_i{background: url("../../../images/drv/v1/jy_05.jpg") no-repeat left bottom; background-size:0.44rem;}
+/**footer*/
+.oil_footer{position: fixed;width: 7.5rem;bottom: 0;}
+.oil_footer div{width: 3.75rem;float: left;line-height:1.1rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
+.oil_footer .oil_btn{border-top: 1px solid #ec584e;background-color: #ec584e;font-size: 0.3rem;text-align: center;color: #fff;}
+.oil_footer div p{float:left;font-size:0.3rem;margin-left: 0.3rem;}
+.oil_footer div i{display:block;float:left;font-size:0.26rem;color: #ec584e;}
+.oil_footer div span{display:block;float:left;font-size:0.34rem;color: #ec584e;}

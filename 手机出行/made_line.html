@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>定制线路</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/made_line.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script type="text/javascript" src="js/local_city_dz.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/start_end_dz.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">定制线路</p>
+</div>
+<div class="main">
+    <div class="main_top">
+        <p>定制班线，专座直达</p>
+        <span>填写乘车需求，我们会为您开通定制班车！</span>
+        <i onclick="process_dz();">了解定制班车及流程></i>
+    </div>
+<div class="main_msg">
+    <div class="main_point">
+        <input type="text" class="start_point" placeholder="去程地址" readonly="readonly" onclick="start_station();">
+        <input type="text" class="end_point" placeholder="回程地址" readonly="readonly" onclick="end_station();">
+    </div>
+    <div class="main_time">
+        <input type="text" class="start_time" onclick="get_time(this);" readonly="readonly" placeholder="去程时间">
+        <input type="text" class="end_time" onclick="get_time(this);" readonly="readonly" placeholder="回程时间">
+    </div>
+    <p class="main_ts">填写准确信息，线路开通的更及时！</p>
+</div>
+    <a class="main_btn" onclick="submit_btn();">提交信息</a>
+</div>
+<!--确定时间-->
+<div class="mask"></div>
+<div class="getTime  bc_f5">
+    <div class="bot_title bc_f5 c_333">
+        <span class="cancel" onclick="cancel_btn();">取消</span>
+        <p class="bot_msg">请选择去程时间</p>
+        <span class="sure" onclick="sure_btn();">确定</span>
+    </div>
+    <ul class="time_type">
+        <li class="sel_hour">04--08</li>
+        <li>08--12</li>
+        <li>12--16</li>
+        <li>16--20</li>
+    </ul>
+        <div class="time_warp bc_fff">
+            <ul class="time_show">
+                <li class="sel_time">04:00</li>
+                <li>04:30</li>
+                <li>05:00</li>
+                <li>05:30</li>
+                <li>06:00</li>
+                <li>06:30</li>
+                <li>07:00</li>
+                <li>07:30</li>
+            </ul>
+    </div>
+</div>
+
+<!--选择城市列表-->
+<div class="city_select bc_fff">
+    <div id='container'></div>
+    <div id="tip"></div>
+    <div id="mapContainer"></div>
+    <div class="city_top bc_fff">
+        <span class="city_fh c_or" onclick="city_fh();">取消</span>
+        <span class="city_sel" onclick="city_sel(this);"></span>
+        <input type="text" class="city_pin" placeholder="输入城市中文名称或拼音">
+        <input type="text" class="city_title c_333" id="keyword" name="keyword" placeholder="您从哪上车"/>
+    </div>
+    <ul class="city_nav">
+        <li>Q</li>
+    </ul>
+    <div class="city_main">
+        <p class="local_city" onclick="local_city(this);">当前城市:<span class="c_or">烟台市</span></p>
+        <ul class="city_list">
+            <li class="c_a">
+                <span>Q</span>
+                <p>请先选择出发城市</p>
+            </li>
+        </ul>
+    </div>
+    <div id="panel"></div>
+    </div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    function submit_btn(){
+        var start_point=$(".start_point").val().trim();
+        var end_point=$(".end_point").val().trim();
+        var start_time=$(".start_time").val().trim();
+        var end_time=$(".end_time").val().trim();
+        if(start_point!=end_point!=""&&start_time!=end_time!=""){
+            window.open("made_line_success.html","_self","");
+        }
+    }
+    function process_dz(){
+        window.open("process_dz.html","_self","");
+    }
+</script>
+
+</html>

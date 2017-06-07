@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>约租车</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/car_rental_list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a&plugin=AMap.Driving"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/car_rental_list.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=7,chrome=1"/>
+    <![endif]-->
+
+</head>
+<body class="bc_f0">
+<header class="bc_f0 c_36 ">
+    <div class="header_inner clearfix">
+        <h2>欢迎来到交运出行服务网</h2>
+        <ul class="header_right">
+            <li><span>登录</span> | <span>注册</span></li>
+            <li><span>会员中心</span> | <span class="wx">微信公众号<div class="wx_box"><p>微信搜索“<span
+                    class="c_or">滨州交运集团</span>”<br>或者扫描右侧二维码关注。<br><br>即刻参与优惠等您！</p></div></span></li>
+        </ul>
+    </div>
+</header>
+<nav class="bc_ff c_36">
+    <div class="nav_inner clearfix">
+        <div class="nav_left">
+            <h1>交运出行服务</h1>
+            <h2>滨州交运集团官方出行服务平台</h2>
+        </div>
+        <p class="nav_tel c_or">0546-7095666</p>
+        <ul class="nav_nav c_7c">
+            <li>首页</li>
+            <li>汽车票</li>
+            <li class="nav_active">约租车</li>
+            <li>定制班线</li>
+            <li>景区直达</li>
+            <li>新闻中心</li>
+        </ul>
+
+    </div>
+</nav>
+<div class="banner">
+    <div class="banner_inner clearfix">
+        <h5 class="banner_title c_ff">交运，给您不一样的服务</h5>
+    </div>
+</div>
+
+
+<section class="main bc_f0">
+    <div class="main_inner clearfix">
+        <div class="main_search clearfix">
+            <form class="banner_table">
+                <p class="yzc_type">
+                    <span>拼车</span>
+                    <span>包车</span>
+                    <span>租车</span>
+                </p>
+                <i class="bg_i"></i>
+                <div class="pin_car">
+                    <section class="pin_car_item">
+                        <p class="city_sel_go">滨州</p>
+                        <input type="text" value="您从哪上车" class="pin_start">
+                        <input type="text" value="您从哪上车" id="pin_start_b" onfocus='city_(this);' class="pin_start_b" style="display: none;">
+                    </section>
+                    <section class="pin_car_item">
+                        <p class="city_sel_to">滨州</p>
+                        <input type="text" value="您从哪下车" class="pin_end">
+                        <input type="text" value="您从哪下车" id="pin_end_b" onfocus='city_2(this);' class="pin_end_b" style="display: none;">
+                    </section>
+                    <input type="text" value="约定时间" class="banner_time end-li startDay">
+                    <input type="text" value="约定时间" class="banner_time text-box" style="display: none;">
+            <span class="peo_warp">
+            <img src="images/jian_01.png" onclick="peo_jian();" class="jian">
+            <i class="pin_peo">1人</i>
+            <img src="images/add_01.png" onclick="peo_add();" class="add">
+            </span>
+                    <a href="javascript:;" class="search_pin_bao search_pin">查询</a>
+                    <a href="javascript:;" class="search_pin_bao search_bao" style="display: none;">查询</a>
+                    <!--出发站-->
+                    <ul class="yzc_c_list">
+                        <li class="yzc_p_title">请选择城市</li>
+                        <li class="yzc_p_item">无棣</li>
+                        <li class="yzc_p_item">阳信</li>
+                        <li class="yzc_p_item">惠民</li>
+                    </ul>
+                    <!--出发站-->
+                    <ul class="yzc_e_list">
+                        <li class="yzc_p_title">请选择城市</li>
+                        <li class="yzc_p_item">无棣</li>
+                        <li class="yzc_p_item">阳信</li>
+                        <li class="yzc_p_item">惠民</li>
+                    </ul>
+                    <!--乘车点-->
+                    <ul class="yzc_d_list">
+                        <li class="yzc_p_title">请输入乘车地点</li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                    <ul class="yzc_f_list">
+                        <li class="yzc_p_title">请输入乘车地点</li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+
+                </div>
+                <div class="zu_car">
+                    <section class="pin_car_item">
+                        <p class="city_zl_go">滨州</p>
+                        <input type="text" value="您从哪取车" class="pin_start_zr">
+                    </section>
+                    <section class="pin_car_item">
+                        <p class="city_zl_to">滨州</p>
+                        <input type="text" value="您从哪还车" class="pin_end_zr">
+                    </section>
+                    <input type="text" value="取车时间" class="banner_time end-li startDay">
+                    <input type="text" value="还车时间" class="banner_time zu_time end-li startDay">
+                    <a href="javascript:;" class="search_btn_zu">查询</a>
+                    <!--出发站-->
+                    <ul class="yzc_z1l_list">
+                        <li class="yzc_p_title">请选择城市</li>
+                        <li class="yzc_p_item">无棣</li>
+                        <li class="yzc_p_item">阳信</li>
+                        <li class="yzc_p_item">惠民</li>
+                    </ul>
+                    <!--出发站-->
+                    <ul class="yzc_z2l_list">
+                        <li class="yzc_p_title">请选择城市</li>
+                        <li class="yzc_p_item">无棣</li>
+                        <li class="yzc_p_item">阳信</li>
+                        <li class="yzc_p_item">惠民</li>
+                    </ul>
+                    <!--乘车点-->
+                    <ul class="yzc_z1r_list">
+                        <li class="yzc_p_title">请输入乘车地点</li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                    <ul class="yzc_z2r_list">
+                        <li class="yzc_p_title">请输入乘车地点</li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                </div>
+            </form>
+
+        </div>
+        <div class="main_result">
+            <!--拼车-->
+            <section class="result_left" style="display:none;">
+                <div class="result_top">
+                    <p class="result_title">等待拼车</p>
+                    <ul class="result_date">
+                    </ul>
+                </div>
+                <div class="result1">
+                    <p class="result1_title">期待与您一起出发。。。</p>
+                    <ul class="result1_main">
+                        <li class="result1_item">
+                            <span class="trip_time">09:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">120.0</span>元</p>
+                                <p class="trip_seat">余座 : <span>2</span></p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                        <li class="result1_item">
+                            <span class="trip_time">09:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">120.0</span>元</p>
+                                <p class="trip_seat">余座 : <span>2</span></p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                        <li class="result1_item">
+                            <span class="trip_time">09:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">120.0</span>元</p>
+                                <p class="trip_seat">余座 : <span>2</span></p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                    </ul>
+                </div>
+                <div class="result2">
+                    <p class="result1_title">期待为您提供服务。。。</p>
+                    <ul class="result1_main">
+                        <li class="result1_item">
+                            <span class="trip_time">09:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">120.0</span>元</p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                        <li class="result1_item">
+                            <span class="trip_time">09:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">120.0</span>元</p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                        <li class="result1_item">
+                            <span class="trip_time">09:00</span>
+                            <section class="trip_line">
+                                <p class="start_city">滨州</p>
+                                <p class="pass_city">途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、途径点1、</p>
+                                <p class="end_city">青岛</p>
+                            </section>
+                            <section class="trip_other">
+                                <p class="trip_money"><span class="c_or">120.0</span>元</p>
+                            </section>
+                            <section class="sao">
+                                <p>点击扫码<br>一键约车</p>
+                            </section>
+                        </li>
+                    </ul>
+                </div>
+                <p class="main_more">加载更多···</p>
+            </section>
+            <!--包车-->
+            <section class="result_left" style="display:block;">
+                <div class="show_top">
+                    <p class="show_title">推荐车型(2016-15-11 08:00出发)</p>
+                    <ul class="show_type">
+                        <li class="sel_show_type">全部</li>
+                        <li>普通</li>
+                        <li>高级</li>
+                        <li>商务</li>
+                        <li>中巴</li>
+                        <li>大客</li>
+                    </ul>
+                </div>
+                <ul class="bc_list">
+                    <li class="bc_item clearfix">
+                        <section class="bc_type">
+                            <img src="images/bc_03.jpg" class="bc_img">
+                            <p class="bc_num">标致308S五座</p>
+                        </section>
+                        <section class="bc_right">
+                            <div class="bc_r_bot">
+                                <p class="bc_start">滨州·滨州市人民政府</p>
+                                <p class="bc_end">济南·山东省人大常委会</p>
+                                <span class="bc_money">起步价：<i>120.0</i>元</span>
+                                <span class="bc_money1">里程费用：<i>120.0</i>元</span>
+                                <span class="bc_money2">总金额：<i>120.0</i>元</span>
+                            </div>
+
+                            <div class="bc_r_top clearfix">
+                                <ul class="dan_or">
+                                   <li><p class="dan_l">单程：50km x 6元/km</p><p  class="dan_r"><span class="sel_dan2">300.0</span>元</p></li>
+                                   <li><p class="dan_l">往返：100km x 6元/km</p><p  class="dan_r"><span>600.0</span>元</p></li>
+                                </ul>
+                                <section class="sao">
+                                    <p>点击扫码<br>快人一步</p>
+                                </section>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="bc_item clearfix">
+                        <section class="bc_type">
+                            <img src="images/bc_03.jpg" class="bc_img">
+                            <p class="bc_num">标致308S五座</p>
+                        </section>
+                        <section class="bc_right">
+                            <div class="bc_r_bot">
+                                <p class="bc_start">滨州·滨州市人民政府</p>
+                                <p class="bc_end">济南·山东省人大常委会</p>
+                                <span class="bc_money">起步价：<i>120.0</i>元</span>
+                                <span class="bc_money1">里程费用：<i>120.0</i>元</span>
+                                <span class="bc_money2">总金额：<i>120.0</i>元</span>
+                            </div>
+
+                            <div class="bc_r_top clearfix">
+                                <ul class="dan_or">
+                                   <li><p class="dan_l">单程：50km x 6元/km</p><p  class="dan_r"><span class="sel_dan2">300.0</span>元</p></li>
+                                   <li><p class="dan_l">往返：100km x 6元/km</p><p  class="dan_r"><span>600.0</span>元</p></li>
+                                </ul>
+                                <section class="sao">
+                                    <p>点击扫码<br>快人一步</p>
+                                </section>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+                <p class="main_more">加载更多···</p>
+            </section>
+            <!--租车-->
+            <section class="result_left" style="display:none;">
+                <div class="show_top">
+                    <p class="show_title">推荐车型</p>
+                    <ul class="show_type">
+                        <li class="sel_show_type">全部</li>
+                        <li>普通</li>
+                        <li>高级</li>
+                        <li>商务</li>
+                        <li>中巴</li>
+                        <li>大客</li>
+                    </ul>
+                </div>
+                <ul class="zu_list">
+                    <li class="zu_item">
+                        <img src="images/zc_03.jpg" class="zu_img">
+                        <p class="zu_car_type">
+                            <span class="car_name">标致308S</span>
+                            <span class="car_parameter">自动1.6T | 三厢 | 五座</span>
+                        </p>
+                        <section class="trip_other">
+                            <p class="trip_money">日均价<br><span class="c_or">120.0</span>元</p>
+                        </section>
+                        <section class="sao">
+                            <p>点击扫码<br>快人一步</p>
+                        </section>
+
+                    </li>
+                    <li class="zu_item">
+                        <img src="images/zc_03.jpg" class="zu_img">
+                        <p class="zu_car_type">
+                            <span class="car_name">标致308S</span>
+                            <span class="car_parameter">自动1.6T | 三厢 | 五座</span>
+                        </p>
+                        <section class="trip_other">
+                            <p class="trip_money">日均价<br><span class="c_or">120.0</span>元</p>
+                        </section>
+                        <section class="sao">
+                            <p>点击扫码<br>快人一步</p>
+                        </section>
+
+                    </li>
+                    <li class="zu_item">
+                        <img src="images/zc_03.jpg" class="zu_img">
+                        <p class="zu_car_type">
+                            <span class="car_name">标致308S</span>
+                            <span class="car_parameter">自动1.6T | 三厢 | 五座</span>
+                        </p>
+                        <section class="trip_other">
+                            <p class="trip_money">日均价<br><span class="c_or">120.0</span>元</p>
+                        </section>
+                        <section class="sao">
+                            <p>点击扫码<br>快人一步</p>
+                        </section>
+
+                    </li>
+                    <li class="zu_item">
+                        <img src="images/zc_03.jpg" class="zu_img">
+                        <p class="zu_car_type">
+                            <span class="car_name">标致308S</span>
+                            <span class="car_parameter">自动1.6T | 三厢 | 五座</span>
+                        </p>
+                        <section class="trip_other">
+                            <p class="trip_money">日均价<br><span class="c_or">120.0</span>元</p>
+                        </section>
+                        <section class="sao">
+                            <p>点击扫码<br>快人一步</p>
+                        </section>
+                    </li>
+                </ul>
+                <p class="main_more">加载更多···</p>
+            </section>
+            <section class="result_right">
+                <img src="images/yzc_2wm_03.jpg">
+                <p class="gzh_txt">关注公众号，一起约车吧！</p>
+                <img src="images/yzc_2wm_03.jpg">
+                <p class="app_txt">下载APP，约车更便捷！</p>
+            </section>
+        </div>
+    </div>
+</section>
+<section class="help bc_ff clearfix">
+    <ul class="help_inner">
+        <li class="help1">
+            <span>如何购票</span>
+            <p>新手指南</p>
+            <p>注册流程</p>
+            <p>购票流程</p>
+        </li>
+        <li class="help2">
+            <span>如何支付</span>
+            <p>支付宝支付流程</p>
+            <p>微信支付流程</p>
+            <p>银联支付流程</p>
+        </li>
+        <li class="help3">
+            <span>如何取票</span>
+            <p>自助机取票</p>
+            <p>售票窗口取票</p>
+        </li>
+        <li class="help4">
+            <span>如何退票</span>
+            <p>网上退票</p>
+            <p>窗口退票</p>
+            <p>服务台退票</p>
+        </li>
+        <li class="help5">
+            <span>如何验票</span>
+            <p>纸质客票验票</p>
+            <p>电子客票验票</p>
+        </li>
+        <li class="help6">
+            <span>如何乘车</span>
+            <p>检票口验票乘车</p>
+        </li>
+    </ul>
+</section>
+<footer class="bc_5e clearfix">
+    <ul class="footer_inner">
+        <li>
+            <span>联系与合作</span>
+            <p>联系我们</p>
+            <p>用户反馈</p>
+            <p>关于我们</p>
+            <p>网站地图</p>
+        </li>
+        <li>
+            <span>友情链接</span>
+            <p>中华人民共和国交通运输部</p>
+            <p>山东省交通厅</p>
+            <p>山东省道路运输管理局</p>
+            <p>山东省道路运输协会</p>
+            <p>滨州市交通局</p>
+        </li>
+        <li class="footer_last">
+            <span>关注我们</span>
+            <p>新浪微博：@滨州交运集团</p>
+            <p>官方QQ：188356956</p>
+            <p>客服热线：0546-7095666</p>
+            <p>客服邮箱：service@jiaoyun.com</p>
+            <p>官方微信：<img src="images/2wm.png"></p>
+        </li>
+    </ul>
+</footer>
+<div class="copy bc_00 clearfix">
+    <div class="copy_inner">
+        <p>Copyright©2016-2017交运出行www.jiaoyunchuxing.com</p>
+        <p>版权所有：山东省滨州交运集团 备案序号：鲁ICP备2433435号-1</p>
+        <span class="police">鲁公网安备 370703234543534号</span>
+    </div>
+    <div class="copy_pic">
+        <img src="images/pic_98.jpg">
+        <img src="images/pic_100.jpg">
+        <img src="images/pic_102.jpg" class="c_p_last">
+    </div>
+</div>
+</body>
+</html>

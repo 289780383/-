@@ -1,0 +1,17 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;background-color:#f6f6f6;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+.sel_type{position: fixed;top: 1rem;z-index:8;width: 7.48rem;margin: 0 auto;background-color: #fff;}
+.sel_type li{float: left;width: 1.87rem;border-bottom:1px solid #c7c7c7;text-align: center;color:#363636;line-height: 0.96rem;font-size: 0.28rem;}
+.sel_type .sel_li{color: #ff4f00;border-bottom: 1px solid #ff4f00;}
+.filter_list{padding: 2rem 0 2.8rem;}
+.filter_list li{border-bottom: 1px solid #c7c7c7;color: #363636;position:relative;padding-left: 0.5rem;background-color: #fff;}
+.filter_list li p{font-size:0.28rem;line-height: 0.8rem;width: 6rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.filter_list li i{display: block;width:0.32rem;height: 0.24rem;background: url("../images/good_04.png") no-repeat left top;background-size: 0.3rem;position: absolute;top: 0.3rem;right: 0.5rem;}
+.filter_list .filter_li{color: #ff4f00;}
+
+/*footer*/
+.footer{position: fixed;bottom: 0;width: 7.5rem;margin: 0 auto;background-color: #f5f5f5;}
+.footer_btn{width: 5.7rem;line-height: 0.8rem;font-size:0.3rem;display:block;background-color: #ff4f00;color: #fff;text-align: center;border-radius: 0.02rem;margin: 0.6rem auto;}

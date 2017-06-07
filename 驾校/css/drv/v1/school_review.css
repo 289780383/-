@@ -1,0 +1,27 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color: #24b4ff;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.28rem;}
+header .head_btn{display:block;font-size:0.3rem;line-height:0.86rem;color:#fff;padding:0 0.24rem;position: absolute;right:0;top: 0;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+/**review_star*/
+.review_star{padding: 1.08rem 0.24rem 0.3rem;border-top: 1px solid #fff;border-bottom: 1px solid #e5e5e5;background-color: #fff;}
+.review_item{overflow: hidden;}
+.review_item .review_type{font-size: 0.28rem;line-height: 0.76rem;width:1.44rem;text-align:left;color: #333;float: left;}
+.review_item .star_group{float: left;overflow: hidden;}
+.review_item .star_group li{float: left;width: 0.55rem;height: 0.55rem;padding:0.1rem 0.04rem;background:url("../../../images/drv/v1/star_bg2.gif") no-repeat center;background-size: 0.55rem;}
+.review_item .star_group .sel_star{background:url("../../../images/drv/v1/star_bg1.gif") no-repeat center;background-size: 0.55rem;}
+.review_item .star_text{font-size: 0.28rem;line-height: 0.76rem;color: #555;float: left;padding-left: 0.2rem;}
+.review_text{overflow: hidden;padding-bottom: 0.3rem;background-color: #fff;position: relative;border-bottom: 1px solid #e5e5e5;margin-bottom: 0.18rem;}
+.text_main{padding:0.24rem 0.18rem 0 0.24rem;height: 2rem;font-size: 0.26rem;width:7.01rem;margin:0;border:none;resize:none;outline:none;line-height:0.38rem;color: #777;}
+.photo_group{padding:0 0.15rem;overflow: hidden;}
+.photo_group img{display: block;width:1rem;height: 1rem;margin: 0.1rem;float:left;}
+.photo_btn{width: 0.68rem;height: 0.68rem;background: url("../../../images/drv/v1/photo_btn.gif") no-repeat center; background-size: 0.44rem;border: 1px solid #e5e5e5;margin-left: 0.3rem;}
+.text_num{font-size: 0.26rem;line-height: 1.04rem;color: #777;position: absolute;bottom: 0;right: 0.26rem;}
+.review_money{background-color: #fff;}
+.review_money li{border-bottom: 1px solid #e5e5e5;overflow: hidden;padding: 0 0.38rem 0 0.24rem;}
+.review_money p{font-size: 0.3rem;color: #333;line-height: 1rem;}
+.review_money .subject{background: url("../../../images/drv/v1/l_xsj.gif") no-repeat 6.9rem center;background-size: 0.28rem;}
+.anonymous {padding:0.1rem 0;overflow: hidden;}
+.anonymous i{display:block;float:left;margin:0.16rem 0.18rem 0 0.24rem;width:0.32rem;height: 0.32rem;background: url("../../../images/drv/v1/select_17.png") no-repeat left center;background-size:0.65rem;}
+.anonymous .sel_sure{background: url("../../../images/drv/v1/select_17.png") no-repeat right center;background-size:0.65rem;}
+.anonymous p{font-size: 0.26rem;color: #333;line-height:0.66rem;float: left;}
+.anonymous span{font-size: 0.26rem;color: #777;line-height:0.66rem;float: left;margin-left: 0.14rem;}

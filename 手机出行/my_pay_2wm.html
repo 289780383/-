@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我的付款码</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/my_pay_2wm.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">我的付款码</p>
+</div>
+<p class="pay_title">我的专属付款码</p>
+<div class="pay_2wm_main">
+<img src="images/2wm_03.png" class="pay_2wm_img">
+    <p class="pay_2wm_msg1">扫码付款乘车</p>
+    <p class="pay_2wm_msg2">乘车方便更快捷，资金安全有保障！<i class="y1"></i><i class="y2"></i></p>
+</div>
+<p class="new_2wm" onclick="new_2wm(this);"><img src="images/gx_03.png" class="new_2wm_img">更新付款码</p>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    /**点击更新乘车码*/
+    function new_2wm(obj){
+        $(obj).find(".new_2wm_img").addClass("zhuan");//返回数据就移除class
+    }
+</script>
+
+</html>

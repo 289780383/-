@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--uc强制竖屏-->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我要投诉</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/complain.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+</head>
+<body class="bc_fff">
+<div class="complain_top bc_f5">
+    <p class="c_333">我要投诉</p><img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+</div>
+<p class="complain_title c_333">我们有哪些服务不到位的，来吐槽吧！</p>
+<ul class="complain_list">
+    <li class="complain_item c_333" onclick="pay_way(this);">派单太慢<span></span></li>
+    <li class="complain_item c_333" onclick="pay_way(this);">支付不爽<span></span></li>
+    <li class="complain_item c_333" onclick="pay_way(this);">司机态度不好<span></span></li>
+    <li class="complain_item c_333" onclick="pay_way(this);">车况太差<span></span></li>
+    <li class="complain_item c_333" onclick="pay_way(this);">车内不能充电<span></span></li>
+    </ul>
+<textarea class="complain_txt c_a" onclick="complain_txt(this);">补充投诉内容 (选填)</textarea>
+<a href="###" class="complain_btn bc_or c_fff" onclick="complain_btn();">提交</a>
+<div class="mask"></div>
+<div class="thanks bc_fff">
+    <img class="thanks_img" src="images/good_06.png">
+    <p class="thanks_txt c_333">感谢您的支持！<br>我们已接到您的投诉！</p>
+    <a class="thanks_btn bc_or c_fff" onclick="thanks_btn();">好</a>
+</div>
+
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    function complain_btn(){
+        $(".thanks").show();
+        $(".mask").show();
+    }
+    function thanks_btn(){
+        $(".thanks").hide();
+        $(".mask").hide();
+    }
+    function pay_way(obj){
+        $(obj).find("span").toggleClass("selected",'');
+    }
+function complain_txt(obj){
+    if($(obj).val()=="补充投诉内容 (选填)"){
+        $(obj).val('');
+    }
+    $(obj).blur(function(){
+        if($(obj).val().trim()==""){
+            $(obj).val("补充投诉内容 (选填)");
+        }
+    });
+}
+</script>
+</html>

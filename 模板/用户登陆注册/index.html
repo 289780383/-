@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>直通车</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="the_header">
+        <img src="images/menu_1.png" onclick="user_login(this);" class="header_left">
+        <p>直通车</p>
+        <img src="images/sao_1.png" class="header_right">
+    </div>
+
+    <!--登陆那套-->
+    <!--登录前手机验证-->
+    <div class="mask"></div>
+    <div class="login bc_f7">
+        <div class="login_top bc_f0"><span class="c_333">登录</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <form class="login_form">
+            <input type="tel" class="login_tel c_a" onclick="login_tel(this);" onblur="login_blur(this);" maxlength="13" value="请输入手机号">
+            <p class="c_fff bg_0">手机号码输入有误</p>
+            <button type="button" class="login_btn c_fff bc_a" onclick="tel_false('.login_form');" disabled>下一步</button>
+        </form>
+    </div>
+    <!--发送验证码-->
+    <div class="login_yan bc_f7">
+        <div class="login_top bc_f0"><img class="fh" src="images/fh_03.png" onclick="fanhui(this);"><span class="c_333">输入验证码</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <p class="c_fff bg_0">验证码输入有误</p>
+        <form class="yzmWarp">
+            <span class="yan_tel c_a">170 0050 2223</span>
+            <button class="yan_btn c_a" onclick="send_yan(this);" disabled>90秒后重发</button>
+            <div class="clearfix"></div>
+            <input type="number" class="yzm">
+            <input type="number" class="yzm">
+            <input type="number" class="yzm">
+            <input type="number" class="yzm">
+        </form>
+    </div>
+    <!--设置登录密码-->
+    <div class="set_pass bc_f7">
+        <div class="login_top bc_f0"><span class="c_333">设置登录密码</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <form class="login_form">
+            <input type="password" class="set_pw c_a" onclick="set_pass(this);" maxlength="16" min="6"><span class="pass_num c_a" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+            <input type="text" class="set_pw2 c_a" onclick="set_pass(this);" maxlength="16" min="6" value="请输入6-16位密码">
+            <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+            <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+            <span class="pass_msg c_a">设置密码可保障资金安全，密码为后续登陆凭证，请务必牢记</span>
+            <button type="button" class="pass_btn c_fff bc_a" onclick="set_mm();" disabled>确定</button>
+        </form>
+    </div>
+    <!--我要登录-->
+    <div class="login_now bc_f7">
+        <div class="login_top bc_f0"><span class="c_333">登录</span><img class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+        <form class="login_form">
+            <input type="tel" class="login_tel c_a" onblur="login_blur(this);" onclick="login_tel(this);" maxlength="13" value="请输入手机号">
+            <input type="password" class="set_pw c_a" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16" min="6"><span class="pass_num c_a" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+            <input type="text" class="set_pw2 c_a" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16" min="6">
+            <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+            <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+            <button type="button" class="pass_btn c_fff bc_a" onclick="login_now();" disabled>登录</button>
+            <span class="forget c_a" onclick="forget();">忘记密码</span>
+        </form>
+    </div>
+    <!--我的设置-->
+    <div class="my_home bc_fff">
+        <div class="my_top">
+            <img src="images/index_03.png"><span>170****5555</span>
+        </div>
+        <ul class="my_list">
+            <li class="my_trip"><a href="my_trip.html">行程</a></li>
+            <li class="my_setting"><a href="setting.html">设置</a></li>
+        </ul>
+    </div>
+    <!--我的未完成-->
+    <div class="my_wwc" onclick="my_wwc();">
+        <img src="images/wwc_03.png" class="wwc_pic"><span class="wwc_badge"></span>
+    </div>
+</body>
+
+</html>

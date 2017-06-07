@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>技能鉴定-报名</title>
+<!--[if lt IE9]> 
+<script src="js/drv/v1/html5shiv.js"></script>
+<![endif]-->
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/education_jnjd.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/education_jnjd.js"></script>
+</head>
+<body>
+<header>
+    <img src="images/drv/v1/fh.gif" onclick="history.go(-1)" class="head_fh">
+    <p>技能鉴定报名</p>
+</header>
+<div class="student_info">
+    <div class="student_xl" data-type="1"><p>工种</p><span class="the_job_type">请选择工种</span></div>
+    <div class="student_xl" data-type="2"><p>原等级</p><span class="the_old_level">请选择原等级</span></div>
+    <div class="student_item"><p>申报等级</p><span class="the_new_level"></span></div>
+    <div class="student_item"><p>价格</p><span class="the_price"></span></div>
+    <div class="student_item"><p>申报说明</p><i>技师、高级技师只收教材费及培训费，鉴定费用由市鉴定中心收取</i></div>
+    <div>
+        <label for="student_name" class="student_n">申报人</label>
+        <input type="text" id="student_name" placeholder="输入您的姓名">
+    </div>
+    <div class="student_sex">
+        <p><i></i><span>男</span></p>
+        <p><i></i><span>女</span></p>
+    </div>
+    <div class="student_item"><p>身份证号码</p><input type="tel" class="student_id" placeholder ="输入身份证号"></div>
+    <div class="student_item"><p>联系电话</p><input type="tel" class="student_tel" placeholder ="输入电话号码"></div>
+    <div class="student_item"><p>年龄</p><input type="number" min="1" class="student_age" placeholder ="输入年龄"></div>
+    <div class="student_item"><p>工作单位</p><input type="tel" class="student_job" placeholder ="输入工作单位"></div>
+</div>
+<div class="btn_warp">
+	<p class="submit_btn">提交</p>
+</div>
+<ul class="xl_box" data-type="1">
+    <li><p>汽车驾驶员</p><span></span></li>
+    <li><p>汽车修理工</p><span></span></li>
+</ul>
+</body>
+
+</html>

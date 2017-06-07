@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>钱包充值</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/my_wallet_recharge.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top bc_f5">
+    <img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">充值</p>
+
+</div>
+<div class="recharge_main">
+    <div class="recharge_num"><span>充值金额</span><input type="number" value="120" class="recharge_money" maxlength="12">
+    </div>
+    <ul class="recharge_way">
+        <li class="way_zfb"><span>支付宝</span><i class="select_sel"></i></li>
+        <li><span>微信支付</span><i class="select_sel"></i></li>
+    </ul>
+</div>
+<a href="javascript:;" class="pay_btn" onclick="recharge();">充值</a>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    /**点击充值*/
+    function recharge() {
+        if($(".recharge_money").val()!=""){
+            /**支付事件*/
+            window.open("my_wallet_recharge_or.html","_self","");
+        }
+
+    }
+    /**x选择支付方式*/
+    function recharge_way() {
+        $(".select_sel").removeClass("select_select");
+        $(this).find(".select_sel").addClass("select_select");
+    }
+    $(function () {
+        /**初始化支付方式*/
+        $(".way_zfb i").addClass("select_select");
+        /**x选择支付方式*/
+        $(".recharge_way li").on("click", recharge_way);
+        /**初始化按钮金额*/
+        $(".pay_btn").text("充值(" + $('.recharge_money').val() + "元)");
+        /**监听input的变化*/
+        $('.recharge_money').bind('input propertychange', function () {
+            var money = "(" + $('.recharge_money').val() + "元)" + "";
+            if ($('.recharge_money').val().indexOf(".")) {
+                var  m=$('.recharge_money').val().replace('.', '');
+                $('.recharge_money').val(m);
+                money= "(" + m + "元)" + "";
+            }
+            if ($('.recharge_money').val() == "") {
+                money = "";
+            }
+            $(".pay_btn").text("充值" + money + "");
+        });
+    })
+</script>
+
+</html>

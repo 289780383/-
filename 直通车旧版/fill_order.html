@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>填写订单</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/fill_order.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fill_order.js"></script>
+</head>
+
+<body class="bc_f5">
+    <div class="pay_top">
+        <img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip">
+        <p>填写订单</p>
+    </div>
+    <div class="pay_msg">
+        <div class="msg_top">
+            <p class="line_name f_l">鱼台-济宁</p>
+            <p class="pay_time f_r">2017-03-24<span class="c_or">80:00</span></p>
+        </div>
+        <div class="msg_mid">
+            <p class="pay_start over_ellipsis">汉府大酒店</p>
+            <div style="clear: both;"></div>
+            <p class="pay_end over_ellipsis">建设北路-济宁农商银行</p>
+        </div>
+        <div class="msg_bot">
+            <p class="f_l"><span class="pay_pin">拼座</span><span class="pay_number">1人</span></p>
+            <p class="pay_money f_r"><span class="c_or">60</span>元</p>
+        </div>
+    </div>
+    <ul class="main_list">
+        <li class="the_name">
+            <p>姓名</p>
+            <input type="text" placeholder="选择联系人">
+        </li>
+        <li class="the_tel">
+            <p>手机</p>
+            <input type="tel" placeholder="选择联系人" readonly>
+        </li>
+    </ul>
+    <ul class="way_list">
+        <li class="wx sel_way" onclick="pay_way(this);">
+            <p>微信支付</p>
+        </li>
+        <li class="zfb" onclick="pay_way(this);">
+            <p>微信支付</p>
+        </li>
+        <li class="xj" onclick="pay_way(this);">
+            <p>微信支付</p>
+        </li>
+    </ul>
+    <div class="coupon">
+        <p>请选择优惠券</p><span class="coupon_money">¥15</span>
+    </div>
+    <div class="pay_bot">
+        <p>应付：<span class="c_or all_money">150.00</span>元</p><span class="go_pay">提交</span>
+    </div>
+    <!--优惠券-->
+    <div class="sel_warp">
+        <div class="pay_top">
+            <img src="images/fh_03.png" class="fh_trip" onclick="close_coupon();">
+            <p>选择优惠券</p><span class="coupon_sure">确定</span>
+        </div>
+        <ul class="coupon_list">
+            <li>
+                <div class="money_warp">
+                    <p>¥<span>5</span></p>
+                </div>
+                <div class="coupon_type">
+                    <p class="over_ellipsis">仅限城际快车使用</p>
+                    <span>2017.3.18-2017.5.18</span>
+                </div>
+                <i></i>
+            </li>
+            <li>
+                <div class="money_warp">
+                    <p>¥<span>15</span></p>
+                </div>
+                <div class="coupon_type">
+                    <p class="over_ellipsis">仅限城际快车使用</p>
+                    <span>2017.3.18-2017.5.18</span>
+                </div>
+                <i class="sel_1"></i>
+            </li>
+            <li>
+                <div class="money_warp">
+                    <p>¥<span>25</span></p>
+                </div>
+                <div class="coupon_type">
+                    <p class="over_ellipsis">仅限酒店使用</p>
+                    <span>2017.3.18-2017.5.18</span>
+                </div>
+                <i class="sel_0"></i>
+            </li>
+        </ul>
+    </div>
+    <!--常用联系人-->
+    <div class="contacts_warp">
+        <div class="pay_top">
+            <img src="images/fh_03.png" class="fh_trip" onclick="close_contacts();">
+            <p>常用联系人</p><img src="images/add_peo_04.png" class="add_contacts">
+        </div>
+        <ul class="contacts_list">
+            <li>
+                <div class="the_name">
+                    <p>姓名</p>
+                    <span>孙先生</span>
+                </div>
+                <div class="the_tel">
+                    <p>手机</p>
+                    <span>13100000000</span>
+                </div>
+            
+            </li>
+            <li>
+                <div class="the_name">
+                    <p>姓名</p>
+                    <span>孙先生</span>
+                </div>
+                <div class="the_tel">
+                    <p>手机</p>
+                    <span>13200000000</span>
+                </div>
+                <i></i>
+            </li>
+            <li>
+                <div class="the_name">
+                    <p>姓名</p>
+                    <span>孙先生</span>
+                </div>
+                <div class="the_tel">
+                    <p>手机</p>
+                    <span>13000000000</span>
+                </div>
+                <i></i>
+            </li>
+        </ul>
+        <div class="add_contacts_mask">
+            <div class="add_item">
+                <div class="the_name">
+                    <p>姓名</p>
+                    <input type="text" placeholder="填写姓名">
+                </div>
+                <div class="the_tel">
+                    <p>手机</p>
+                    <input type="number" placeholder="填写手机号">
+                </div>
+            </div>
+            <div class="add_btn">
+                <p class="contacts_cancel">取消</p>
+                <p class="contacts_save">保存</p>
+            </div>
+        </div>
+        <div class="contacts_btn">
+            <button onclick="talk_save();">确定</button>
+        </div>
+            <div class="mask_add"></div>
+    </div>
+
+</body>
+
+</html>

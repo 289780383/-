@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>定制线路</title>
+        <!--[if lt IE9]> 
+<script src="js/drv/v1/html5shiv.js"></script>
+<![endif]-->
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/made_line_bao.css" rel="stylesheet" type="text/css">
+    <link href="css/mobiscroll_date.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/mobiscroll_date.js" charset="gb2312"></script>
+    <script src="js/mobiscroll.js"></script>
+
+</head>
+<div class="pay_top">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p>定制线路</p>
+</div>
+ <div class="main">
+    <div class="main_top">
+        <span>咨询热线：0535-57001234</span>
+    </div>
+<div class="main_msg">
+    <div class="main_point">
+        <input type="text" class="the_name" placeholder="输入姓名">
+        <input type="number" class="the_tel" placeholder="输入联系电话">
+        <input type="text" class="start_point" placeholder="输入出发地">
+        <input type="text" class="end_point" placeholder="输入目的地">
+        <input type="text" class="start_time" readonly placeholder="选择用车时间">
+    </div>
+    <p class="main_ts">填写准确信息，以便更好的为您服务！</p>
+</div>
+    <a class="main_btn" onclick="submit_btn();">提交</a>
+</div>
+
+</body>
+<script type="text/javascript">
+    function submit_btn(){
+        var the_name=$(".the_name").val().trim();
+        if(the_name==""){
+msg_show("输入姓名",2000);
+return;
+        }
+        var the_tel=$(".the_tel").val().trim();
+                if(the_tel==""){
+msg_show("输入联系电话",2000);
+return;
+        }
+
+        var start_point=$(".start_point").val().trim();
+                if(start_point==""){
+msg_show("输入出发地",2000);
+return;
+        }
+
+        var end_point=$(".end_point").val().trim();
+                if(end_point==""){
+msg_show("输入目的地",2000);
+return;
+        }
+
+        var start_time=$(".start_time").val().trim();
+                if(start_time==""){
+msg_show("选择用车时间",2000);
+return;
+        }
+
+        
+    }
+
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = {preset: 'date'};
+        opt.datetime = {preset: 'datetime'};
+        opt.time = {preset: 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear, //开始年份
+            endYear: currYear + 5 //结束年份
+        };
+        $(".start_time").mobiscroll($.extend(opt['date'], opt['default']));
+    });
+</script>
+
+</html>

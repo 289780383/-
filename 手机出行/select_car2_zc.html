@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>车型筛选</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/select_car2_zc.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top">
+    <img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip">
+    <p>车型筛选</p>
+</div>
+<ul class="sel_type">
+    <li class="sel_li">品牌</li>
+    <li>价格</li>
+    <li>排挡</li>
+    <li>座位数</li>
+</ul>
+<ul class="filter_list">
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+    <li><p>一汽马自达</p></li>
+</ul>
+<div class="footer">
+    <a class="footer_btn">确定</a>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    $(function(){
+        /**切换种类*/
+        $(".sel_type li").on("click",sel_car_type);
+        /**选择具体类别*/
+        $(".filter_list li").on("click",filter_car_type);
+    });
+    /**切换种类*/
+    function sel_car_type(){
+        $(".sel_type li").removeClass("sel_li");
+        $(this).addClass("sel_li");
+    }
+    /**选择具体类别*/
+    function filter_car_type(){
+        $(this).siblings().removeClass("filter_li");
+        $(this).siblings().find("i").remove();
+        $(this).append("<i></i>");
+$(this).addClass("filter_li");
+    }
+</script>
+</html>

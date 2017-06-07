@@ -1,0 +1,30 @@
+header{width:7.5rem;height:3.4rem;margin-bottom:0.14rem;background:url("../images/mine_bg_02.gif") no-repeat center;position:relative;background-size:cover;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+header .user_head{display: block;width: 1.34rem;height: 1.34rem;margin: 0.8rem auto 0;border: 3px solid rgba(255,255,255,0.5);border-radius: 50%;}
+header .user_tel{font-size: 0.3rem;color: #fff;line-height: 0.64rem;text-align: center;}
+/**mine_list*/
+.mine_list{margin-bottom: 1.1rem;}
+.mine_list li{padding-left:0.76rem;}
+.mine_list .mine_dd{background:#fff url("../images/mine_icon_03.gif") no-repeat 0.28rem center;background-size: 0.34rem;}
+.mine_list .mine_sc{background:#fff url("../images/mine_icon_06.gif") no-repeat 0.28rem center;background-size: 0.34rem;}
+.mine_list .mine_jl{background:#fff url("../images/mine_icon_08.gif") no-repeat 0.28rem center;background-size: 0.34rem;}
+.mine_list .mine_sz{background:#fff url("../images/mine_icon_10.gif") no-repeat 0.28rem center;background-size: 0.34rem;margin-top: 0.14rem;}
+.mine_list li p{font-size: 0.3rem;line-height: 1rem;color: #333;border-bottom: 1px solid #e5e5e5;background:url("../images/r_xsj.gif") no-repeat 6rem center;background-size: 0.28rem;}
+.mine_list li span{display:block;font-size: 0.3rem;line-height: 1rem;color: #333;background: #fff url("../images/r_xsj.gif") no-repeat 6rem center;background-size: 0.28rem;}
+/**提交成功*/
+.submit_answer{display: none;position:fixed;top:0;width: 7.5rem;overflow:auto;height: 100%;background-color:#f0f0f0;z-index: 110;}
+.submit_answer .submit_header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+.submit_answer .submit_header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+.submit_answer .submit_header p{width:6rem;margin:0 auto;font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.submit_answer .clear_cache{font-size: 0.3rem;line-height: 1rem;color: #333;margin-top:1.02rem;background-color: #fff;padding-left:0.24rem;}
+.submit_answer .log_out{display:block;width:6rem;text-align:center;font-size: 0.3rem;line-height: 0.8rem;color: #fff;background-color: #ec584e;border-radius: 0.1rem;margin:0.66rem auto 0;}
+/**footer_nav*/
+.footer_nav{position:fixed;bottom: 0;z-index:100;width: 7.48rem;padding: 0 0.01rem;background-color: #fff;border-top:1px solid #e5e5e5;}
+.footer_nav li{float:left;text-align:center;width:1.87rem;padding-top: 0.1rem;}
+.footer_nav li i{display:block;width:0.61rem;height:0.48rem;margin: 0 auto;}
+.footer_nav .index i{background: url("../images/nav_f01.gif") no-repeat left top;background-size: 1.2rem;}
+.footer_nav .study_car i{background: url("../images/nav_f02.gif") no-repeat left top;background-size: 1.2rem;}
+.footer_nav .study_id i{background: url("../images/nav_f03.gif") no-repeat left top;background-size: 1.2rem;}
+.footer_nav .mine i{background: url("../images/nav_f04.gif") no-repeat right top;background-size: 1.2rem;}
+.footer_nav li p{font-size: 0.2rem;line-height: 0.4rem;color: #555;}
+.footer_nav li .c_or{color: #ec584e;}

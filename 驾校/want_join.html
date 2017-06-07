@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我要报名</title>
+    <script type="text/javascript" src="js/drv/v1/html5shiv.js"></script>
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/want_join.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/mobiscroll_date.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/want_join.js"></script>
+    <script src="js/drv/v1/mobiscroll_date.js" charset="gb2312"></script>
+    <script src="js/drv/v1/mobiscroll.js"></script>
+
+</head>
+<body class="bc_fff">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="history.go(-1)" class="head_fh">
+        <p>我要报名</p>
+        <img src="images/drv/v1/map.gif" class="head_map">
+    </header>
+
+    <div class="main_top">
+        <div class="school_info">
+            <img src="images/drv/v1/jx.gif" class="show_pic">
+            <section class="show_msg">
+                <p class="the_name"><span>滨州交运驾校 · 滨州</span><img src="images/drv/v1/v.gif" class="vip_pic"></p>
+                <div class="the_star"><img src="images/drv/v1/star.gif"><img src="images/drv/v1/star.gif"><img src="images/drv/v1/star.gif">
+                </div>
+                <p class="the_money">¥3780</p>
+                <a href="tel:0543 4561170" class="the_tel">0543-4561170</a>
+            </section>
+        </div>
+    </div>
+    
+
+    <div class="main_form">
+        <p class="bot_title">必填项</p>
+        <div class="peo_name"><p>姓名</p><input type="text" placeholder="输入您的姓名"></div>
+        <div>
+            <p>性别</p>
+            <section class="peo_sex">
+                <p><i></i><span>先生</span></p>
+                <p><i></i><span>女士</span></p>
+            </section> 
+        </div>
+        <div class="sel_xsj sel_education"><p>学历</p><span>本科</span></div>
+        <div class="peo_id"><p>身份证</p><input type="tel" placeholder="输入您的身份证号码"></div>
+        <div class="peo_tel"><p>电话</p><input type="tel" placeholder="输入您的电话号码"></div>
+        <div class="peo_address"><p>收件地址</p>
+            <input type="text" placeholder="输入您的收件地址"></div>
+            <div class="sel_cars sel_xsj"><p>驾驶证准驾车型</p><span>A1</span></div>
+            <div class="sel_xsj"><p>初领驾驶证日期</p><input type="text" id="first_time" readonly placeholder="选择初领驾驶证日期"/></div>
+            <div class="peo_jobs"><p>原从业资格证件号</p><input type="tel" placeholder="输入您的资格证件号"></div>
+            <div class="sel_xsj sel_jobs"><p>从业资格类别</p><span>货运</span></div>
+            <div class="sel_xsj"><p>从业资格证有效期</p><input type="text" id="second_time" readonly placeholder="选择从业资格证有效期"/></div>
+            <p class="bot_title">选填项</p>
+            <div class=""><p>工作单位</p><input type="text" placeholder="输入您的工作单位"></div>
+            <div class=""><p>工作单位电话</p><input type="tel" placeholder="输入您工作单位的电话"></div>
+            <div class=""><p>培训单位</p><input type="text" placeholder="输入您的培训单位"></div>
+        </div>
+        <i class="line_hui"></i>
+        <div><span class="privilege">在线交费<i>9折</i>优惠</span></div>
+        <ul class="pay_way">
+            <li class="wx_pay"><p>微信支付</p><i class="sel_pay"></i></li>
+            <li class="zfb_pay"><p>支付宝支付</p><i></i></li>
+            <li class="cash_pay"><p>到校支付</p><i></i></li>
+        </ul>
+        <div class="pay_bot">
+            <p>应付：<span class="end_money">120.0</span>元</p><span class="go_pay">确认</span>
+        </div>
+        <!--学历-->
+<div class="education">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="$(this).parent().parent().hide();" class="head_fh">
+        <p>学历</p>
+        <span class="head_right" onclick="education_save();">保存</span>
+    </header>
+<ul class="this_list">
+    <li><p>初中</p><i></i></li>
+    <li><p>高中</p><i></i></li>
+    <li><p>专科</p><i></i></li>
+    <li><p>本科</p><i></i></li>
+    <li><p>硕士</p><i></i></li>
+    <li><p>博士</p><i></i></li>
+</ul>
+</div>
+        <!--从业资格类别-->
+<div class="jobs">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="$(this).parent().parent().hide();" class="head_fh">
+        <p>从业资格类别</p>
+        <span class="head_right" onclick="jobs_save();">保存</span>
+    </header>
+<ul class="this_list">
+    <li><p>危险品</p><i></i></li>
+    <li><p>押运员</p><i></i></li>
+    <li><p>增加客运</p><i></i></li>
+    <li><p>客运</p><i></i></li>
+    <li><p>货运</p><i></i></li>
+    <li><p>增货</p><i></i></li>
+    <li><p>继续教育</p><i></i></li>
+    <li><p>安全管理</p><i></i></li>
+</ul>
+</div>
+        <!--准驾车型-->
+<div class="cars">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="$(this).parent().parent().hide();" class="head_fh">
+        <p>准驾车型</p>
+        <span class="head_right" onclick="cars_save();">保存</span>
+    </header>
+<ul class="this_list">
+    <li><p>A1</p><i></i></li>
+    <li><p>A2</p><i></i></li>
+    <li><p>B1</p><i></i></li>
+    <li><p>B2</p><i></i></li>
+    <li><p>C1</p><i></i></li>
+    <li><p>C2</p><i></i></li>
+</ul>
+</div>
+
+    </body>
+    <script type="text/javascript">
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = {preset: 'date'};
+        opt.datetime = {preset: 'datetime'};
+        opt.time = {preset: 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear, //开始年份
+            endYear: currYear + 10 //结束年份
+        };
+        $("#first_time").mobiscroll($.extend(opt['date'], opt['default']));
+        $("#second_time").mobiscroll($.extend(opt['date'], opt['default']));
+    });
+</script>
+
+    </html>

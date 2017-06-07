@@ -1,0 +1,58 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+/**top*/
+.top{padding: 0 0.34rem;background-color: #fff;margin:1.02rem 0 0.14rem 0 ;}
+.top .top_title{display:block;font-size: 0.3rem;line-height: 0.7rem;color:#333;border-bottom:1px solid #e5e5e5;padding:0.04rem 0.1rem;}
+.top .top_text{font-size: 0.26rem;line-height: 0.42rem;color:#777;padding:0.12rem 0.1rem;}
+/**middle*/
+.middle{background-color: #fff;padding: 0 0.34rem;}
+.middle li{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.middle .the_number{background: url("../../../images/drv/v1/r_xsj.gif") no-repeat 6.3rem center;background-size: 0.28rem;}
+.middle .the_tel{border: none;}
+.middle p{font-size: 0.3rem;line-height: 1rem;color: #777;float: left;padding-left:0.12rem;width:1.6rem;}
+.middle span{font-size: 0.3rem;line-height: 1rem;color: #333;float: left;}
+.middle input{width:5rem;font-size: 0.3rem;line-height: 0.98rem;color: #333;float: left;border:none;background-color: transparent;}
+/**pay*/
+.pay_way{margin:0.14rem 0;background-color: #fff;}
+.way_title{font-size:0.3rem;line-height: 0.9rem;border-bottom: 1px solid #e5e5e5;padding: 0 0.5rem;color: #777;}
+.way_list{padding:0 0 0 0.5rem;overflow: hidden;}
+.way_list li{font-size: 0.3rem;line-height: 0.9rem;padding-left: 0.7rem;padding-right:0.3rem;overflow: hidden;/*border-bottom: 1px solid #e5e5e5;*/}
+.way_list li p{float: left;color: #333;}
+.way_list li span{float: right;width: 0.5rem;height: 0.5rem;background: url("../../../images/drv/v1/pay_05.png") no-repeat center bottom;background-size: 0.5rem;margin-top: 0.2rem;}
+.way_list li .selected{background-position:center top;}
+.way_list .zfb{background:url("../../../images/drv/v1/pay_03.png") no-repeat left center;background-size: 0.57rem;}
+.way_list .wx{background:url("../../../images/drv/v1/pay_08.png") no-repeat left center;background-size: 0.57rem;}
+.way_list .xj{background:url("../../../images/drv/v1/pay_11.gif") no-repeat left center;background-size: 0.57rem;border:none;}
+.bill{background-color: #fff;padding-left:0.34rem;overflow:hidden;margin: 0.14rem 0 1.1rem;}
+.bill p{font-size: 0.3rem;line-height: 1rem;color: #777;float: left;padding-left:0.12rem;width:1.6rem;}
+.bill span{font-size: 0.3rem;line-height: 1rem;color: #333;float: left;}
+/**footer*/
+.footer{position: fixed;width:7.5rem;bottom: 0;}
+.footer div{width: 3.75rem;float: left;line-height:1.1rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
+.footer .foot_btn{border-top: 1px solid #ec584e;background-color: #ec584e;font-size: 0.3rem;text-align: center;color: #fff;}
+.footer div p{float:left;font-size:0.3rem;margin-left: 0.3rem;}
+.footer div i{display:block;float:left;font-size:0.26rem;color: #ec584e;}
+.footer div span{display:block;float:left;font-size:0.34rem;color: #ec584e;}
+/**房间数量*/
+.room_num{position: fixed;z-index:200;bottom: 0;width:7.5rem;overflow: hidden;background-color: #fff;display:none;}
+.room_num .room_title{font-size:0.28rem;line-height: 0.84rem;color: #777;padding: 0.12rem 0 0 0.3rem;}
+.room_num ul{overflow: hidden;padding: 0 0 0.2rem 0.21rem;}
+.room_num ul li{font-size:0.28rem;line-height: 0.58rem;color: #333;margin:0 0.07rem 0.2rem;width:1.6rem;text-align: center;border: 1px solid #e5e5e5;border-radius: 0.1rem;float:left;}
+.room_num ul .sel_num{color: #fff;border: 1px solid #ec584e;background-color: #ec584e;}
+.room_num .room_btn{display:block;font-size:0.28rem;line-height: 0.8rem;color: #fff;width:6rem;margin:0 auto 0.44rem;height:0.8rem;background-color:#ec584e;border-radius:0.1rem;text-align: center;}
+/**提交成功*/
+.submit_end{display: none;position:fixed;top:0;width: 7.5rem;overflow:auto;height: 100%;background-color:#fff;z-index: 110;}
+.submit_end .submit_header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+.submit_end .submit_header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+.submit_end .submit_header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+.submit_end .sub_info{padding-top: 1.44rem;}
+.submit_end .text1{font-size: 0.34rem;line-height: 0.72rem;color: #333;margin-left:2.55rem;background: url("../../../images/drv/v1/wait_03.gif") no-repeat left center;background-size:0.5rem;padding-left:0.64rem;}
+.submit_end .text2{font-size: 0.28rem;line-height: 0.66rem;color: #555;text-align: center;}
+.success_nav {padding:0.42rem 0 0 0.24rem;overflow: hidden;}
+.success_nav li{font-size:0.3rem;line-height: 0.64rem;color:#ec584e;border-radius:0.1rem;border: 1px solid #e5e5e5;width:2.1rem;float: left;text-align: center;margin: 0 0.11rem;}
+.success_nav .sel_success_li{color:#fff;background-color:#ec584e;border-radius:0.1rem;border: 1px solid #ec584e;}
+.success_info{width: 6.8rem;margin: 0.7rem auto 0;}
+.success_info li{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.success_info p{font-size: 0.3rem;line-height: 1rem;color: #555;padding-left: 0.16rem;width:1.6rem;float:left;}
+.success_info span{width:5rem;font-size: 0.3rem;line-height: 0.96rem;color: #333;display: block;float:left;}

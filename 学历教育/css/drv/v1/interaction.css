@@ -1,0 +1,17 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color: #24b4ff;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.28rem;}
+header .head_write{display:block;padding:0.26rem 0.3rem;position: absolute;right:0;top: 0;width: 0.34rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+
+
+/**main*/
+.main{margin:0.88rem 0 0;}
+.main li{background-color: #fff;overflow: hidden;padding: 0.26rem 0.24rem 0;}
+.the_top{overflow: hidden;}
+.user_head{float: left;display:inline-block;width: 0.8rem;height: 0.8rem;border-radius: 50%;margin-right: 0.14rem;}
+.user_name{font-size: 0.3rem;line-height: 0.38rem;color: #555;}
+.text_title{font-size: 0.22rem;line-height: 0.32rem;color: #777;}
+.the_middle{font-size: 0.28rem;line-height: 0.4rem;color: #333;margin:0.14rem 0 0.14rem 0.94rem;display:-webkit-box!important;overflow: hidden;text-overflow: ellipsis;word-break:break-all;-webkit-box-orient: vertical;-webkit-line-clamp:2;}
+.the_middle p{font-size: 0.28rem;line-height: 0.4rem;color: #333;}
+.the_bottom{overflow: hidden;margin-left: 0.94rem;border-bottom: 1px solid #e5e5e5;}
+.the_time{font-size: 0.24rem;line-height: 0.5rem;color: #999;float: right;}

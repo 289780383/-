@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>我要发布</title>
+    <script type="text/javascript" src="js/drv/v1/html5shiv.js"></script>
+    <link href="css/drv/v1/base.css" rel="stylesheet" type="text/css">
+    <link href="css/drv/v1/want_publish.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/drv/v1/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/drv/v1/v1.0.0.js"></script>
+    <script type="text/javascript" src="js/drv/v1/common.js"></script>
+    <script type="text/javascript" src="js/drv/v1/want_publish.js"></script>
+</head>
+
+<body class="bc_fff">
+    <header>
+        <img src="images/drv/v1/fh.gif" onclick="history.go(-1)" class="head_fh">
+        <p>我要发布</p>
+        <span class="head_txt">发布</span>
+    </header>
+    <div contenteditable="true" class="main_text">
+        学车过程，有什么趣事，新鲜事跟我们分享一下吧！
+    </div>
+    <div class="btn_group">
+        <span class="photograph"></span>
+        <span class="local_pic"></span>
+    </div>
+</body>
+<script type="text/javascript">
+wx.config({
+     debug: false,
+     appId: 'wxf8b4f85f3a794e77',
+     timestamp: 1421142450,
+     nonceStr: '9hKgyCLgGZOgQmEI',
+     signature: 'bf7a5555f9ad0e7e491535f232349a40510a6f8f',
+     jsApiList: [
+       'checkJsApi',
+       'onMenuShareTimeline',
+       'onMenuShareAppMessage',
+       'onMenuShareQQ',
+       'onMenuShareWeibo',
+       'hideMenuItems',
+       'showMenuItems',
+       'hideAllNonBaseMenuItem',
+       'showAllNonBaseMenuItem',
+       'translateVoice',
+       'startRecord',
+       'stopRecord',
+       'onRecordEnd',
+       'playVoice',
+       'pauseVoice',
+       'stopVoice',
+       'uploadVoice',
+       'downloadVoice',
+       'chooseImage',
+       'previewImage',
+       'uploadImage',
+       'downloadImage',
+       'getNetworkType',
+       'openLocation',
+       'getLocation',
+       'hideOptionMenu',
+       'showOptionMenu',
+       'closeWindow',
+       'scanQRCode',
+       'chooseWXPay',
+       'openProductSpecificView',
+       'addCard',
+       'chooseCard',
+       'openCard'
+     ]
+ });
+wx.ready(function () {
+    var images = {
+    localId: [],
+    serverId: []
+};
+ document.querySelector('.photograph').onclick = function () {
+    wx.chooseImage({
+      success: function (res) {
+        images.localId = res.localIds;
+        alert('已选择 ' + res.localIds.length + ' 张图片');
+      }
+    });
+  };
+})
+</script>
+
+</html>

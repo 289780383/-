@@ -1,0 +1,43 @@
+/**轮播css*/
+.banner{width: 7.5rem;position: relative;height: 3rem;overflow: hidden;}
+.pic_warp{position: absolute;top:0;left:0;z-index: 8;transition: all 0.5s;}
+.pic_warp li{width: 7.5rem;float:left;background-color: black;overflow: hidden;}
+.pic_warp li img{width: 7.5rem;height: 3rem;display: block;}
+.pic_nav {position: absolute;bottom:0.2rem;left: 50%;transform: translateX(-50%);z-index: 10;}
+.pic_nav li{float: left;width: 0.12rem;height: 0.13rem;background:url("../../../images/drv/v1/nav_d_03.png") no-repeat left top;background-size:0.12rem;opacity:0.6;margin: 0 0.1rem;}
+.pic_nav .nav_active{transform:scale(1.1);opacity:1;}
+
+/**nav导航*/
+.nav{background-color:#fff;width: 7.5rem;overflow: hidden;margin-bottom: 0.18rem;}
+.nav li{float:left;text-align:center;width:1.5rem;padding: 0.3rem 0 0.16rem;}
+.nav li img{display:block;width:0.8rem;height:0.8rem;margin: 0 auto;}
+.nav li p{font-size: 0.26rem;line-height: 0.54rem;color: #555;}
+/**find_nav*/
+.main_{padding-top: 0.8rem;}
+.find_nav{width:7.5rem;overflow: hidden;}
+.find_nav_fixed{position:fixed;top:0;left:50%;transform: translateX(-50%);z-index: 20;}
+.find_nav p{width:50%;float:left;background-color:#fff;border-bottom: 1px solid #e5e5e5;font-size: 0.3rem;line-height: 0.8rem;color: #333;text-align: center;}
+.find_nav .find_active{border-bottom: 1px solid #24b4ff;color: #24b4ff;}
+.find_join{font-size: 0.24rem;line-height:0.8rem;color: #777;display: none;text-align: center;background-color:#fff;margin-bottom: 0.18rem;}
+.footer_tishi{margin-bottom: 1rem;font-size: 0.24rem;line-height:0.8rem;color: #777;text-align: center;}
+.find_school li,.find_teacher li{overflow: hidden;width: 7.02rem;position:relative;padding: 0.3rem 0.24rem;margin-bottom:0.18rem;background: #fff url("../../../images/drv/v1/r_xsj.gif") no-repeat 6.9rem 0.75rem;background-size: 0.28rem;}
+.show_pic{width: 1.8rem;height: 1.2rem;display: block;float: left;}
+.show_msg{float: left;margin-left: 0.2rem;}
+.show_msg .the_name{overflow: hidden;font-size: 0.28rem;}
+.show_msg .the_name span{display:block;line-height: 0.5rem;color: #333;float:left;max-width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.show_msg .the_name .vip_pic{width: 0.28rem;height: 0.28rem;margin:0.05rem 0 0 0.1rem;float: left;}
+.show_msg .the_name i{display: block;float: left;font-size:0.2rem;border: 1px solid #24b4ff;font-style:normal;color:#24b4ff;border-radius: 0.05rem;padding-top:0.02rem;margin: 0.05rem 0 0 0.1rem;}
+.show_msg .the_star{overflow: hidden;}
+.show_msg .the_star img{display:block;width: 0.28rem;height: 0.28rem;float: left;}
+.show_msg .the_money{font-size: 0.3rem;color: #ff3535;line-height: 0.48rem;}
+.the_price{font-size: 0.26rem;color: #ff6022;line-height: 1.3rem;position: absolute;top: 0.4rem;right: 1rem;}
+.evaluate{font-size: 0.24rem;color: #777;line-height: 0.3rem;clear: both;padding-top: 0.05rem;width:6rem;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+/**footer_nav*/
+.footer_nav{position: fixed;bottom: 0;width: 7.48rem;padding: 0 0.01rem;background-color: #fff;border-top:1px solid #e5e5e5;}
+.footer_nav li{float:left;text-align:center;width:1.87rem;padding-top: 0.1rem;}
+.footer_nav li i{display:block;width:0.61rem;height:0.44rem;margin: 0 auto;}
+.footer_nav .index i{background: url("../../../images/drv/v1/f_nav1.gif") no-repeat right top;background-size: 1.22rem;}
+.footer_nav .study_car i{background: url("../../../images/drv/v1/f_nav2.gif") no-repeat left top;background-size: 1.22rem;}
+.footer_nav .study_id i{background: url("../../../images/drv/v1/f_nav3.gif") no-repeat left top;background-size: 1.22rem;}
+.footer_nav .mine i{background: url("../../../images/drv/v1/f_nav4.gif") no-repeat left top;background-size: 1.22rem;}
+.footer_nav li p{font-size: 0.2rem;line-height: 0.4rem;color: #555;}

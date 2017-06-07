@@ -1,0 +1,11 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.pay_top span{position:absolute;right:0;top:0;font-size: 0.26rem;padding:0 0.5rem;display: inline-block;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+.main{padding: 0 0.34rem;margin: 1.34rem 0 0.4rem;text-align: center;}
+.main_top{display:block;font-size: 0.26rem;line-height: 0.36rem;color: #5e5e5e;text-align: left;margin-bottom: 0.4rem;}
+.main h5{font-size: 0.32rem;line-height: 0.52rem;color: #363636;}
+.main p{font-size: 0.26rem;line-height: 0.46rem;color: #5e5e5e;}
+.main img{width: 0.33rem;height: 0.18rem;display:block;margin: 0.2rem auto;}

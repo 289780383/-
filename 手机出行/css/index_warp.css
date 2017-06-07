@@ -1,0 +1,61 @@
+.search{position: fixed;top:0;width: 7.5rem;overflow: hidden;z-index: 100;background-color: transparent;}
+.search .search_city{font-size:0.32rem;line-height: 0.8rem;color: #fff;padding-right: 0.36rem;margin: 0.06rem 0 0 0.28rem;float:left;background:url("../images/index_xia.png") no-repeat right center;background-size:0.26rem; }
+.search .search_box{width:4.84rem;height: 0.56rem;border-radius:0.1rem;overflow:hidden;background:rgba(255,255,255,0.7);position:absolute;top:0.16rem;right:1rem;border: none; }
+.search .search_icon{width:0.32rem;height:0.33rem;margin:0.15rem 0 0 0.1rem;display:block;float:left;background:url("../images/index_search.png") no-repeat center;background-size:0.32rem;}
+.search .search_in{width:4.25rem;height: 0.56rem;display:block;font-size:0.26rem;float:left;line-height:0.5rem;padding-left:0.1rem;padding-top:0.06rem;color: #999698;background-color:transparent;border: none;}
+.search .search_sao{width:0.52rem;height: 0.48rem;float: right;padding: 0.2rem 0.24rem;}
+/**轮播css*/
+.banner{width: 7.5rem;position: relative;height: 3rem;overflow: hidden;}
+.pic_warp{position: absolute;top:0;left:0;z-index: 8;transition: all 0.5s;}
+.pic_warp li{width: 7.5rem;float:left;background-color: black;overflow: hidden;}
+.pic_warp li img{width: 7.5rem;height: 3rem;display: block;}
+.pic_nav {position: absolute;bottom:0.2rem;left: 50%;transform: translateX(-50%);z-index: 10;}
+.pic_nav li{float: left;width: 0.12rem;height: 0.13rem;background:url("../images/nav_d_03.png") no-repeat left top;background-size:0.12rem;opacity:0.6;margin: 0 0.1rem;}
+.pic_nav .nav_active{transform:scale(1.1);opacity:1;}
+
+/**nav导航*/
+.nav{background-color:#fff;width: 7.2rem;overflow: hidden;padding:0.1rem 0.15rem 0;}
+.nav li{float:left;text-align:center;width:1.8rem;padding-top: 0.2rem;}
+.nav li img{display:block;width:0.88rem;height:0.88rem;margin: 0 auto;}
+.nav li p{font-size: 0.26rem;line-height: 0.5rem;color: #646464;}
+/**message*/
+.message{background:#fff url("../images/cxtt.gif") no-repeat 0.5rem center;background-size: 1.4rem;overflow: hidden;padding:0.22rem 0;margin-bottom: 0.14rem;}
+.msg_warp{width: 4.9rem;height: 0.4rem;float: right;position:relative;overflow: hidden;padding:0 0.2rem 0 0.5rem;background: url("../images/bo.gif") no-repeat 0.1rem center;background-size:0.3rem 0.27rem;}
+.msg_main{position: absolute;left: 0.5rem;top: 0;}
+.msg_main li{font-size: 0.22rem;line-height:0.4rem;color: #101010;}
+/**加个标签*/
+.add_tab{padding:0.16rem 0.14rem;background-color:#fff;overflow: hidden;margin-bottom: 0.14rem;}
+.add_tab .head_pic{display: block;float: left;width: 0.72rem;height: 0.72rem;}
+.add_tab .add_title{font-size: 0.26rem;color: #ec584e;line-height: 0.72rem;float: left;margin-left: 0.16rem;}
+.add_tab .gd_weather{width: 2.18rem;height: 0.68rem;border:1px solid #e5e5e5;float: right;}
+.add_tab .gd_weather  .gd{float: left;padding: 0.1rem 0.05rem 0.1rem 0.18rem;}
+.add_tab .gd_weather  .gd .gd_wd{font-size: 0.46rem;line-height: 0.5rem;color:#9e9e9e;float: left;}
+.add_tab .gd_weather .gd i{font-size: 0.22rem;line-height: 0.24rem;color:#9e9e9e;float: left;font-style: normal;}
+.add_tab .gd_weather .gd_txt_warp{width:0.98rem;height:0.5rem;float:right;margin: 0.1rem 0 0 0;position: relative;}
+.add_tab .gd_weather .gd_txt{width:0.98rem;font-size: 0.2rem;line-height: 0.24rem;color:#7c7c7c;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%)}
+/**畅销车票*/
+.ticket{overflow: hidden;background-color:#fff;margin-bottom: 0.14rem;}
+.ticket_title{font-size: 0.28rem;line-height: 0.65rem;padding-top:0.05rem;color:#363636;border-bottom:1px solid #e5e5e5;padding-left:0.5rem;background: url("../images/index_hot.gif") no-repeat 0.14rem center;background-size: 0.3rem;}
+.ticket_list{position:relative;overflow: hidden;}
+.ticket_list:after{content: "";display: block;height: 100%;border-left: 1px solid #e5e5e5;position: absolute;top: 0;left: 50%;}
+.ticket_item{width:3.25rem;float: left;padding:0.24rem 0 0.24rem 0.5rem;border-bottom: 1px solid #e5e5e5;}
+.ticket_item .ticket_site {font-size: 0.26rem;line-height: 0.38rem;color:#363636;width:3.2rem;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;}
+.ticket_item .ticket_time {font-size: 0.22rem;line-height: 0.34rem;color:#696969;width:3.2rem;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;}
+/**景区推荐*/
+.jq_list{padding: 0.1rem 0.2rem 1.1rem;overflow: hidden;}
+.jq_item{width: 3.18rem;height: 1.78rem;border: 1px solid #e5e5e5;float: left;position: relative;margin:0.1rem 0.16rem;}
+.jq_item img{width: 3.18rem;height: 1.78rem;display: block;}
+.jq_item .jq_price{font-size: 0.22rem;padding:0.05rem 0.2rem;line-height: 0.36rem;color: #fff; position: absolute;top: 0.23rem;right: 0;background-color:#ec584e;border-top-left-radius: 0.1rem;border-bottom-left-radius:0.1rem; }
+.jq_item .jq_price i{font-size: 0.16rem;line-height: 0.36rem;color: #fff;font-style:normal;}
+.jq_item .jq_black {position: absolute;left: 0;bottom: 0;z-index:10;width:3.18rem;height:0.36rem;background-color: #000;opacity: 0.5;}
+.jq_item .jq_name{font-size: 0.22rem;line-height: 0.36rem;position: absolute;z-index:20;left: 0.18rem;bottom: 0;color: #fff;opacity:1;}
+
+/**footer_nav*/
+.footer_nav{position:fixed;bottom: 0;z-index:100;width: 7.48rem;padding: 0 0.01rem;background-color: #fff;border-top:1px solid #e5e5e5;}
+.footer_nav li{float:left;text-align:center;width:1.87rem;padding-top: 0.1rem;}
+.footer_nav li i{display:block;width:0.61rem;height:0.48rem;margin: 0 auto;}
+.footer_nav .index i{background: url("../images/nav_f01.gif") no-repeat right top;background-size: 1.2rem;}
+.footer_nav .study_car i{background: url("../images/nav_f02.gif") no-repeat left top;background-size: 1.2rem;}
+.footer_nav .study_id i{background: url("../images/nav_f03.gif") no-repeat left top;background-size: 1.2rem;}
+.footer_nav .mine i{background: url("../images/nav_f04.gif") no-repeat left top;background-size: 1.2rem;}
+.footer_nav li p{font-size: 0.2rem;line-height: 0.4rem;color: #555;}

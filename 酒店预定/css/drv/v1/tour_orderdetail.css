@@ -1,0 +1,52 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+/**top*/
+.top{margin:1.02rem 0 0 0 ;}
+.top div{overflow: hidden;padding: 0 0 0 0.46rem;background-color: #fff;}
+.top .sel_date{background:#fff url("../../../images/drv/v1/r_xsj.gif") no-repeat 6.9rem center;background-size: 0.28rem;}
+.top .top_margin{margin-bottom:0.14rem;}
+.top div .text_left{font-size:0.3rem;color: #777;line-height: 1rem;float: left;padding-left:0.12rem;}
+.top div span,.top div input{display:block;font-size:0.3rem;color: #ec584e;line-height: 1rem;float:right;padding-right: 0.92rem;}
+.top div input{width:4.5rem;color: #777;background-color: transparent;border: none;text-align: right;}
+/**sel_people*/
+.sel_people{overflow: hidden;}
+.sel_people .people_title{font-size:0.28rem;color: #777;line-height: 0.6rem;padding-left: 0.24rem;}
+.sel_people .peo_main{background-color: #fff;}
+.sel_people .peo_main>div{overflow: hidden;margin: 0 0 0 0.36rem;}
+.sel_people .peo_border{border-bottom: 1px solid #e5e5e5;}
+.sel_people .text_left{font-size:0.3rem;color: #777;line-height: 1rem;float: left;padding-left:0.12rem;}
+.sel_people .peo_warp{float: right;overflow: hidden;margin-right: 0.44rem;}
+.sel_people .peo_warp .peo_add{float:right;margin:0.24rem 0;display:block;width:0.52rem;height: 0.52rem;background: url("../../../images/drv/v1/add_jian_05.gif") no-repeat left top;background-size:0.52rem;}
+.sel_people .peo_warp .peo_jian{float:left;margin:0.24rem 0;display:block;width:0.52rem;height: 0.52rem;background: url("../../../images/drv/v1/add_jian_03.gif") no-repeat left top;background-size:0.52rem;}
+.sel_people .peo_warp .peo_off{background-position:left bottom;}
+.sel_people .peo_warp span{width:1rem;text-align:center;font-size:0.3rem;color: #333;line-height: 1rem;display: block;float: left;}
+/**user_info*/
+.user_info{overflow: hidden;}
+.user_info .user_title{font-size:0.28rem;color: #777;line-height: 0.6rem;padding-left: 0.24rem;}
+.user_info .user_main{background-color: #fff;}
+.user_info .user_main>div{overflow: hidden;margin: 0 0 0 0.36rem;}
+.user_info .user_border{border-bottom: 1px solid #e5e5e5;}
+.user_info .text_left{font-size:0.3rem;color: #777;line-height: 1rem;float: left;width: 1.6rem;padding-left:0.12rem;}
+.user_info input{width:5rem;font-size:0.3rem;color: #333;line-height: 1rem;border:none;display: block;float: left;background-color:transparent;}
+/**pay*/
+.pay_way{margin:0.14rem 0;background-color: #fff;}
+.way_title{font-size:0.3rem;line-height: 0.9rem;border-bottom: 1px solid #e5e5e5;padding: 0 0.5rem;color: #777;}
+.way_list{padding:0 0 0 0.5rem;overflow: hidden;}
+.way_list li{font-size: 0.3rem;line-height: 0.9rem;padding-left: 0.7rem;padding-right:0.3rem;overflow: hidden;/*border-bottom: 1px solid #e5e5e5;*/}
+.way_list li p{float: left;color: #333;}
+.way_list li span{float: right;width: 0.5rem;height: 0.5rem;background: url("../../../images/drv/v1/pay_05.png") no-repeat center bottom;background-size: 0.5rem;margin-top: 0.2rem;}
+.way_list li .selected{background-position:center top;}
+.way_list .zfb{background:url("../../../images/drv/v1/pay_03.png") no-repeat left center;background-size: 0.57rem;}
+.way_list .wx{background:url("../../../images/drv/v1/pay_08.png") no-repeat left center;background-size: 0.57rem;}
+.way_list .xj{background:url("../../../images/drv/v1/pay_11.gif") no-repeat left center;background-size: 0.57rem;border:none;}
+.bill{background-color: #fff;padding-left:0.34rem;overflow:hidden;margin: 0.14rem 0 1.1rem;}
+.bill p{font-size: 0.3rem;line-height:1rem;color: #777;float: left;padding-left:0.12rem;width:1.6rem;}
+.bill span{font-size: 0.3rem;line-height: 1rem;color: #333;float: left;}
+/**footer*/
+.footer{position: fixed;width:7.5rem;bottom: 0;}
+.footer div{width: 3.75rem;float: left;line-height:1.1rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
+.footer .foot_btn{border-top: 1px solid #ec584e;background-color: #ec584e;font-size: 0.3rem;text-align: center;color: #fff;}
+.footer div p{float:left;font-size:0.3rem;margin-left: 0.3rem;}
+.footer div i{display:block;float:left;font-size:0.26rem;color: #ec584e;line-height:1.05rem;padding-top:0.05rem;}
+.footer div span{display:block;float:left;font-size:0.34rem;color: #ec584e;}

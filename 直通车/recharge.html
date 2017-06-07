@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>充值</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/recharge.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/recharge.js"></script>
+</head>
+
+<body>
+    <div class="the_header">
+        <img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip">
+        <p>充值</p>
+    </div>
+    <div class="main">
+            <div class="recharge">
+            <p>充值金额</p>
+            <input type="number" min=1 class="recharge_money" placeholder="请输入要充值的金额">
+        </div>
+            <ul class="recharge_list ">
+        <li class="wx sel_way" onclick="ride_way(this);">
+            <p>微信支付</p></li>
+        <li class="zfb" onclick="ride_way(this);">
+            <p>支付宝支付</p></li>
+    </ul>
+</div>
+    <div class="recharge_btn">
+        <button>确认支付</button>
+    </div>
+
+</body>
+
+</html>

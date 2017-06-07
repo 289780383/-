@@ -1,0 +1,90 @@
+.pay_top{font-size: 0.3rem;line-height: 1rem;overflow: hidden;background-color: #ec584e;position:fixed;top:0;z-index: 1;width:7.5rem;}
+.pay_top p{text-align: center;color:#fff;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+/***/
+.pay_msg {overflow:hidden;margin:1.16rem 0.24rem 0;background-color: #fff;border-radius: 0.1rem;}
+.msg_top {color:#333;font-size: 0.3rem;line-height: 0.9rem;overflow: hidden;padding:0 0.3rem;}
+.msg_top .pay_time{margin-left:0.1rem;}
+.msg_top .pay_time span{margin-left:0.1rem;}
+.msg_mid {font-size: 0.26rem;line-height: 0.5rem;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;overflow: hidden;padding:0.2rem 0.5rem 0.2rem 0.26rem;position: relative;}
+.msg_mid .up{margin-right:0.4rem;}
+.msg_mid p{padding-left: 0.5rem;color: #333;}
+.msg_mid .pay_start{background: url("../images/start.gif") no-repeat left 0.12rem;background-size: 0.25rem;}
+.msg_mid .pay_end{background: url("../images/end.gif") no-repeat left 0.12rem;background-size: 0.25rem;}
+.msg_bot {font-size: 0.3rem;line-height: 0.9rem;overflow: hidden;padding:0 0.3rem 0 0;}
+.msg_bot .pay_pin {font-size: 0.3rem;display:inline-block;line-height: 0.4rem;height: 0.4rem;padding:0 0.16rem;color: #fff;margin:0 0.3rem;background-color: #0299ff;}
+.msg_bot .pay_number {color: #333;}
+/**填写联系方式*/
+.main_list{margin:0.16rem 0.24rem 0;background-color: #fff;border-radius: 0.1rem;}
+.main_list li{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.main_list li:first-child{background:#fff url("../images/go_l_03.gif") no-repeat 6.5rem center;background-size:0.2rem;}
+.main_list li:last-child{border:none;}
+.main_list li p{font-size: 0.3rem;line-height: 1rem;color: #333;float: left;padding-left: 0.5rem;background: url("../images/line.gif") no-repeat left center;background-size:0.4rem;margin-left: 0.27rem;}
+.main_list li input{display:block;font-size: 0.3rem;border:none;line-height: 1rem;height: 1rem;color: #333;background-color: transparent;margin-right: 0.7rem;float:right;width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: right;}
+.main_list .the_name p{background-image: url(../images/peo__03.gif);}
+.main_list .the_tel p{background-image: url(../images/peo__06.gif);}
+/**选择支付方式*/
+.way_list{margin:0.16rem 0.24rem 0.16rem;background-color: #fff;border-radius: 0.1rem;overflow: hidden;}
+.way_list li{font-size: 0.3rem;line-height: 1rem;overflow: hidden;border-bottom: 1px solid #e5e5e5;}
+.way_list .sel_way{background: url("../images/sel_true.png") no-repeat 6.22rem center;background-size: 0.38rem 0.28rem;}
+.way_list li:last-child{border:none;}
+.way_list li p{float: left;padding-left: 1rem;color:#333;}
+.way_list .zfb p{background:url("../images/pay_03.png") no-repeat 0.3rem center;background-size: 0.57rem;}
+.way_list .wx p{background:url("../images/pay_08.png") no-repeat 0.3rem center;background-size: 0.57rem;}
+.way_list .xj p{background:url("../images/pay_11.png") no-repeat 0.3rem center;background-size: 0.57rem;}
+/**优惠券*/
+.coupon{position:relative;overflow: hidden;background:#fff url("../images/go_l_03.gif") no-repeat 6.5rem center;background-size:0.2rem;margin:0.16rem 0.24rem 1.2rem;border-radius: 0.1rem;}
+.coupon p{color:#333;font-size: 0.3rem;line-height: 1.1rem;float: left;padding-left: 1rem;background:url("../images/you_hui.png") no-repeat 0.3rem center;background-size: 0.57rem;}
+.coupon_money{display: block;font-size: 0.34rem;line-height: 1.1rem;color:#ff4f00;position:absolute;right: 0.7rem;top:0;}
+/**底部提交支付*/
+.pay_bot{position: fixed;bottom: 0;width: 7.5rem;margin: 0 auto;font-size: 0.3rem;}
+.pay_bot p{color: #333;background-color:#fff;line-height: 1.08rem;border-top: 1px solid #e5e5e5;text-align: center;display: inline-block;width: 3.75rem;}
+.pay_bot .all_money{font-size: 0.35rem;line-height: 1rem;display: inline-block;}
+.pay_bot .go_pay{background-color: #ec584e;color:#fff;border-top: 1px solid #fd4e00;width: 3.75rem;line-height: 1.08rem;display: inline-block;text-align: center;}
+/**优惠券浮层*/
+.sel_warp{display:none;position:fixed;z-index:10;background-color: #fff;top:0;bottom: 0;width:100%;overflow: auto;}
+.coupon_list{margin-top: 1.6rem;}
+.coupon_list li{position: relative;width: 6.66rem;height:1.44rem;border: 2px solid #e5e5e5;border-left: none;border-radius:8px;margin:0 auto 0.4rem;}
+.coupon_sure {color:#fff;position: absolute;padding:0 0.44rem;line-height: 1rem;right:0;top: 0;}
+.money_warp{position:absolute;width:2.6rem;height:1.5rem;top:-2px;overflow: hidden;background:#ff4f00 url("../images/border_07.gif") repeat-y left top;background-size: 0.08rem;}
+.money_warp p{text-align:center;color:#fff;font-size: 0.3rem;line-height: 1.5rem;background: url("../images/border_03.gif") repeat-y right top;background-size: 0.08rem;}
+.money_warp p span{font-size: 0.9rem;font-weight: bold;line-height: 1.5rem;}
+.coupon_type{margin-left:2.6rem;width:3rem;}
+.coupon_type p{font-size:0.34rem;line-height: 0.54rem;color:#333;background-color: #fff;font-style:bold;margin:0.26rem 0 0 0.26rem;}
+.coupon_type span{font-size:0.24rem;line-height: 0.4rem;color:#474747;display: block;margin-left: 0.26rem;}
+.coupon_list i{position:absolute;right:0.24rem;top:0.48rem;display: block;width:0.5rem;height: 0.5rem;background:url("../images/icon_03.gif") no-repeat center top;background-size: 1.66rem;}
+.coupon_list .sel_1{position:absolute;right:0.24rem;top:0.48rem;display: block;width:0.5rem;height: 0.5rem;background:url("../images/icon_03.gif") no-repeat right top;background-size: 1.66rem;}
+.coupon_list .sel_0{position:absolute;right:0.24rem;top:0.48rem;display: block;width:0.5rem;height: 0.5rem;background:url("../images/icon_03.gif") no-repeat left top;background-size: 1.66rem;}
+/**常用联系人*/
+.contacts_warp{display:none;position:fixed;z-index:10;background-color: #f0f0f0;top:0;bottom: 0;width:7.5rem;overflow: auto;}
+.add_contacts{width: 0.34rem;position: absolute;padding:0.33rem 0.4rem;right:0;top: 0;}
+.contacts_list{padding-top:1rem;}
+.contacts_list li{margin:0.16rem 0.24rem 0;background-color: #fff;border-radius: 0.1rem;overflow: hidden;position: relative;}
+.contacts_list .sel_contacts{background:#fff url("../images/sel_true.png") no-repeat 6.24rem center;background-size: 0.38rem 0.28rem;}
+.contacts_list li div{border-bottom: 1px solid #e5e5e5;overflow: hidden;width: 5rem;margin:0 auto;}
+.contacts_list li .the_tel{border:none;}
+.contacts_list li div p{font-size: 0.3rem;line-height: 1rem;color: #333;float: left;padding-left: 0.5rem;background: url("../images/line.gif") no-repeat left center;background-size:0.4rem;margin-left: 0.27rem;}
+.contacts_list li span{display:block;font-size: 0.3rem;line-height: 1rem;height: 1rem;color: #333;padding-right: 0.12rem;float:right;text-align: right;}
+.contacts_list .the_name p{background-image: url(../images/peo__03.gif);}
+.contacts_list .the_tel p{background-image: url(../images/peo__06.gif);}
+.contacts_list li i{display: block;background:url("../images/jian_04.gif") no-repeat center;background-size:0.38rem;padding:0.5rem;position: absolute;left: 0;top: 0.5rem;}
+/**添加联系人*/
+.add_contacts_mask{display: none;position: fixed;z-index:120;width: 6.7rem;top:50%;left:50%;transform: translate(-50%,-50%);background-color: #fff;border-radius: 0.2rem;overflow: hidden;}
+.add_item{margin: 0.4rem 0.38rem 0;}
+.add_item div{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.add_item div p{font-size: 0.3rem;line-height: 1rem;color: #333;float: left;padding-left: 0.5rem;background: url("../images/line.gif") no-repeat left center;background-size:0.4rem;margin-left: 0.27rem;}
+.add_item input{border:none;background: transparent;width: 4rem;display:block;font-size: 0.3rem;line-height: 1rem;height: 1rem;color: #151515;padding-right: 0.12rem;float:right;text-align: right;}
+.add_item .the_name p{background-image: url(../images/peo__03.gif);}
+.add_item .the_tel p{background-image: url(../images/peo__06.gif);}
+.add_item .the_tel{border-bottom: 1px solid #e5e5e5;}
+.add_btn p{font-size: 0.3rem;color: #ec584e;border:1px solid #ec584e;float: left;border-radius: 0.1rem;margin: 0.3rem 0.38rem;width:2.52rem;line-height: 0.84rem; text-align: center;}
+.add_btn .contacts_save{color: #fff;background-color:#ec584e; }
+/**contacts_btn*/
+.contacts_btn{position:fixed;bottom:0;width: 7.5rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
+.contacts_btn button{width: 6.8rem;background:#ec584e;font-size:0.3rem;color: #fff;text-align: center;line-height: 0.8rem;border-radius: 0.1rem;border:none;display:block;margin:0.2rem auto;}
+.mask_add{width:100%;height: 100%;background-color: #000;opacity: 0.5;position: fixed;top:0;z-index: 100;display: none;}
+
+.c_or{color:#fd4e00;}
+.bc_f5{background-color:#f5f5f5;}
+.f_r{float: right;}
+.f_l{float: left;}

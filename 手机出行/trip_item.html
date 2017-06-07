@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--uc强制竖屏-->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>行程单</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/trip_item.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pay.js"></script>
+
+</head>
+<body class="bc_f5">
+<div class="trip_I_top">
+    <p class="c_333">行程单</p><img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip"><a href="complain.html"><span class="c_or">投诉</span></a>
+</div>
+<div class="trip_I_msg bc_fff">
+    <div class="msg_top bc_fff">
+        <p class="trip_I_time f_l c_333">09月08日<span class="c_or">80:00</span></p>
+        <p class="c_a f_r"><span class="trip_I_number">1人</span>·<span class="trip_I_pin">拼座</span></p>
+    </div>
+    <div class="msg_mid c_333">
+        <span class="up">上车</span><p class="trip_I_start">济宁<br><span>太白楼</span></p>
+        <div style="clear: both;"></div>
+        <span class="up">下车</span><p class="trip_I_end">济宁<br><span>太白楼</span></p>
+        <span class="trip_I_line"></span>
+    </div>
+    <div class="msg_bot">
+        <p class="c_95 f_l">全程运行约<span class="c_blue">60</span>分钟</p><span class="trip_I_money c_333 f_r">单价:<span class="c_or">120.00</span>元</span>
+    </div>
+</div>
+<div class="driver bc_fff">
+    <p class="driver_name">张师傅</p>
+    <p class="driver_info"><span class="driver_car">鲁F12345</span>济宁交运集团</p>
+    <img src="images/sj_07.png" class="driver_head">
+    <a href="javascript:;"><img src="images/sj_10.png" class="driver_tel"></a>
+    <ul class="driver_xx">
+        <li class="sjxx"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="trip_I_btn">
+<a href="javascript:;" class="over_trip bc_f5 c_a">完成行程</a><a href="javascript:;" class="want_trip bc_a c_f5">我要乘车</a>
+</div>
+<div class="mask"></div>
+<div class="want_mask bc_fff">
+    <span class="car_id bc_or c_fff">鲁F12345</span>
+    <div class="wm2"><img src="images/2wm_03.png"></div>
+    <a href="javascript:;" class="wm2_btn bc_or c_fff" onclick="at_car();">我已上车</a>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+/*
+    $(".driver_xx li").click(function(){
+        $(".driver_xx li").removeClass("sjxx");
+        for(var i=0;i<$(this).index()+1;i++){
+            $(".driver_xx li").eq(i).addClass("sjxx");
+        }
+    });
+*/
+
+
+    //*获取url中的参数*/
+    function request(paras)
+    {
+        var url = location.href;
+        var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");
+        var paraObj = {};
+        for (i=0; j=paraString[i]; i++){
+            paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);
+        }
+        var returnValue = paraObj[paras.toLowerCase()];
+        if(typeof(returnValue)=="undefined"){
+            return "";
+        }else{
+            return returnValue;
+        }
+    }
+
+
+    /*处理上个页面url中参数*/
+    var wc=decodeURI(request("wc"));
+if(wc=="未完成"){
+    $(".driver_tel").attr("src","images/sj2_10.png");
+    $(".driver_tel").parent().attr("href","tel:17076157998");
+    $(".over_trip").css({color:"#fd4e00",backgroundColor:"#fff",borderColor:"#fd4e00"});
+    $(".over_trip").click(function(){
+        window.open("driver_success.html","_self","");
+    });
+    $(".want_trip").css({color:"#fff",backgroundColor:"#fd4e00",borderColor:"#fd4e00"});
+    $(".want_trip").click(function(){
+        $(".want_mask").show();
+        $(".mask").show();
+    });
+    function at_car(){
+        $(".want_mask").hide();
+        $(".mask").hide();
+    }
+}   else {
+}
+    var ss=decodeURI(request("ss"));
+ss=ss.split("·");
+    $(".trip_I_start").html(""+ss[0]+"<br><span>"+ss[1]+"</span>");
+    var es=decodeURI(request("es"));
+es=es.split("·");
+    $(".trip_I_end").html(""+es[0]+"<br><span>"+es[1]+"</span>");
+    var st=decodeURI(request("st"));
+st=st.split(" ");
+    var st1=st[0].split("/");
+    $(".trip_I_time").html(""+st1[0]+"月"+st1[1]+"日<span class='c_or'>"+st[1]+"</span>");
+</script>
+</html>

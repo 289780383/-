@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>定制线路</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/made_line_success.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_f5">
+<div class="pay_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">定制线路</p>
+</div>
+<div class="main">
+<div class="main_top">
+    <img src="images/good_dz_03.png">
+    <p>定制信息提交成功！</p>
+    <span>如果线路开通，我们会第一时间通知您。</span>
+</div>
+<ul class="main_list">
+    <li><span>去程地址</span><p>烟台市 · 烟台火车站(公交站)</p></li>
+    <li><span>回程地址</span><p>烟台市 · 科技创业大厦</p></li>
+    <li><span>去程时间</span><p>08:30</p></li>
+    <li><span>回程时间</span><p>18:00</p></li>
+</ul>
+<a class="main_btn" onclick="made_again();">重新定制线路</a>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    function made_again(){
+        window.open("made_line.html","_self","");
+    }
+
+</script>
+
+</html>

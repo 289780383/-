@@ -1,0 +1,165 @@
+
+  {
+    "secResult": "0",
+
+    "schoolResult": [
+      {
+        "did":"1",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "1",
+        "money": "3780"
+      },
+      {
+        "did":"2",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "4",
+        "money": "3780"
+      },
+      {
+        "did":"1",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "1",
+        "money": "3780"
+      },
+      {
+        "did":"2",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "4",
+        "money": "3780"
+      },
+      {
+        "did":"1",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "1",
+        "money": "3780"
+      },
+      {
+        "did":"2",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "4",
+        "money": "3780"
+      },
+      {
+        "did":"1",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "1",
+        "money": "3780"
+      },
+      {
+        "did":"2",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "4",
+        "money": "3780"
+      },
+      {
+        "did":"3",
+        "pic": "images/drv/v1/jx.gif",
+        "name": "滨州交运驾校 · 滨州",
+        "star_n": "5",
+        "money": "3780"
+      }
+    ],
+    "teacherResult": [
+      {
+        "did":"1",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"3",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"4",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"4",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"1",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"3",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"4",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"4",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "age":"2年教龄",
+        "star_n": "1",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      },
+      {
+        "did":"1",
+        "pic": "images/drv/v1/jl.jpg",
+        "name": "韩教练",
+        "vip": "images/drv/v1/v.gif",
+        "age":"2年教龄",
+        "star_n": "1",
+        "star_p1": "images/drv/v1/star.gif",
+        "star_p2": "images/drv/v1/star2.gif",
+        "money": "3780",
+        "price":"100元/小时",
+        "evaluate":"C1陪练，不抽烟，态度好，拿证快"
+      }
+    ]
+  }

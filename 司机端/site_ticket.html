@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>现场售票</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/site_ticket.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/site_ticket.js"></script>
+</head>
+<body class="bc_f6">
+<div class="select_line">
+    <div class="select_top bc_f6">
+        <p class="c_333">现场售票</p><img src="images/fh_03.png" onclick="history.go(-1)" class="fh_trip"><span
+            class="local_name c_or">解放桥</span>
+    </div>
+    <p class="small_title bc_f6 c_7c7">请选择到站</p>
+    <ul class="end_station bc_fff">
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">120.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">120.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">120.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">121.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">122.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">123.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">124.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">125.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">124.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">125.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">124.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+        <li><p><span class="end_city">济南</span><span class="end_m"><i class="end_money">125.0</i>元</span></p>
+            <p class="end_dian">南郊宾馆</p></li>
+    </ul>
+    <div class="more_warp bc_fff">
+        <div class="more_add"><p class="reduce_p f_l" onclick="reduce(this);"></p><span><i class="this_num">1</i>人</span>
+            <p class="add_p f_r" onclick="add(this);"></p></div>
+    </div>
+    <div class="site_bot">
+        <p><span class="m_l">1x120.0</span><span class="m_r">总计<span class="c_or">120.0</span>元</span></p><a href="javascript:;" onclick="site_sure();" class="site_sure bc_or c_fff">确定</a>
+    </div>
+</div>
+<div class="mask"></div>
+<!-确认收费-->
+<div class="close_trip bc_f6">
+    <div class="bc_a close_top"><span class="chang bc_or"><span class="dian bc_or"></span></span></div>
+    <p class="c_333">收费<span class="all_money">120.0</span>元！</p>
+    <a class="close_no bc_fff c_333" onclick="close_no();" href="JavaScript:;">取消</a><a class="close_yes bc_or c_fff" onclick="close_yes();" href="JavaScript:;">确认</a>
+</div>
+
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+</script>
+</html>

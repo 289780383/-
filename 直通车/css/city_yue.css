@@ -1,0 +1,95 @@
+.pay_top{font-size: 0.3rem;line-height: 1rem;overflow: hidden;background-color: #ec584e;position:fixed;top:0;z-index: 1;width:7.5rem;}
+.pay_top p{text-align: center;color:#fff;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.open_map{display:block;width: 0.28rem;position: absolute;padding:0.3rem 0.4rem;right:0;top: 0;}
+/**main_list*/
+.main_list{margin:1.16rem 0.24rem 0.16rem;background-color: #fff;border-radius: 0.1rem;}
+.main_list li{border-bottom: 1px solid #e5e5e5;overflow: hidden;padding-right: 0.54rem;}
+.main_list li:last-child{border-bottom:none;}
+.sel_xsj{background:url("../images/go_l_03.gif") no-repeat 6.6rem center;background-size: 0.14rem;}
+.main_list li p{font-size: 0.3rem;margin-left: 0.26rem;line-height: 1rem;color: #555;float: left;padding-left: 0.5rem;background: url("../images/line.gif") no-repeat left center;background-size:0.4rem; }
+.main_list li span{font-size: 0.3rem;line-height: 1rem;color: #151515;float:right;width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: right;}
+.main_list .start_poi p{background-image: url(../images/start.gif);}
+.main_list .end_poi p{background-image: url(../images/end.gif);}
+.main_list .the_date p{background-image: url(../images/date.gif);}
+.main_list .the_time p{background-image: url(../images/clock.gif);}
+.main_list .peo_num p{background-image: url(../images/num.gif);}
+/**选择乘坐方式*/
+.ride_list{margin:0 0.24rem 0;background-color: #fff;border-radius: 0.1rem;}
+.ride_list li{font-size: 0.3rem;line-height: 1.1rem;overflow: hidden;border-bottom: 1px solid #e5e5e5;}
+.ride_list .sel_way{background: url("../images/sel_true.png") no-repeat 6.4rem center;background-size:0.38rem 0.28rem;}
+.ride_list li:last-child{border-bottom:none;}
+.ride_list li p{float: left;color: #555;padding-left: 0.5rem;margin-left: 0.26rem;background: url("../images/pin.gif") no-repeat left center;background-size:0.4rem; }
+.ride_list .w_sw p{background-image: url(../images/swx.gif);}
+.ride_list .w_jj p{background-image: url(../images/jj.gif);}
+.ride_list li span{display:block;float: right;margin-right:0.76rem;font-size: 0.28rem;line-height: 1.1rem;color:#151515;}
+.ride_list li i{font-size: 0.34rem;line-height: 1.1rem;color:#ec584e; font-style: normal;}
+/**捎句话*/
+.talk_msg{margin:0.16rem 0.24rem 2rem;background-color: #fff;border-radius: 0.1rem;overflow: hidden;}
+.talk_msg p{color: #555;font-size: 0.3rem;line-height: 1.1rem;float: left;padding-left: 0.5rem;margin-left: 0.26rem;background: url("../images/msg_i.png") no-repeat left center;background-size:0.4rem; }
+.talk_msg span{display:block;float: right;margin-right:0.52rem;font-size: 0.28rem;line-height: 1.1rem;color:#151515;text-align: right;}
+
+/**yue_btn*/
+.yue_btn{position:fixed;bottom:0;width: 7.5rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
+.yue_btn button{width: 6.8rem;background:#ec584e;font-size:0.3rem;color: #fff;text-align: center;line-height: 0.8rem;border-radius: 0.1rem;border:none;display:block;margin:0.2rem auto;}
+/**选择列表**/
+.sel_box{display:none;width: 6.68rem;border-radius: 0.1rem;border:1px solid #e5e5e5;overflow: hidden;background-color: #fff;position: fixed;z-index:110;top:50%;left:50%;transform: translate(-50%,-50%);}
+.sel_top{position: relative;border-bottom: 1px solid #e5e5e5;}
+.sel_top p{font-size:0.26rem; color:#333;line-height: 0.9rem;text-align: center;}
+.sel_top span{font-size:0.24rem;color:#666;line-height: 0.9rem;padding:0 0.2rem;position: absolute;right: 0;top:0;}
+.sel_list{height:4rem;overflow: auto;}
+.sel_list li{border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.sel_list .sel_true{background: url("../images/sel_true.png") no-repeat 5.9rem center;background-size:0.38rem 0.28rem; }
+.sel_list li i{width:0.4rem;margin:0.2rem 0.1rem;height: 0.4rem;display: block;float: left;background: url("../images/pay_05.png") no-repeat center bottom;background-size: 0.4rem;}
+.sel_list li .sel_item{background: url("../images/pay_05.png") no-repeat center top;background-size: 0.4rem;}
+.sel_list li p{font-size:0.24rem;line-height: 0.8rem;float: left;color: #999;margin-left: 0.48rem;}
+.sel_list li span{display:block;font-size:0.18rem;line-height: 0.4rem;float:left;margin:0.2rem;padding:0 0.1rem;border-radius:0.06rem;color: #fff;background-color:#fd4e00;}
+
+/**先选择城市*/
+.city_select{position:fixed;top: 0;bottom:0;overflow: auto;width: 7.5rem;background-color:#fff;margin: 0 auto;display:none;z-index: 2;}
+.city_top{border-bottom:1px solid #e5e5e5;position:fixed;top: 0;width: 7.5rem;height:0.9rem;margin: 0 auto;z-index: 1000;background-color: #ec584e;}
+.city_fh{display:block;position: absolute;color:#fff;font-size:0.26rem;padding: 0 0.44rem;line-height:0.9rem;right:0;top: 0;}
+.city_sel{display:block;color:#fff;text-align:center;padding: 0 0.1rem;width:1.8rem;border-right:1px solid #d5d2d2;font-size: 0.3rem;line-height: 0.5rem;margin:0.2rem 0;float: left;}
+.city_top .city_title,.city_top .city_pin{color:#fff;font-size: 0.28rem;padding-left:0.2rem;width:4rem;line-height: 0.9rem;float: left;background-color: transparent;border:none;}
+.city_top .city_title::-webkit-input-placeholder{color:#fff;opacity: 0.8;}
+#tip{display: none;}
+#panel {background-color: white;width: 7.5rem;margin:0 auto;overflow:auto;left: 0; top:0;bottom:0;position:relative;margin-top:1rem;z-index: 100;}
+.city_p{height:10rem;padding-top: 0.9rem;}
+.city_p .city_point,.poibox,.active{margin: 0 0.2rem;border-bottom: 1px solid #e5e5e5;font-size: 0.3rem;padding:0.1rem 0.2rem ;}
+.city_p .city_point p,.poi-name{line-height: 0.4rem;padding-top: 0.2rem;color: #333;font-size: 0.32rem;}
+.city_p .city_point span,.poi-addr{display:block;font-size:0.24rem;line-height:0.5rem; color:#c7c7c7;}
+/***/
+body .amap-sug-result{display: none;}
+body .amap-sug-result{display:block;width:7.5rem;border:none;position: relative;bottom:0;overflow: auto;}
+#panel .amap-sug-result{margin-left:0;}
+body .amap-sug-result .auto-item{margin: 0 0.2rem;border-bottom: 1px solid #e5e5e5;font-size: 0.3rem;padding-left: 0.2rem;}
+body .amap-sug-result .auto-item .auto-item-span{display:block;font-size:0.24rem;line-height:0.5rem; color:#c7c7c7;}
+body .amap_lib_placeSearch{display:block;width:7.5rem;border: none;}
+body .amap_lib_placeSearch_page{display:none;}
+body .amap_lib_placeSearch_poi,body .poi-more,body .poi-tel{display:none;}
+body .amap_lib_placeSearch .poibox{padding: 0;}
+body .amap_lib_placeSearch .poibox .poi-title{line-height: 0.3rem;padding-top: 0.2rem;}
+body .amap_lib_placeSearch .poibox .poi-info p{line-height: 0.5rem;}
+.amap_lib_placeSearch .poibox.active, .amap_lib_placeSearch .poibox.hover, .amap_lib_placeSearch .poibox:hover{background-color: #fff;}
+/**输入提示*/
+#input_auto{display: none;background-color: white;width: 7.5rem;margin:0 auto;overflow:auto;left: 0; top:0;bottom:0;position:relative;margin-top:1rem;z-index: 102;}
+
+/**捎句话*/
+.talk{position:fixed;height: 100%;width:7.5rem;top:0;bottom:0;background-color:#f0f0f0;z-index:50;display: none;}
+.talk_head{font-size: 0.3rem;line-height: 1rem;overflow: hidden;background-color: #ec584e;position:fixed;top:0;z-index: 1;width:7.5rem;}
+.talk_head .head_fh{display: block;width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.talk_head p{text-align: center;color:#fff;}
+.want_talk{font-size: 0.28rem;line-height: 0.8rem;color: #333;padding:1rem 0 0 0.3rem;}
+.talk_main{position:absolute;top:1.8rem;bottom: 1.26rem;width: 100%;overflow: auto;}
+.talk_list{background-color:#fff;overflow: hidden;position: relative;width: 100%;}
+.talk_list:after{content: "";display: block;height: 100%;border-left: 1px solid #e5e5e5;position: absolute;top: 0;left: 50%;}
+.talk_list li{float: left;width: 2.89rem;padding:0 0.62rem 0 0.24rem;border-bottom: 1px solid #e5e5e5;font-size: 0.3rem;line-height: 1rem;color: #333;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.talk_list .sel_talk{background:#ec584e url("../images/white_true.png") no-repeat 3.14rem center;background-size:0.38rem 0.28rem;color: #fff;}
+.talk .notice{font-size: 0.26rem;line-height:0.66rem;color: #777;padding-left: 0.24rem;}
+/**talk_btn*/
+.talk_btn{position:fixed;bottom:0;width: 7.5rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
+.talk_btn button{width: 6.8rem;background:#ec584e;font-size:0.3rem;color: #fff;text-align: center;line-height: 0.8rem;border-radius: 0.1rem;border:none;display:block;margin:0.2rem auto;}
+
+
+.bc_f5{background-color:#f5f5f5;}
+

@@ -1,0 +1,11 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color: #24b4ff;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.28rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+.main{padding-top: 1.88rem;overflow: hidden;}
+.main_top{overflow: hidden;position: fixed;top:0.88rem;background-color:#fff;width: 7.5rem;}
+.main_top .local_city{font-size:0.3rem;line-height:1rem;color: #333;padding:0  0.36rem 0 0.24rem;float:left;background:url("../../../images/drv/v1/xxx_07.png") no-repeat right center;background-size:0.26rem; }
+.main_top input{font-size:0.3rem;line-height:0.4rem;color: #777;float:left;border: none;border-left: 1px solid #e5e5e5;margin: 0.3rem 0 0 0.15rem;padding-left:0.15rem;width: 5rem;}
+.school_item li span{font-size:0.3rem;line-height:0.6rem;color: #777;display: block;background-color:#f0f0f0;padding-left: 0.24rem;}
+.school_item li p{font-size:0.3rem;line-height:1rem;color: #333;background-color:#fff;padding-left: 0.24rem;border-bottom: 1px solid #e5e5e5;}
+.school_nav{position: fixed;right:0;top: 1.8rem;}
+.school_nav li{width:0.54rem;font-size: 0.24rem;line-height:0.44rem;color:#24b4ff;text-align: center;}

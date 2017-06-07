@@ -1,0 +1,66 @@
+header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+/**banner*/
+.banner{overflow: hidden;padding-top:0.88rem;}
+.banner img{width: 7.5rem;display: block;}
+/**表单*/
+.the_table{width:7rem;margin:0 auto;overflow: hidden;position:relative;z-index:10;border-radius:0.1rem;transform:translateY(-0.4rem);background-color: #fff;box-shadow: 0 0 0.2rem #888888;}
+.the_table ul{width: 6rem;margin:0 auto;overflow: hidden;}
+.the_table ul li{position:relative;height:1rem;border-bottom: 1px solid #e5e5e5;background: url("../../../images/drv/v1/r_xsj.gif") no-repeat 5.7rem 0.32rem;background-size:0.28rem; }
+.the_table ul .the_city{line-height:1rem;font-size: 0.28rem;color: #333;padding-left: 0.08rem;}
+.come_time,.go_time{overflow: hidden;}
+.come_time p,.go_time p{float:left;line-height:1rem;font-size: 0.28rem;padding-left: 0.08rem;color: #777;}
+.come_time input,.go_time input{float:left;width:4.6rem;line-height:0.96rem;font-size: 0.28rem;padding-left: 0.08rem;color: #333;border: none;background-color: transparent;}
+.come_time span,.go_time span{padding-left:0.2rem;display: block;float: left;font-size: 0.28rem;line-height: 0.4rem;color: #333;}
+.the_table ul .the_hotel_name,.the_table ul .the_room_price{line-height:1rem;font-size: 0.28rem;color: #777;padding-left: 0.08rem;}
+.the_table .the_btn{display: block;font-size: 0.28rem;color: #fff;line-height: 0.8rem;width:6rem;background-color: #ec584e;border-radius: 0.1rem;text-align: center;margin: 0.24rem auto;}
+/**我的按钮*/
+.my_btn{width:7rem;margin:0 auto;overflow: hidden;position:relative;background-color:#fff;border-radius:0.1rem;}
+.my_btn:before{content: "";width:1px;height:0.46rem;background-color:#e5e5e5;transform:scaleX(0.5);position: absolute;left: 3.5rem;top: 0.22rem;}
+.my_btn span{display: block;width:3.2rem;padding-left:0.3rem;float: left;text-align: center;font-size:0.28rem;line-height: 0.88rem;padding-top:0.02rem;color: #4caf50;background: url("../../../images/drv/v1/ic_03.gif") no-repeat 0.96rem center;background-size:0.32rem;}
+.hot_title{width: 7rem;overflow: hidden;position: relative;margin:0.12rem auto 0;}
+.hot_title:before{content:"";width: 7rem;height:0;border-bottom:1px solid #bbb;left:0;top:0.34rem;position: absolute;z-index: 0;}
+.hot_title p{font-size: 0.28rem;line-height: 0.68rem;color: #555;width:2rem;text-align: center;position: relative;margin:0 auto;z-index: 1;background-color:#f0f0f0;}
+.hot_list{width:7rem;overflow: hidden;margin: 0 auto;}
+.hot_list li{width: 7rem;height: 2.4rem;position: relative;margin-bottom: 0.14rem;}
+.hot_list li img{width:7rem;height:2.4rem;display: block;}
+.hot_list li .jd_price{font-size: 0.24rem;padding:0.1rem 0.2rem 0.06rem;line-height: 0.3rem;color: #fff; position: absolute;top: 0.3rem;right: 0;background-color:#ec584e;border-top-left-radius: 0.1rem;border-bottom-left-radius:0.1rem; }
+.hot_list li .jd_price i{font-size: 0.18rem;line-height: 0.3rem;color: #fff;font-style:normal;}
+.hot_list li .jd_name{font-size: 0.28rem;line-height: 0.4rem;background-color:rgba(0,0,0,0.4);padding-top:0.04rem;position: absolute;z-index:20;left: 0;bottom: 0;color: #fff;opacity:1;width:6.82rem;padding-left:0.18rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+/**选择酒店*/
+.select_hotel{display: none;position:fixed;top:0;width: 7.5rem;overflow:auto;height: 100%;background-color:#f0f0f0;z-index: 110;}
+.select_hotel .sel_header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+.select_hotel .sel_header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+.select_hotel .sel_header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+
+.hotel_list{padding-top: 0.88rem;}
+.hotel_list li{overflow: hidden;width: 7.26rem;position:relative;padding: 0.3rem 0 0.3rem 0.24rem;margin-bottom:0.18rem;background-color: #fff;}
+.show_pic{width: 1.8rem;height: 1.2rem;display: block;float: left;}
+.show_msg{float: left;margin-left: 0.2rem;}
+
+.show_msg .the_name{font-size: 0.28rem;line-height: 0.5rem;color: #333;max-width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.show_msg .the_address{font-size:0.28rem;width: 3.6rem;line-height: 0.3rem;float: left;color: #6e6e6e;white-space:nowrap;overflow: auto;}
+.show_msg .the_tag{overflow: hidden;clear: both;}
+.show_msg .the_tag i{display: block;float: left;font-size:0.2rem;border: 1px solid #24b4ff;font-style:normal;color:#24b4ff;border-radius: 0.05rem;padding:0.02rem 0.1rem 0;margin: 0.05rem 0 0 0.1rem;}
+.show_msg .the_tag span{display: block;float: left;font-size:0.2rem;border: 1px solid #ec584e;font-style:normal;color:#ec584e;border-radius: 0.05rem;padding:0.02rem 0.1rem 0;margin: 0.05rem 0 0 0.1rem;}
+.hotel_list li .hotel_btn{float:left;margin:0.3rem 0 0 0.2rem;font-size: 0.3rem;color: #fff;background-color: #b7b7b7;padding:0.1rem 0.2rem;border-radius: 0.1rem;}
+.hotel_list li .hotel_btn_sure{background-color: #ec584e;}
+html,body{height: 100%;overflow: auto;position: relative;}
+/**选择房型*/
+.select_room{display: none;position:fixed;top:0;width: 7.5rem;overflow:auto;height: 100%;background-color:#f0f0f0;z-index: 110;}
+.select_room .sel_header{width:7.5rem;position:fixed;top: 0;left: 50%;transform: translateX(-50%);background-color:#ec584e;z-index:20;overflow: hidden;}
+.select_room .sel_header .head_fh{display:block;padding:0.27rem 0.24rem;position: absolute;left:0;top: 0;width:0.18rem;}
+.select_room .sel_header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
+.room_list{padding-top: 0.88rem;}
+.room_list>li{overflow: hidden;width: 7.02rem;position:relative;padding: 0.3rem 0.24rem;margin-bottom:0.18rem;background-color: #fff;}
+.room_type,.room_price{overflow: hidden;}
+.room_type p,.room_price p{font-size: 0.28rem;line-height: 0.4rem;color: #777;float: left;}
+.room_type span,.room_price span{display:block;font-size: 0.28rem;line-height: 0.4rem;color: #ec584e;float: left;}
+.room_list .room_btn{float:left;font-size: 0.28rem;line-height: 0.6rem;color: #fff;background-color: #ec584e;padding: 0.1rem 0.2rem;border-radius:0.1rem;margin-right: 0.2rem;}
+.room_list .room_btn_stop{background-color: #b7b7b7;}
+.room_list .room_btn_sure{background-color: #ec584e;}
+.room_pic{clear: both;padding-top:0.2rem;overflow: hidden;display: none;}
+.room_pic li{width: 3.3rem;overflow: hidden;float: left;margin:0 0.1rem;}
+.room_pic img{width: 3.3rem;height: 2rem;display: block;}
+.room_pic p{font-size: 0.28rem;line-height: 0.6rem;color: #777;text-align: center;}

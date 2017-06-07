@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>手机出行—司机端</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+<div class="sj_head_warp">
+    <img src="images/sjtx.png" class="sj_head" onclick="sj_head(this);">
+    <p class="sj_head_t">司机端</p>
+</div>
+
+<div class="mask"></div>
+<!--登录前手机验证-->
+
+<div class="login bc_f7">
+    <div class="login_top bc_f0"><span class="c_333">忘记密码</span><img class="close" src="images/close_1.png"
+                                                                   onclick="close_login(this);"></div>
+    <form class="login_form">
+        <input type="tel" class="login_tel c_a" onclick="login_tel(this);" onblur="login_blur(this);" maxlength="13"
+               value="请输入手机号">
+        <p class="c_fff bg_0">该手机号尚未登记</p>
+        <button type="button" class="login_btn c_fff bc_a" onclick="tel_false('.login_form');" disabled>下一步</button>
+    </form>
+</div>
+<!--发送验证码-->
+<div class="login_yan bc_f7">
+    <div class="login_top bc_f0"><img class="fh" src="images/fh_03.png" onclick="fanhui(this);"><span class="c_333">输入验证码</span><img
+            class="close" src="images/close_1.png" onclick="close_login(this);"></div>
+    <p class="c_fff bg_0">验证码输入有误</p>
+    <form class="yzmWarp">
+        <span class="yan_tel c_a">170 0050 2223</span>
+        <button class="yan_btn c_a" onclick="send_yan(this);" disabled>90秒后重发</button>
+        <div class="clearfix"></div>
+        <input type="number" class="yzm">
+        <input type="number" class="yzm">
+        <input type="number" class="yzm">
+        <input type="number" class="yzm">
+    </form>
+</div>
+<!--设置登录密码-->
+
+<div class="set_pass bc_f7">
+    <div class="login_top bc_f0"><span class="c_333">重置登录密码</span><img class="close" src="images/close_1.png"
+                                                                       onclick="close_login(this);"></div>
+    <form class="login_form">
+        <input type="password" class="set_pw c_a" onclick="set_pass(this);" onblur="pass_blur(this);" maxlength="16" min="6"><span
+            class="pass_num c_a" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+        <input type="text" class="set_pw2 c_a" onclick="set_pass(this);" onblur="pass_blur(this);" maxlength="16" min="6" value="请输入6-16位密码">
+        <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+        <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+<!--
+        <span class="pass_msg c_a">设置密码可保障资金安全，密码为后续登陆凭证，请务必牢记</span>
+-->
+        <button type="button" class="pass_btn c_fff bc_a" onclick="set_mm();" disabled>确定</button>
+    </form>
+</div>
+<!--我要登录-->
+<div class="login_now bc_f7">
+    <div class="bogin_bg"></div>
+    <form class="login_form">
+        <input type="tel" class="login_tel c_fff" onblur="login_blur(this);" onclick="login_tel(this);" maxlength="13"
+               value="请输入手机号">
+        <input type="password" class="set_pw c_333" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16"
+               min="6"><span class="pass_num c_fff" onclick="pass_num(this);">请输入6-16位数字or字母</span>
+        <input type="text" class="set_pw2 c_333" onblur="pass_blur(this);" onclick="set_pass(this);" maxlength="16"
+               min="6">
+        <img src="images/eye_07.png" onclick="eye_pass(this);" class="eye">
+        <p class="c_fff bg_0">密码中不能含有特殊字符</p>
+        <button type="button" class="pass_btn c_fff bc_or" onclick="login_now();" disabled>登录</button>
+        <span class="forget c_fff" onclick="forget();">忘记密码</span>
+    </form>
+</div>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize = function () {
+        font_size();
+    };
+    function font_size() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+</script>
+</html>

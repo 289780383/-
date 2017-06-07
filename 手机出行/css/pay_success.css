@@ -1,0 +1,19 @@
+.pay_S_top{font-size: 0.3rem;line-height: 1rem;padding: 0 0.42rem;border-bottom:1px solid #aaa;overflow: hidden;position: relative;}
+.pay_S_top p{text-align: center;}
+.pay_S_top span{position:absolute;right:0.5rem;top:0;font-size: 0.26rem;display: inline-block;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+.kf_head{display: block;width: 1.23rem;margin: 0.46rem auto 0;}
+.kf_name{width: 100%;text-align: center;font-size: 0.3rem;line-height: 0.56rem;}
+.kf_xx{width: 2.2rem;margin: 0 auto;overflow: hidden;}
+.kf_xx li{float:left;width: 0.44rem;height: 0.44rem;background: url("../images/success_07.png") no-repeat right center;background-size:0.88rem;}
+.kf_xx .xx{background: url("../images/success_07.png") no-repeat left center;background-size:0.88rem;}
+.zffs{text-align: center;height: 0.5rem;position: relative;margin-top: 0.4rem;}
+.zffs i{width: 3rem;border-bottom: 1px solid #aaa;margin-top:0.25rem;height: 0;}
+.zffs_txt{font-size: 0.24rem;top:0;width:1.5rem;text-align:center;display:inline-block;line-height:0.5rem;position:absolute;left: 50%;margin-left:-0.75rem;}
+.zf_big{width: 100%;text-align: center;font-size:0.38rem;line-height: 0.66rem;padding-top: 0.45rem;}
+.zf_sm{width: 100%;text-align: center;font-size:0.24rem;line-height: 0.42rem;padding-bottom: 0.1rem;}
+.server_xx{width: 5rem;margin: 0 auto;padding-top: 0.5rem;overflow: hidden;}
+.server_xx li{float:left;width: 1rem;height: 1rem;background: url("../images/success_07.png") no-repeat right center;background-size:2rem;}
+.server_xx .ser_xx{background: url("../images/success_07.png") no-repeat left center;background-size:2rem;}
+.server_over{width: 100%;text-align: center;font-size: 0.3rem;line-height: 1.2rem;}
+.success_go{display:block;width: 6rem;line-height: 1rem;margin: 1.2rem auto 0;text-align: center;font-size: 0.3rem;border-radius:0.1rem; }

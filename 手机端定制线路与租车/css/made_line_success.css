@@ -1,0 +1,16 @@
+body{position:absolute;width:100%;top: 0;}
+.pay_top{font-size: 0.34rem;line-height: 1rem;border-bottom: 1px solid #aaa;overflow: hidden;width:7.5rem;position:fixed;top: 0;margin: 0 auto;height: 1rem;z-index: 10;}
+.pay_top p{text-align: center;}
+.pay_top span{position:absolute;right:0;top:0;font-size: 0.26rem;padding:0 0.5rem;display: inline-block;}
+.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+
+.main{padding: 0 0.34rem;margin: 1.4rem 0 0;}
+.main_top{text-align: center;margin-bottom: 0.4rem;}
+.main_top img{width: 0.9rem;height: 0.9rem;display: block;margin: 0 auto 0.06rem;}
+.main_top p{font-size: 0.32rem;line-height: 0.52rem;color: #363636;}
+.main_top span{font-size: 0.26rem;line-height: 0.46rem;color:#5e5e5e;display: block;}
+.main_list{padding:0 0.44rem;margin-bottom: 0.9rem;}
+.main_list li{border-bottom: 1px solid #c7c7c7;overflow: hidden;}
+.main_list li span{display: block;width:1.6rem;text-align:center;font-size:0.28rem;line-height: 0.8rem;color:#7c7c7c;float: left;}
+.main_list li p{display: block;font-size:0.28rem;line-height: 0.8rem;color:#363636;float: left;}
+.main_btn{display: block;margin:0 auto;width:6.6rem;background-color: #ff4f00;border-radius: 0.1rem;text-align:center;line-height: 0.88rem;color: #fff;font-size: 0.3rem;}

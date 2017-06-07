@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--uc强制竖屏-->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>支付完成与评价</title>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/pay_success.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body class="bc_fff">
+<div class="pay_S_top bc_f5">
+    <img src="images/fh_03.png"  onclick="history.go(-1)" class="fh_trip">
+    <p class="c_333">支付完成与评价</p><a href="complain.html"><span class="c_or">投诉</span></a>
+</div>
+<img src="images/success_03.png" class="kf_head">
+<p class="kf_name c_333">3号客服</p>
+<ul class="kf_xx">
+    <li class="xx"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<div class="zffs"><i class="f_l"></i><span class="zffs_txt">微信支付</span><i class="f_r"></i></div>
+<p class="zf_big c_or">成功支付车费120元</p>
+<p class="zf_sm c_333">已付车费120元</p>
+<div class="zffs"><i class="f_l"></i><span class="zffs_txt">评价服务</span><i class="f_r"></i></div>
+<ul class="server_xx">
+    <li class="ser_xx"></li>
+    <li class="ser_xx"></li>
+    <li class="ser_xx"></li>
+    <li class="ser_xx"></li>
+    <li></li>
+</ul>
+<p class="server_over c_333">"挺好"</p>
+<a href="javascript:;" class="success_go c_fff bc_or">完成预约，等待出行</a>
+</body>
+<script type="text/javascript">
+    font_size();
+    window.onresize=function(){
+        font_size();
+    };
+    function font_size(){
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 750) deviceWidth = 750;//640为设计稿宽度三处需要修改
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    }
+    /**这是客服本来的评分*/
+/*
+$(".kf_xx li").click(function(){
+    $(".kf_xx li").removeClass("xx");
+    for(var i=0;i<$(this).index()+1;i++){
+        $(".kf_xx li").eq(i).addClass("xx");
+    }
+});
+*/
+$(".server_xx li").click(function(){
+    $(".server_xx li").removeClass("ser_xx");
+    for(var i=0;i<$(this).index()+1;i++){
+        $(".server_xx li").eq(i).addClass("ser_xx");
+    }
+    switch ($(this).index()){
+        case 0:
+                $(".server_over").text('"一般般"');
+            break;
+        case 1:
+                $(".server_over").text('"较好"');
+            break;
+        case 2:
+                $(".server_over").text('"好"');
+            break;
+        case 3:
+                $(".server_over").text('"挺好"');
+            break;
+        default:
+                $(".server_over").text('"非常好"');
+
+    }
+});
+</script>
+
+</html>
