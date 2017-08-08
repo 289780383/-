@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>交运出行服务</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/city-day.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=67922577ba2d3e7bc74413447ae0b85a&plugin=AMap.Driving"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!--[if lt IE 9]-->
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=7,chrome=1"/>
+    <!--[endif]-->
+</head>
+<body>
+	        <div class="trip bc_ff clearfix">
+            <ul class="trip_left">
+                <li class="trip_item trip_active"><img src="images/trip1.png"><br>汽车票</li>
+                <li class="trip_item"><img src="images/trip_2.png"><br>约租车</li>
+                <li class="trip_item"><img src="images/trip_3.png"><br>定制班线</li>
+                <li class="trip_item"><img src="images/trip_4.png"><br>景区直达</li>
+                <li></li>
+            </ul>
+            <ul class="trip_right">
+                <li class="qcp">
+                    <p>出发车站</p>
+                    <input type="text" value="全部" class="start_point">
+                    <p>目的地</p>
+                    <input type="text" value="中文/拼音/简拼" class="end_point">
+                    <p>出发时间</p>
+                    <input type="text" class="send_time end-li startDay">
+                    <p>
+                        <span onclick="get_date(this);" class="next_day">后天</span>
+                        <span onclick="get_date(this);">明天</span>
+                        <span onclick="get_date(this);">今天</span>
+                    </p>
+                    <a href="javascript:;" class="search_qcp">立即查询</a>
+                    <!--出发站-->
+                    <ul class="s_p_list">
+                        <li class="point_title">请选择汽车站</li>
+                        <li class="point_item">滨州汽车总站</li>
+                        <li class="point_item">滨州汽车西站</li>
+                        <li class="point_item">广饶汽车站</li>
+                        <li class="point_title">最近行程</li>
+                        <li class="point_near clearfix">
+                            <span onclick="near(this);">滨州汽车站—济南</span>
+                            <span onclick="near(this);">滨州汽车站—济南</span>
+                        </li>
+                    </ul>
+                    <!--目的站-->
+                    <ul class="e_p_box2">
+                        <li class="yzc_p_title">支持中文/拼音/简拼输入</li>
+                        <li class="yzc_p_item">无棣</li>
+                        <li class="yzc_p_item">阳信</li>
+                        <li class="yzc_p_item">惠民</li>
+                    </ul>
+
+                    <div class="e_p_box">
+                        <p class="e_p_msg">支持中文/拼音/简拼输入</p>
+                        <p class="e_p_title">搜索历史</p>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <span>济南</span>
+                        <div class="e_p_letter clearfix">
+                            <ul class="letter_group">
+                                <li class="letter-active">ABCD</li>
+                                <li>EFGH</li>
+                                <li>JKLMN</li>
+                                <li>PQRST</li>
+                                <li>WXYZ</li>
+                            </ul>
+                        </div>
+                        <ul class="e_p_city">
+                            <li class="e_p_c">
+                                <i>A</i>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                                <span>安庆</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="yzc">
+                    <p class="yzc_type">
+                        <span class="select_yzc">拼车</span>
+                        <span>包车</span>
+                        <span>租车</span>
+                    </p>
+                    <div class="pin_car">
+                        <p class="pin_car_title">出发地</p>
+                        <div class="pin_car_item">
+                            <p class="city_sel_go">滨州</p>
+                            <input type="text" value="您从哪上车" class="pin_start">
+                            <input type="text" value="您从哪上车" id="pin_start_b" onfocus='city_(this);' class="pin_start_b" style="display: none;">
+                        </div>
+                        <p class="pin_car_title">目的地</p>
+                        <div class="pin_car_item">
+                            <p class="city_sel_to">滨州</p>
+                            <input type="text" value="您从哪下车" class="pin_end">
+                            <input type="text" value="您从哪下车" id="pin_end_b" onfocus='city_2(this);' class="pin_end_b" style="display: none;">
+                        </div>
+                        <p class="pin_car_title">出发时间及人数</p>
+                        <div class="clearfix">
+                            <input type="text" class="pin_time text-box" style="display: none">
+                            <input type="text" class="pin_time end-li startDay">
+                        <span class="peo_warp">
+                            <img src="images/jian_01.png" class="jian"> <i class="pin_peo">1人</i><img
+                                src="images/add_01.png" class="add">
+                        </span>
+
+                        </div>
+                        <a href="javascript:;" class="search_pin_bao search_pin">立即查询</a>
+                        <a href="javascript:;" class="search_pin_bao search_bao" style="display: none;">立即查询</a>
+                        <!--出发站-->
+                        <ul class="yzc_c_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--出发站-->
+                        <ul class="yzc_e_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--乘车点-->
+                        <ul class="yzc_d_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+                        <ul class="yzc_f_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+
+                    </div>
+                    <div class="zu_car">
+                        <p class="pin_car_title">取车地</p>
+                        <div class="pin_car_item">
+                            <p class="city_zl_go">滨州</p>
+                            <input type="text" value="您从哪取车" class="pin_start_zr">
+                        </div>
+                        <p class="pin_car_title">还车地</p>
+                        <div class="pin_car_item">
+                            <p class="city_zl_to">滨州</p>
+                            <input type="text" value="您从哪还车" class="pin_end_zr">
+                        </div>
+                        <p class="pin_car_title">取车时间<span>还车时间</span></p>
+                        <div class="clearfix">
+                            <input type="text" class="pin_time end-li startDay">
+                            <input type="text" class="pin_time zu_time end-li startDay">
+                        </div>
+                        <a href="javascript:;" class="search_zu">立即查询</a>
+                        <!--出发站-->
+                        <ul class="yzc_z1l_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--出发站-->
+                        <ul class="yzc_z2l_list">
+                            <li class="yzc_p_title">请选择城市</li>
+                            <li class="yzc_p_item">无棣</li>
+                            <li class="yzc_p_item">阳信</li>
+                            <li class="yzc_p_item">惠民</li>
+                        </ul>
+                        <!--乘车点-->
+                        <ul class="yzc_z1r_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+                        <ul class="yzc_z2r_list">
+                            <li class="yzc_p_title">请选择乘车地点</li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                            <li class="yzc_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        </ul>
+
+                    </div>
+                </li>
+                <li class="dzbx">
+                    <p>出发地</p>
+                    <input type="text" value="您从哪上车" class="dzbx_point_start">
+                    <p>目的地</p>
+                    <input type="text" value="您从哪下车" class="dzbx_point">
+                    <p class="pin_car_title">出发时间及人数</p>
+                    <div class="clearfix">
+                        <input type="text" class="pin_time end-li startDay">
+                        <span class="peo_warp">
+                            <img src="images/jian_01.png" onclick="peo_jian();" class="jian"> <i class="pin_peo">1人</i><img
+                                src="images/add_01.png" onclick="peo_add();" class="add">
+                        </span>
+                    </div>
+
+                    <a href="javascript:;" class="search_dzbx">立即查询</a>
+                    <a href="javascript:;" class="dzbx_new">我要发起新线路</a>
+
+                    <!--上车点-->
+                    <ul class="s_p_list">
+                        <li class="dzbx_p_title">请选择乘车地点</li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                    <!--下车点-->
+                    <ul class="dzbx_list">
+                        <li class="dzbx_p_title">请选择乘车地点</li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="dzbx_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                </li>
+                <li class="jqzd">
+                    <p>选择景区</p>
+                    <input type="text" value="您要去哪个景区" class="start_point">
+                    <p>乘车地点</p>
+                    <input type="text" value="您要从哪乘车" class="jqzd_point">
+
+                    <p class="pin_car_title">出发时间及人数</p>
+                    <div class="clearfix">
+                        <input type="text" class="pin_time end-li startDay">
+                        <span class="peo_warp">
+                            <img src="images/jian_01.png" onclick="peo_jian();" class="jian"> <i class="pin_peo">1人</i><img
+                                src="images/add_01.png" onclick="peo_add();" class="add">
+                        </span>
+                    </div>
+
+                    <a href="javascript:;" class="search_jqzd">立即查询</a>
+                    <!--出发站-->
+                    <ul class="s_p_list">
+                        <li class="point_title">请选择景区</li>
+                        <li class="point_item">无棣</li>
+                        <li class="point_item">阳信</li>
+                        <li class="point_item">惠民</li>
+                    </ul>
+                    <!--乘车点-->
+                    <ul class="jqzd_list">
+                        <li class="jqzd_p_title">请选择乘车地点</li>
+                        <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                        <li class="jqzd_p_end"><p>滨州人民政府</p><span>山东省滨州市滨城区</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+</body>
+</html>

@@ -15,7 +15,7 @@
 .select_go,.select_to{margin-left:0.47rem;padding:0.3rem 0 0.3rem 0.3rem;color:#333;position: relative;line-height: 0.7rem;font-size: 0.28rem;z-index: 2;}
 .select_go:before{content: "";display: block;position: absolute;height:100%;border-left: 1px solid #aaa;left: 0;top:0;z-index: -1;}
 .select_to:before{content: "";display: block;position: absolute;height:100%;border-left: 1px solid #aaa;left: 0;top:0;z-index: -1;}
-
+.select_go{border-bottom:2px dashed #aaa;}
 .select_go li,.select_to li{position: relative;}
 .select_position{color: #0096ff;}
 .select_go li span,.select_to li span{display: inline-block;}

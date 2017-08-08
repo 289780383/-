@@ -1,0 +1,55 @@
+html,body{width: 1960px;overflow: auto;}
+#container {position:inherit;width: 100%;}
+/**隐藏高德空间*/
+.amap-toolbar,.amap-logo,.amap-copyright,.amap-mcode{display: none;}
+/**列表*/
+.my_warp{position:static;z-index:1;left:0;top:0;right:0;bottom:0;width: 100%;height: 100%;}
+.area_warp{float:right;width: 400px;height: 100%;background-color: #fff;position: relative;z-index:1;}
+.area_head{position: relative;padding: 9px 0;border-bottom: 1px solid #aaa;}
+.order_nav{width:241px;border:1px solid #ec3d5a;border-radius:25px;overflow: hidden;margin: 0 auto;}
+.order_nav li{cursor: pointer;border-right:1px solid #ec3d5a;width: 120px;float: left;font-size: 16px;line-height: 40px;text-align: center;color: #111;}
+.order_nav li:last-of-type{border:none;}
+.order_nav .sel_nav{background-color: #ec3d5a;color:#fff;}
+.close_table,.close_mask{display: block;width:20px;height:20px;cursor: pointer;position:absolute;right:20px;top:20px;background: url("../images/close_03.png") no-repeat center;}
+/**主体*/
+.area_main{}
+.area_main .sel_all_warp{padding:5px 10px;overflow: hidden;border-bottom: 1px solid #aaa;}
+.area_main .sel_all{cursor: pointer;display: block;width: 18px;height: 18px;background-color: #fff;border: 1px solid red;float: left;}
+.area_main .sel_show{background-color: red;border: 1px solid red;}
+.sel_all_warp span{display:block;float:left;margin-left: 5px;font-size: 14px;line-height:20px;color: #333;}
+.area_list{overflow: auto;}
+.area_list .area_item{position: relative;padding: 6px 0 ;border-bottom: 1px solid #e5e5e5;}
+.area_item p{margin-left: 40px;overflow: hidden;}
+.area_item p span{display:block;float:left;font-size: 14px;line-height:28px;color: #333;}
+.area_item .area_name,.area_item .area_company{color:#ec3d5a;width:200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.area_item i{cursor: pointer;position: absolute;left: 10px;top: 22px;display: block;width: 18px;height: 18px;background-color: #fff;border: 1px solid red;}
+.area_item .sel_show{background-color: red;border: 1px solid red;}
+.area_item .area_btn{font-size: 14px;line-height: 38px;cursor: pointer;text-align: center; width: 100px;border: 1px solid #ec3d5a;color: #ec3d5a;border-radius: 4px;position: absolute;top: 11px;right:11px;}
+.area_item .area_btn:hover{color: #fff;background-color: #ec3d5a;}
+/**新增页面*/
+.new_page{display:none;width: 400px;position: absolute;left: 0;top:61px;background-color: #fff;transition: 0.5s all;}
+.new_page .page_item{position: relative;height:50px;width:300px;margin:30px auto; border: 1px solid #e5e5e5;}
+.new_page .page_item p{font-size: 14px;width: 40px;line-height: 50px;float: left;color: #333;text-align: center;}
+.new_page .page_item input{border:none;font-size: 14px;line-height: 16px;padding:17px 10px;width: 240px;float: left;background:transparent;color: #333;}
+.page_item .page_company{cursor: pointer;}
+.page_item .company_list{display: none;background-color:#fff;position: absolute;width: 300px;top:52px;left: -1px;max-height: 230px;border:1px solid #aaa;overflow: auto;font-size: 14px;color: #333;}
+.page_item .company_list li{border-bottom: 1px solid #e5e5e5;padding-left: 10px;line-height: 30px;}
+.page_item .company_list li:hover{background-color:#ec3d5a;color:#fff;cursor: pointer;}
+.new_page .draw_btn{width: 300px;margin:30px auto;overflow: hidden;}
+.new_page .draw_btn p{float: left;font-size:14px;width:98px;border:1px solid #ec3d5a;text-align: center;color:#ec3d5a;height:30px;line-height: 30px;margin:0 25px;}
+.new_page .draw_btn p:hover{background-color: #ec3d5a;color: #fff;cursor: pointer;}
+.new_page .sub_sure{font-size: 14px;line-height: 50px;width: 300px;border: 1px solid #ec3d5a;margin:0 auto;color: #ec3d5a;text-align: center;}
+.new_page .sub_sure:hover{background-color: #ec3d5a;color: #fff;cursor: pointer;}
+.new_page .sub_cancel{font-size: 14px;line-height: 50px;width: 300px;border: 1px solid #ec3d5a;margin:30px auto;color: #ec3d5a;text-align: center;}
+.new_page .sub_cancel:hover{background-color: #ec3d5a;color: #fff;cursor: pointer;}
+/**loading*/
+.loading_pic{width: 60px;height: 60px;}
+/**切换城市*/
+.button-group {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 12px;
+    padding: 10px;
+    z-index: 100;
+}

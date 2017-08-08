@@ -37,10 +37,39 @@
             </div>
         </li>
     </ul>
-    <div class="go_msg_box" onclick="window.open('index.html','_self','')" style="width: 1.2rem;height: 1.2rem;background-color:rgba(255, 180, 0, 0.58);position: fixed;z-index: 10;right:1rem;bottom:1.8rem;border-radius: 50%;">
+    <div class="go_msg_box" onclick="window.open('index.html','_self','')" on style="width: 1.2rem;height: 1.2rem;background-color:rgba(255, 180, 0, 0.58);position: fixed;z-index: 100;right:1rem;bottom:1.8rem;border-radius: 50%;">
         <p style="width: 1rem;height: 1rem;background-color: #ffb400;margin:0.1rem;border-radius: 50%;font-size: 0.3rem;line-height: 1rem;text-align: center;color: #fff;">留</p>
     </div>
-</body>
+     <script>
+  var div = document.getElementsByClassName("go_msg_box")[0];
+  div.addEventListener('touchmove', function(event) {
+  event.preventDefault();//阻止其他事件
+  // 如果这个元素的位置内只有一个手指的话
+  if (event.targetTouches.length == 1) {
+   var touch = event.targetTouches[0];  // 把元素放在手指所在的位置
+   div.style.left = touch.pageX + 'px';
+  div.style.top = touch.pageY + 'px';
+   }
+  }, false);
+ </script>
+<!--     <script type="text/javascript">
+$(function(){
+          
+ $(".go_msg_box").on("mousedown", function(e){
+
+        var bot=parseFloat($(this).css("bottom"));
+bot+=50;
+if(bot>250){
+    $(this).css("bottom","1.8rem");
+    return;
+}
+$(this).css("bottom",bot+"px");
+
+
+    });
+})
+</script>
+ --></body>
 <script type="text/javascript">
     var imgUrl = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496200585722&di=96163d9611dc5687e779f0a5703f2eeb&imgtype=0&src=http%3A%2F%2Fimg.tupianzj.com%2Fuploads%2Fallimg%2F160602%2F9-160602215623-50.jpg";
     var lineLink = "www.baidu.com";

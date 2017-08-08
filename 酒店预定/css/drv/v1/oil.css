@@ -19,3 +19,8 @@ header p{font-size: 0.34rem;color:#fff;line-height: 0.88rem;text-align: center;}
 .oil_footer div p{float:left;font-size:0.3rem;margin-left: 0.3rem;}
 .oil_footer div i{display:block;float:left;font-size:0.26rem;color: #ec584e;}
 .oil_footer div span{display:block;float:left;font-size:0.34rem;color: #ec584e;}
+/**compony_list*/
+.company_list{display:none;width: 5rem;background-color:#fff;max-height:4rem;overflow-y: auto;position: fixed;z-index: 200;left: 50%;top:50%;transform: translate(-50%,-50%);border:1px solid #aaa;}
+.company_list li{font-size: 0.3rem;line-height: 0.8rem;color: #333;border-bottom: 1px solid #e5e5e5;padding:0  0.3rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+/**sel_company*/
+.sel_company p{width:90%;margin:0 auto;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}

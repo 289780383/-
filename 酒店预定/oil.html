@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -11,48 +12,85 @@
     <script type="text/javascript" src="js/drv/v1/common.js"></script>
     <script type="text/javascript" src="js/drv/v1/oil.js"></script>
 </head>
+
 <body>
-<header>
-    <img src="images/drv/v1/xsj_l_03.gif" onclick="history.go(-1)" class="head_fh">
-    <p>加油卡</p>
-</header>
-<div class="banner"><img src="images/drv/v1/jy_02.jpg"></div>
-<i class="banner_bot_line"></i>
-<ul class="oil_list">
-   <li>
-       <p>交运加油卡</p>
-       <span>¥100</span>
-       <i></i>
-   </li>
-   <li>
-       <p>交运加油卡</p>
-       <span>¥200</span>
-       <i></i>
-   </li>
-   <li>
-       <p>交运加油卡</p>
-       <span>¥500</span>
-       <i class="sel_i"></i>
-   </li>
-   <li>
-       <p>交运加油卡</p>
-       <span>¥1000</span>
-       <i></i>
-   </li>
-   <li>
-       <p>交运加油卡</p>
-       <span>¥2000</span>
-       <i></i>
-   </li>
-   <li>
-       <p>交运加油卡</p>
-       <span>¥5000</span>
-       <i></i>
-   </li>
-</ul>
-<div class="oil_footer">
-    <div><p>总共：</p><i>¥</i><span>500</span></div>
-    <div class="oil_btn">提交订单</div>
-</div>
+    <header>
+        <img src="images/drv/v1/xsj_l_03.gif" onclick="history.go(-1)" class="head_fh">
+        <p>加油卡</p>
+    </header>
+    <div class="banner"><img src="images/drv/v1/jy_02.jpg"></div>
+    <i class="banner_bot_line"></i>
+    <ul class="oil_list">
+        <li>
+            <p>交运加油卡</p>
+            <span>¥100</span>
+            <i></i>
+        </li>
+        <li>
+            <p>交运加油卡</p>
+            <span>¥200</span>
+            <i></i>
+        </li>
+        <li>
+            <p>交运加油卡</p>
+            <span>¥500</span>
+            <i class="sel_i"></i>
+        </li>
+        <li>
+            <p>交运加油卡</p>
+            <span>¥1000</span>
+            <i></i>
+        </li>
+        <li>
+            <p>交运加油卡</p>
+            <span>¥2000</span>
+            <i></i>
+        </li>
+        <li>
+            <p>交运加油卡</p>
+            <span>¥5000</span>
+            <i></i>
+        </li>
+    </ul>
+    <div class="oil_footer">
+        <!-- <div><p>总共：</p><i>¥</i><span>500</span></div> -->
+        <div class="sel_company">
+            <p>选择单位</p>
+        </div>
+        <div class="oil_btn">提交订单</div>
+    </div>
+    <div class="mask2"></div>
+    <ul class="company_list">
+        <li>中石化</li>
+        <li>中石油中石油中石油中石油中石油</li>
+        <li>中石化</li>
+        <li>中石油中石油中石油中石油中石油</li>
+        <li>中石化</li>
+        <li>中石油中石油中石油中石油中石油</li>
+        <li>中石化</li>
+        <li>中石油中石油中石油中石油中石油</li>
+    </ul>
 </body>
+<script type="text/javascript">
+$(function() {
+    $(".sel_company").on("click", sel_company);
+
+    function sel_company() {
+        $(".mask2,.company_list").show();
+    }
+
+    $(".company_list li").on("click", company_list);
+
+    function company_list() {
+        var txt = $(this).text().trim();
+        $(".sel_company p").text(txt);
+         $(".mask2,.company_list").hide();
+    }
+    $(".mask2").on("click",close_company_list);
+    function close_company_list(){
+      $(".mask2,.company_list").hide();
+    }
+});
+</script>
+
 </html>

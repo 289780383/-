@@ -1,37 +1,55 @@
-.pay_top{font-size: 0.3rem;line-height: 1rem;overflow: hidden;background-color: #ec584e;position:fixed;top:0;z-index: 1;width:7.5rem;}
-.pay_top p{text-align: center;color:#fff;}
-.fh_trip{width: 0.18rem;position: absolute;padding:0.34rem 0.44rem;left:0;top: 0;}
+/**header*/
+header{height: 0.88rem;border-top: 1px solid #fff;}
+.user_photo{display: block;padding: 0.28rem 0 0.24rem 0.3rem;width:0.18rem;}
+.nav_warp{width:6rem;height:0.37rem;float:left;overflow:auto;margin:0.27rem 0.2rem;border-left:1px solid #aaa;}
+.head_nav{display:block;height: 0.37rem;font-size: 0.26rem;}
+.head_nav li{float: left;padding:0 0.15rem;}
+.head_nav li p{line-height:0.35rem;color: #474747;border-bottom: 1px solid #fff;}
+.head_nav li .a_active{line-height:0.35rem;color: #ff4f00;border-bottom: 1px solid #ff4f00;}
+.head_btn{margin:0.38rem 0.4rem 0 0;width:0.33rem;height: 0.19rem;background: url("../../../images/atc/v1/index_06.png")no-repeat 0 0;background-size:cover;}
 
 /**main_list*/
-.main_list{margin:1.16rem 0.24rem 0.16rem;background-color: #fff;border-radius: 0.1rem;}
-.main_list li{border-bottom: 1px solid #e5e5e5;overflow: hidden;padding-right: 0.54rem;}
+.main_list{position: relative;background-color: #fff;border-top: 1px solid #aaa;border-bottom: 1px solid #aaa;}
+.main_list:nth-of-type(1){border-bottom:none;}
+.main_list li{border-bottom: 1px solid #c7c7c7;overflow: hidden;padding-right: 0.54rem;clear: both;margin-left: 1.7rem;}
 .main_list li:last-child{border-bottom:none;}
-.sel_xsj{background:url("../images/go_l_03.gif") no-repeat 6.6rem center;background-size: 0.14rem;}
+/* .sel_xsj{background:url("../images/go_l_03.gif") no-repeat 7rem center;background-size: 0.14rem;} */
 .main_list li p{font-size: 0.3rem;margin-left: 0.26rem;line-height: 1rem;color: #555;float: left;padding-left: 0.5rem;background: url("../images/line.gif") no-repeat left center;background-size:0.4rem; }
-.main_list li span{font-size: 0.3rem;line-height: 1rem;color: #151515;float:right;width: 4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: right;}
+.main_list li span{font-size: 0.3rem;line-height: 1rem;color: #151515;float:right;width: 3rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: right;}
 .main_list .start_poi p{background-image: url(../images/start.gif);}
 .main_list .end_poi p{background-image: url(../images/end.gif);}
 .main_list .the_date p{background-image: url(../images/date.gif);}
 .main_list .the_time p{background-image: url(../images/clock.gif);}
 .main_list .peo_num p{background-image: url(../images/num.gif);}
 /**选择乘坐方式*/
-.ride_list{margin:0 0.24rem 0;background-color: #fff;border-radius: 0.1rem;}
-.ride_list li{font-size: 0.3rem;line-height: 1.1rem;overflow: hidden;border-bottom: 1px solid #e5e5e5;}
-.ride_list .sel_way{background: url("../images/sel_true.png") no-repeat 6.4rem center;background-size:0.38rem 0.28rem;}
+.ride_list{position: relative;margin-top:0.2rem;background-color: #fff;border-top: 1px solid #aaa;border-bottom: 1px solid #aaa;}
+.ride_list li{font-size: 0.3rem;overflow: hidden;border-bottom: 1px solid #c7c7c7;}
+.ride_list .sel_way{background: url("../images/sel_true.png") no-repeat 6.9rem center;background-size:0.38rem 0.28rem;}
 .ride_list li:last-child{border-bottom:none;}
-.ride_list li p{float: left;color: #555;padding-left: 0.5rem;margin-left: 0.26rem;background: url("../images/pin.gif") no-repeat left center;background-size:0.4rem; }
+.ride_list li p{float: left;line-height: 1rem;color: #555;padding-left: 0.5rem;margin-left: 0.26rem;background: url("../images/pin.gif") no-repeat left center;background-size:0.4rem; }
 .ride_list .w_sw p{background-image: url(../images/swx.gif);}
 .ride_list .w_jj p{background-image: url(../images/jj.gif);}
-.ride_list li span{display:block;float: right;margin-right:0.76rem;font-size: 0.28rem;line-height: 1.1rem;color:#151515;}
-.ride_list li i{font-size: 0.34rem;line-height: 1.1rem;color:#ec584e; font-style: normal;}
+.ride_list li span{display:block;float: right;margin-right:0.76rem;font-size: 0.28rem;color:#151515;}
+.ride_list li i{font-size: 0.34rem;line-height: 1rem;color:#ec584e; font-style: normal;}
 /**捎句话*/
-.talk_msg{margin:0.16rem 0.24rem 2rem;background-color: #fff;border-radius: 0.1rem;overflow: hidden;}
+.talk_msg{margin:0.2rem 0;background-color: #fff;border-top:1px solid #aaa;border-bottom:1px solid #aaa;overflow: hidden;}
 .talk_msg p{color: #555;font-size: 0.3rem;line-height: 1.1rem;float: left;padding-left: 0.5rem;margin-left: 0.26rem;background: url("../images/msg_i.png") no-repeat left center;background-size:0.4rem; }
 .talk_msg span{display:block;float: right;margin-right:0.52rem;font-size: 0.28rem;line-height: 1.1rem;color:#151515;text-align: right;}
-
+/**小标题*/
+.item_name{position: absolute;left: 0;top:0.15rem;line-height: 2.8rem;border-right: 1px solid #c7c7c7;width: 1.62rem;text-align: center;font-size: 0.26rem;}
 /**yue_btn*/
-.yue_btn{position:fixed;bottom:0;width: 7.5rem;background-color: #fff;border-top: 1px solid #e5e5e5;}
-.yue_btn button{width: 6.8rem;background:#ec584e;font-size:0.3rem;color: #fff;text-align: center;line-height: 0.8rem;border-radius: 0.1rem;border:none;display:block;margin:0.2rem auto;}
+.yue_btn button {
+    width: 5.7rem;
+    line-height: 0.8rem;
+    font-size: 0.3rem;
+    display: block;
+    background-color: #ff4f00;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.02rem;
+    border: none;
+    margin: 0.6rem auto;
+}
 /**选择列表**/
 .sel_box{display:none;width: 6.68rem;border-radius: 0.1rem;border:1px solid #e5e5e5;overflow: hidden;background-color: #fff;position: fixed;z-index:110;top:50%;left:50%;transform: translate(-50%,-50%);}
 .sel_top{position: relative;border-bottom: 1px solid #e5e5e5;}
@@ -92,4 +110,5 @@ body .amap_lib_placeSearch .poibox .poi-info p{line-height: 0.5rem;}
 
 
 .bc_f5{background-color:#f5f5f5;}
+.bc_fff{background-color:#fff;}
 

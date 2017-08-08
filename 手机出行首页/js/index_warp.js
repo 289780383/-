@@ -11,6 +11,8 @@ function font_size() {
 
 
 $(function(){
+
+    FastClick.attach(document.body);  
     /**轮播*/
     lunbo_ul(".pic_warp", ".pic_nav");
     /**search*/
@@ -192,7 +194,7 @@ function onComplete(data) {
 }
 //解析定位错误信息
 function onError(data) {
-    document.getElementById('tip').innerHTML = '定位失败';
+   console.log('定位失败') ;
 }
 //逆地理编码
 

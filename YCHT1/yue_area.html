@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<title>区域划分</title>
+	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/yue_area.css" />
+	<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+	<script src="http://webapi.amap.com/maps?v=1.3&key=ef82b2547562eb004e2e59dca496b0ee&plugin=AMap.PolyEditor,AMap.CircleEditor"></script>
+	<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.page.js"></script>
+	<script type="text/javascript" src="js/layer/laydate/laydate.js"></script>-->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/yue_area.js"></script> 
+
+</head>
+<body>
+	<div id="container"></div>
+	<div class="button-group">
+    <input id="cityName" class="inputtext" placeholder="请输入城市的名称" type="text"/>
+    <input id="query" class="button" value="到指定的城市" type="button"/>
+
+</div>
+	<div class="my_warp">
+		<div class="area_warp">
+			<div class="area_head">
+				<!-- <i class="close_table"></i> -->
+				<ul class="order_nav">
+					<li class="sel_nav">所有区域</li>
+					<li>新增</li>
+				</ul>
+			</div>
+			<div class="area_main">
+			<div class="sel_all_warp">
+				<i class="sel_all sel_show"></i><span>全选</span>
+			</div>
+				<ul class="area_list">
+
+					<!-- <li class="area_item">
+						<p><span>名称 :</span><span class="area_name">长城</span></p>
+						<p><span>单位 :</span><span class="area_company">长城长长城长长城长长城长</span></p>
+						<i class="sel_show"></i>
+						<div class="area_btn">修改</div>
+					</li> -->
+				</ul>
+			</div>
+			<div class="new_page">
+				<div class="page_item"><p>名称:</p><input type="text"  class="page_name" placeholder="请输入名称"></div>
+				<div class="page_item"><p>单位:</p><input type="text" class="page_company" readonly placeholder="请选择单位">
+				<ul class="company_list">
+					<li>广大银行</li>
+					<li>广大银行</li>
+					<li>广大银行</li>
+					<li>广大银行</li>
+					<li>广大银行</li>
+					<li>广大银行</li>
+					<li>广大银行</li>
+					<li>广大银行</li>
+				</ul>
+				</div>
+				<div class="draw_btn">
+					<p class="draw_s">修改绘制</p><p class="draw_e">结束绘制</p>
+				</div>
+				<p class="sub_cancel">取消</p>
+				<p class="sub_sure">保存</p>
+			</div>
+
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var map = new AMap.Map('container', {
+		resizeEnable: true,
+	});
+
+ //设置城市
+</script>
+</html>
