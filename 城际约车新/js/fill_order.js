@@ -124,7 +124,7 @@
             $(".main_list .the_tel span").text(tel);
             $(".contacts_warp").hide();
         } else {
-msg_show1("请先选择一项",2000);
+            msg_show1("请先选择一项", 2000);
         }
     }
 
@@ -163,13 +163,13 @@ msg_show1("请先选择一项",2000);
         $(".contacts_cancel").on("click", contacts_cancel);
         $(".contacts_save").on("click", contacts_save);
     });
-/**消息提示*/
-function msg_show1(msg,tm){
-    if($(".msg_show").length>=1){
-        return;
+    /**消息提示*/
+    function msg_show1(msg, tm) {
+        if ($(".msg_show").length >= 1) {
+            return;
+        }
+        $("body").append("<div class='msg_show'><p>" + msg + "</p></div><div class='mask_w'></div>");
+        setTimeout(function() {
+            $(".msg_show,.mask_w").remove();
+        }, tm);
     }
-    $("body").append("<div class='msg_show'><p>"+msg+"</p></div><div class='mask_w'></div>");
-    setTimeout(function () {
-        $(".msg_show,.mask_w").remove();
-    }, tm);
-}

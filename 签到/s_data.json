@@ -1,0 +1,9 @@
+{
+    "returnCode": "1",
+    "returnMsg":
+    {
+        "signPoints": "5",
+        "signHint": "连续签到1天，明天签到可得10积分",
+        "points": "5"
+    }
+}

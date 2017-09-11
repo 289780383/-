@@ -16,17 +16,17 @@
 
 <body class="bc_fff">
     <header>
-    <img class="user_photo f_l" onclick="window.open('http://wh.36596.cn/wx.php','_self');" src="images/fh_03.png">
-    <div class="nav_warp">
-    <ul class="head_nav f_l" style="width: 92px;">
-                    <li onclick="viewsite_bignav(this);" btid="8" presetdate="30" btpicpath="images/atc/v1/index_10.png" bttitle="整车租借业务" btsubtitle="即刻拥有私家车" issysid="ycar">
-            <p class="a_active">城际约车</p>
-        </li>
-                </ul>
-    </div>
-</header>
+        <img class="user_photo f_l" onclick="window.open('http://wh.36596.cn/wx.php','_self');" src="images/fh_03.png">
+        <div class="nav_warp">
+            <ul class="head_nav f_l" style="width: 92px;">
+                <li onclick="viewsite_bignav(this);" btid="8" presetdate="30" btpicpath="images/atc/v1/index_10.png" bttitle="整车租借业务" btsubtitle="即刻拥有私家车" issysid="ycar">
+                    <p class="a_active">城际约车</p>
+                </li>
+            </ul>
+        </div>
+    </header>
     <ul class="main_list">
-    <p class="item_name">线路信息</p>
+        <p class="item_name">线路信息</p>
         <li class="sel_xsj line_id">
             <p class="">线路</p>
             <span>选择线路</span>
@@ -40,7 +40,7 @@
             <span>选择目的地</span>
         </li>
     </ul>
-        <ul class="main_list">
+    <ul class="main_list">
         <p class="item_name">行程信息</p>
         <li class="sel_xsj the_date">
             <p>日期</p>
@@ -56,7 +56,7 @@
         </li>
     </ul>
     <ul class="ride_list ">
-   <!--   <p class="item_name">乘坐类型</p> -->
+        <!--   <p class="item_name">乘坐类型</p> -->
         <li class="w_pin sel_way" onclick="ride_way(this);">
             <p>拼座</p><span><i>15</i>元/人</span></li>
         <li class="w_jj" onclick="ride_way(this);">
@@ -135,4 +135,15 @@
         </div>
     </div>
 </body>
+<script type="text/javascript">
+
+    $.ajax({
+        url:"https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?g_tk=1928093487&inCharset=utf-8&outCharset=utf-8&notice=0&format=jsonp&platform=h5&uin=0&needNewCode=1&jsonpCallback=__jp0",
+
+        success:function(data){
+console.log(data);
+        }
+    });
+
+</script>
 </html>
