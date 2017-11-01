@@ -10,10 +10,10 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video { margin:0;  padding:0; border:0; outline:0; vertical-align:baseline; background:transparent;}
+time, mark, audio, video { font-style: normal;margin:0;  padding:0; border:0; outline:0; vertical-align:baseline; background:transparent;}
 
 body{ font-family:"Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-width: 7.5rem;margin:0 auto;}
+width:100%;margin:0 auto;}
 /* 清理浮动 */
 .clearfix:after {
 	/*visibility:hidden;*/
@@ -65,3 +65,4 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appea
 .mask_w{width:100%;height: 100%;background-color: #fff;opacity: 0.3;position: fixed;top:0;left:0;z-index: 210;}
 .loading_pic{display: none;width: 2rem;height: 2rem;position: fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);z-index: 110;}
 .mask{width:100%;height: 100%;background-color: #000;opacity: 0.5;position: fixed;top:0;left:0;z-index: 100;display: none;}
+.mask2{width:100%;height: 100%;background-color: #fff;opacity: 0.5;position: fixed;top:0;left:0;z-index: 100;display: none;}

@@ -1,0 +1,17 @@
+body{width: 7.5rem;background-color: #f5f5f5;}
+/**头部导航*/
+.head_nav{background-color:#fff;display: flex;position:fixed; top:0.88rem;width:7.5rem;left:50%;transform: translateX(-50%);z-index: 20;}
+.head_nav li{flex:1;text-align: center;border-bottom: 0.01rem solid #fff;font-size:0.34rem;color:#969595;line-height:0.88rem;}
+.head_nav .head_sel{color:#14b379;border-bottom: 0.01rem solid #14b379;}
+/**main*/
+.main{padding:0.88rem 0.24rem 1rem;}
+.main li{position:relative;margin-top:0.2rem;background-color: #fff;border-radius:0.1rem;overflow: hidden;}
+.main .item_id{font-size: 0.3rem;line-height: 0.9rem;margin-bottom:0.3rem;color:#333;padding-left: 0.22rem;border-bottom: 0.01rem solid #e5e5e5;}
+.main .type_w{font-size: 0.3rem;line-height: 0.9rem;color:#14b379;position:absolute;top:0;right:0.54rem;}
+.main .type_d{font-size: 0.3rem;line-height: 0.9rem;color:#fd4d00;position:absolute;top:0;right:0.54rem;}
+.main .type_y{font-size: 0.3rem;line-height: 0.9rem;color:#7c7c7c;position:absolute;top:0;right:0.54rem;}
+.main .item_b{height:1.3rem;position:relative;}
+.main .item_name{width:4.8rem;font-size: 0.32rem;line-height:0.52rem;color: #555;padding-left:0.62rem;background: url("../images/poi_y.png") no-repeat 0.26rem center;background-size:0.24rem;}
+.main .item_other{width:4.8rem;font-size: 0.28rem;line-height:0.48rem;color: #777;padding-left:0.62rem;}
+.main .wm_s{display: block;border:0.05rem solid #e5e5e5;position:absolute;width:1.09rem;height:1.09rem;top:-0.1rem;right:0.46rem;}
+.main .now_pay{display: block;position:absolute;width:1.26rem;height:0.4rem;top:0.26rem;right:0.34rem;}

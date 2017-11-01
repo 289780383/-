@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1,maximum-scale = 1,user-scalable =no" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <title>退票改签订单</title>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/revise_order.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/default.date.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/picker.js"></script>
+    <script type="text/javascript" src="js/picker.date.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/revise_order.js"></script>
+    <!--[if lt IE9]> 
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <img src="images/fh_03.png" onclick="history.go(-1)" class="head_fh">
+        <p>退票改签订单</p>
+    </header>
+    <ul class="main">
+        <li>
+            <p class="item_id">订单号：123456789012</p>
+            <div class="item_b">
+                <p class="item_name">华美达大酒店-蓬莱国际机场</p>
+                <p class="item_other">2017-10-12 07:30 5成人，1儿童</p>
+                <span class="return_ticket">退票</span><span class="change_ticket">改签</span>
+            </div>
+        </li>
+        <li>
+            <p class="item_id">订单号：123456789012</p>
+            <div class="item_b">
+                <p class="item_name">华美达大酒店-蓬莱国际机场</p>
+                <p class="item_other">2017-10-12 07:30 5成人，1儿童</p>
+                <span class="return_ticket">退票</span><span class="change_ticket">改签</span>
+            </div>
+        </li>
+    </ul>
+        <div class="revise_mask return_mask">
+        <p class="m_title">退票</p>
+        <div class="m_warp clearfix">
+            <p>手续费</p>
+            <input type="text" value="2元" readonly>
+        </div>
+        <ul class="m_btn">
+            <li class="m_cancel">取消</li>
+            <li class="m_sure">确定</li>
+        </ul>
+    </div>
+        <div class="revise_mask change_mask">
+        <p class="m_title">改签</p>
+        <div class="m_warp clearfix">
+            <p>改签日期</p>
+            <input type="text" id="change_date" placeholder="选择改签日期">
+        </div>
+        <div class="m_warp clearfix">
+            <p>手续费</p>
+            <input type="text" value="2元" readonly>
+        </div>
+        <ul class="m_btn">
+            <li class="m_cancel">取消</li>
+            <li class="m_sure">确定</li>
+        </ul>
+    </div>
+
+    <ul class="nav">
+        <li class="index">
+            首页
+        </li>
+        <li class="trip">
+            行程
+        </li>
+        <li class="mine n_mine">
+            我的
+        </li>
+    </ul>
+</body>
+<script type="text/javascript">
+$(function() {
+    $("#change_date").pickadate({
+        weekdaysShort: ['日', '一', '二', '三', '四', '五', '六'],
+        monthsFull: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+        today: '',
+        clear: '',
+        close: '',
+        min: "today",
+        max: 15,
+        format: 'yyyy-mm-dd',
+    });
+});
+</script>
+
+</html>

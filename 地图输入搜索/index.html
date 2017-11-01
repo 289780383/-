@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1,maximum-scale = 1,user-scalable =no" />
+
+    <title>关键字检索</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style type="text/css">
+        #poi{
+        	position: absolute;
+        	z-index: 10001;
+        	left: 0;
+        	top: 0;
+        }
+        #container{display: none;position:fixed;z-index:1;top:0;left:0;width: 100%;height: 100%;}
+#open_map{position:fixed;z-index:10100;top:1.2rem;right:0.1rem;background-color: #ec584e;color: #fff;text-align: center;font-size: 0.3rem;line-height: 0.4rem;width: 1.2rem;height: 0.8rem;padding:0.2rem 0;border-radius: 50%;}
+
+        .poi_list{position: relative;z-index: 10000;text-align: center;}
+    </style>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=d1902e529ff34dfe0b414e95a60efe26"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+     <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/selPoi.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<input type="text" id="poi">
+<div id="open_map">开启<br>地图</div>
+ <div class="poi_list">
+ 	<ul id="the_list"><li position="121.249802,37.564268"><p>手到推拿</p><span>经济技术开发区长江路57付一号五号网点二楼</span></li><li position="121.242331,37.567388"><p>华玉手到推拿中心</p><span>福莱山街道长江路黄海小区北门</span></li><li position="121.261485,37.521896"><p>披萨到</p><span>太华路96-6号(山东省烟台市福山区太华路96-6号)</span></li><li position="121.248108,37.561696"><p>十秒到过桥米线(星颐广场店)</p><span>长江路160号星颐广场2号楼3层310</span></li><li position="121.274239,37.515413"><p>粥全粥到(松霞路店)</p><span>松霞路151-2号</span></li><li position="121.246387,37.558531"><p>福和鑫艺阁</p><span>珠江路金城小区南门公交车站点即到</span></li><li position="121.250369,37.485132"><p>福到超市</p><span>西山路与西山南路交叉口西230米</span></li><li position="121.278666,37.518642"><p>到点吃饭</p><span>盐场街8-22号附近</span></li><li position="121.244476,37.560562"><p>宅到家龙虾盖饭(华山路店)</p><span>经济技术开发区华山路6-4号</span></li><li position="121.261548,37.503538"><p>帘到家</p><span>永安街173号</span></li><li position="121.283327,37.558323"><p>鲜到家果蔬超市</p><span>金东小区3号楼一楼东侧北临街门头房</span></li></ul> </div>
+<script type="text/javascript"> 
+   var map = new AMap.Map("container", {
+        resizeEnable: true,
+        zoom:16
+    });
+var area = [
+        [116.169465, 39.932670],
+        [116.160260, 39.924492],
+        [116.186138, 39.879817],
+        [116.150625, 39.710019],
+        [116.183198, 39.709920],
+        [116.226950, 39.777616],
+        [116.421078, 39.810771],
+        [116.442621, 39.799892],
+        [116.463478, 39.790066],
+        [116.588276, 39.809551],
+        [116.536091, 39.808859],
+        [116.573856, 39.839643],
+        [116.706380, 39.916740],
+        [116.657285, 39.934545],
+        [116.600293, 39.937770],
+        [116.540039, 39.937968],
+        [116.514805, 39.982375],
+        [116.499935, 40.013710],
+        [116.546520, 40.030443],
+        [116.687668, 40.129961],
+        [116.539697, 40.080659],
+        [116.503390, 40.058474],
+        [116.468800, 40.052578]
+    ];
+$("#poi").selPoi({
+"city":"370611",
+    'poi_list': '.poi_list',
+    "open_map":"#open_map",
+    "area":area
+    
+});
+</script>
+</body>
+</html>

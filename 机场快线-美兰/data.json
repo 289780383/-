@@ -1,0 +1,200 @@
+{
+    "returnCode": "1",
+    "returnMsg":
+    {
+        "dateList": [
+        {
+            "date": "2017-08-01",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-02",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-03",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-04",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": "1"
+        },
+        {
+            "date": "2017-08-05",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-06",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-07",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-08",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-09",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-10",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-11",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": "1"
+        },
+        {
+            "date": "2017-08-12",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-13",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-14",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-15",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-16",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-17",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-18",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": "1"
+        },
+        {
+            "date": "2017-08-19",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-20",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-21",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-22",
+            "isTimeOut": "1",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-23",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-24",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-25",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": "1"
+        },
+        {
+            "date": "2017-08-26",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-27",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-28",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-29",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-30",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        },
+        {
+            "date": "2017-08-31",
+            "isTimeOut": "",
+            "isSign": "",
+            "isDouble": ""
+        }],
+        "todayInit":
+        {
+            "date": "2017-08-23",
+            "isSign": "1",
+            "isDouble": "",
+            "signPoints": "5"
+        }
+    }
+}

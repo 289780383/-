@@ -1,0 +1,15 @@
+body{background-color: #fff;}
+#top{height: 1.2rem;}
+#top img{display: block;width:4.14rem;height: 0.4rem;margin:0 auto;padding-top:0.4rem;}
+.main{width: 7.22rem;margin:0 auto;overflow: hidden;}
+.main li{position: relative;width: 3.4rem;height: 1.8rem;border-radius:0.1rem;float: left;margin: 0 0.1rem 0.2rem 0.1rem;}
+.main img{display: block;width:0.74rem;height: 0.6rem;float: left;padding:0.6rem 0 0 0.26rem;}
+.main .msg{float: left;width: 2.4rem;text-align: center;padding-top:0.48rem;}
+.main .msg p{font-size: 0.44rem;line-height: 0.54rem;color: #fff;}
+.main .msg span{display: block;font-size: 0.2rem;line-height: 0.3rem;color: #fff;}
+/**颜色*/
+.c_green{background-color:#2d8f01;}
+.c_blue{background-color:#0073a7;}
+.c_red{background-color:#e84343;}
+.c_orange{background-color:#c28a05;}
+.c_blue2{background-color:#00a19b;}

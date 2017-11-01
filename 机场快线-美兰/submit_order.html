@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1,maximum-scale = 1,user-scalable =no" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <title>高新区-蓬莱国际机场</title>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/submit_order.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/default.date.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/picker.js"></script>
+    <script type="text/javascript" src="js/picker.date.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/submit_order.js"></script>
+    <!--[if lt IE9]> 
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <img src="images/fh_03.png" onclick="history.go(-1)" class="head_fh">
+        <p>高新区-蓬莱国际机场</p>
+    </header>
+    <ul class="list">
+        <li class="sj_r">
+            <p>乘车日期</p>
+            <input type="text" id="date" placeholder="选择乘车日期" readonly>
+        </li>
+        <li class="sj_r">
+            <p>班次</p>
+            <input type="text" id="banci" placeholder="选择乘车班次" readonly>
+        </li>
+        <li class="sj_r">
+            <p>乘车点</p>
+            <input type="text" placeholder="选择乘车点" id="position" readonly>
+        </li>
+        <li>
+            <p>票种</p>
+            <div class="pz_warp pz_cr">
+                <div class="pz_type">成人票</div>
+                <i class="pz_j pz_no"></i>
+                <i class="pz_zhi">1</i>
+                <i class="pz_a"></i>
+            </div>
+            <div class="pz_warp pz_gb">
+                <div class="pz_type">贵宾票</div>
+                <i class="pz_j pz_no"></i>
+                <i class="pz_zhi">0</i>
+                <i class="pz_a"></i>
+            </div>
+        </li>
+        <li class="no_border">
+            <div class="pz_warp pz_et">
+                <div class="pz_type">儿童票</div>
+                <i class="pz_j pz_no"></i>
+                <i class="pz_zhi">0</i>
+                <i class="pz_a"></i>
+            </div>
+        </li>
+    </ul>
+    <ul class="people">
+        <li>
+            <p>联系人</p><input type="text" placeholder="请输入联系人姓名"></li>
+        <li class="no_border">
+            <p>联系电话</p><input type="text" placeholder="请输入联系人电话" readonly value="18901283933"></li>
+    </ul>
+    <ul class="pay_way">
+        <li class="pay_sel">
+            <p class="pay_wx">微信支付</p>
+        </li>
+        <li>
+            <p class="pay_yl">银联卡支付</p>
+        </li>
+        <li class="no_border">
+            <p class="pay_lzf">龙支付</p>
+        </li>
+    </ul>
+    <div class="pay_bot">
+        <p>
+            <span class="days">总计:</span>
+            <span class="all_money">120</span>
+        </p>
+        <span class="go_pay">提交订单</span>
+    </div>
+    <!--选择班次-->
+    <div class="sel_mask sel_banci">
+        <p class="sel_title">选择班次</p>
+        <i class="sel_prev"></i>
+        <i class="sel_next"></i>
+        <div class="sel_main_warp">
+            <ul class="sel_main">
+                <li>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                </li>
+                <li>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                    <p>6:30-7:30</p>
+                </li>
+            </ul>
+        </div>
+        <p class="sel_btn">确定</p>
+    </div>
+    <!--选择乘车点-->
+    <div class="sel_mask sel_position">
+        <p class="sel_title">选择乘车点</p>
+        <i class="sel_prev"></i>
+        <i class="sel_next"></i>
+        <div class="sel_main_warp">
+            <ul class="sel_main">
+                <li>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                </li>
+                 <li>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                </li>
+                 <li>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                </li>
+                 <li>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                </li>
+                <li>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                    <p>华美达大酒店</p>
+                </li>
+            </ul>
+        </div>
+        <p class="sel_btn">确定</p>
+    </div>
+</body>
+<script type="text/javascript">
+$(function() {
+    $("#date").pickadate({
+        weekdaysShort: ['日', '一', '二', '三', '四', '五', '六'],
+        monthsFull: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+        today: '',
+        clear: '',
+        close: '',
+        min: "today",
+        max: 15,
+        format: 'yyyy-mm-dd',
+    });
+});
+</script>
+
+</html>

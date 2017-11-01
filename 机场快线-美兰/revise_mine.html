@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1,maximum-scale = 1,user-scalable =no" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <title>修改个人信息</title>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/revise_mine.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/revise_mine.js"></script>
+    <!--[if lt IE9]> 
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <img src="images/fh_03.png" onclick="history.go(-1)" class="head_fh">
+        <p>修改个人信息</p>
+    </header>
+    <ul class="list">
+        <li>
+            <p>昵称</p>
+            <span class="nick_name">1891234567</span>
+        </li>
+        <li class="revise_tel sj_r">
+            <p>修改手机号</p>
+        </li>
+        <li class="revise_pw sj_r">
+            <p>修改密码</p>
+        </li>
+    </ul>
+    <p class="out_btn">退出登陆</p>
+    <!-- 修改手机号 -->
+    <div class="revise_mask tel_mask" data-tel="1">
+        <p class="m_title">修改手机号</p>
+        <div class="m_warp">
+            <p class="m_txt">旧手机号</p>
+            <input type="tel" class="tel_text" placeholder="请输入手机号码">
+        </div>
+        <div class="m_warp">
+            <p>验证码</p>
+            <input type="text" class="yzm_text" placeholder="请输入验证码">
+            <span id='tel_yzm1'>获取验证码</span>
+        </div>
+        <ul class="m_btn">
+            <li class="m_cancel">取消</li>
+            <li class="m_sure tel_sure">确定</li>
+        </ul>
+    </div>
+    <!-- 修改密码 -->
+    <div class="revise_mask pw_mask">
+        <p class="m_title">修改密码</p>
+        <span class="forget_pw">忘记密码?</span>
+        <div class="m_warp">
+            <p>旧密码</p>
+            <input type="text" class="old_pw" placeholder="请输入旧密码">
+        </div>
+        <div class="m_warp">
+            <p>新密码</p>
+            <input type="text" class="old_new_pw1" placeholder="请输入新密码">
+        </div>
+        <div class="m_warp">
+            <p>确认密码</p>
+            <input type="text" class="old_new_pw2" placeholder="请再次输入新密码">
+        </div>
+        <ul class="m_btn">
+            <li class="m_cancel">取消</li>
+            <li class="m_sure pw_sure1">确定</li>
+        </ul>
+    </div>
+    <!-- 忘记密码 -->
+    <div class="revise_mask wj_mask">
+        <p class="m_title">修改密码</p>
+        <div class="m_warp">
+            <p>手机号</p>
+            <input type="tel" class="wj_tel" placeholder="请输入手机号">
+        </div>
+        <div class="m_warp">
+            <p>验证码</p>
+            <input type="text" class="wj_yzm" placeholder="请输入验证码">
+            <span id='pw_yzm'>获取验证码</span>
+        </div>
+        <div class="m_warp">
+            <p>新密码</p>
+            <input type="text" class="wj_new_pw" placeholder="请输入新密码">
+        </div>
+        <ul class="m_btn">
+            <li class="m_cancel">取消</li>
+            <li class="m_sure pw_sure2">确定</li>
+        </ul>
+    </div>
+</body>
+
+</html>

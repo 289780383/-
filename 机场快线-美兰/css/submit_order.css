@@ -1,0 +1,51 @@
+body{width: 7.5rem;background-color: #f5f5f5;}
+/**列表*/
+.list {background-color:#fff;margin:0.2rem 0.24rem;padding:0 0.3rem;border-radius: 0.1rem;}
+.list li{height:1rem;position:relative;border-bottom: 0.01rem solid #e5e5e5;}
+.list .sj_r{background:url("../images/f_r.png") no-repeat 6.1rem center;background-size:0.22rem;}
+.list li p{font-size:0.32rem;padding-left: 0.1rem;line-height: 1rem;color: #6b6b6b;}
+.list .no_border{border:none;}
+.list li input{display: block;border:none;background: transparent;position: absolute;font-size:0.32rem;line-height: 1rem;color: #151515;right:0;padding-right:0.5rem;text-align: right;top:0;}
+.pz_warp{padding-top:0.27rem;position:absolute;top:0;}
+.pz_warp .pz_type{float: left;margin-right:0.2rem;font-size:0.32rem;line-height: 0.43rem;color: #151515;}
+.pz_warp i{display: block;font-size: 0.32rem;line-height:0.43rem;color:#151515;width:0.43rem;height: 0.44rem;text-align: center;float: left;}
+.pz_warp .pz_j{background: url("../images/c_jian.png") no-repeat left top;background-size: 0.43rem;}
+.pz_warp .pz_a{background: url("../images/c_add.png") no-repeat left top;background-size: 0.43rem;}
+.pz_warp .pz_no{background-position:left bottom; }
+.pz_cr{left:1rem;}
+.pz_gb{left:3.8rem;}
+.pz_et{left:1rem;}
+/**联系人*/
+.people {background-color:#fff;margin:0.2rem 0.24rem;padding:0 0.3rem;border-radius: 0.1rem;}
+.people li{height:1rem;position:relative;border-bottom: 0.01rem solid #e5e5e5;}
+.people li p{font-size:0.32rem;padding-left: 0.1rem;line-height: 1rem;color: #6b6b6b;}
+.people .no_border{border:none;}
+.people li input{display: block;position: absolute;background:transparent;width:6rem;text-align: right;border:none;font-size:0.32rem;line-height: 1rem;color: #151515;right:0.1rem;top:0;}
+/**支付方式*/
+.pay_way {background-color:#fff;margin:0.2rem 0.24rem 1.2rem;border-radius: 0.1rem;}
+.pay_way li{height:1rem;position:relative;border-bottom: 0.01rem solid #e5e5e5;}
+.pay_way li p{font-size:0.32rem;padding-left:1.1rem;line-height: 1rem;color: #333;}
+.pay_way li .pay_wx{background: url("../images/pay_wx.png") no-repeat 0.3rem center;background-size:0.61rem;}
+.pay_way li .pay_yl{background:url("../images/pay_yl.png") no-repeat 0.3rem center;background-size:0.61rem;}
+.pay_way li .pay_lzf{background:url("../images/pay_lzf.png") no-repeat 0.3rem center;background-size:0.61rem;}
+.pay_way .pay_sel{background:url("../images/pay_sel.png") no-repeat 6.3rem center;background-size:0.38rem;}
+.pay_way .no_border{border:none;}
+/**支付*/
+.pay_bot{background-color:#fff;position: fixed;bottom: 0;width: 7.5rem;margin: 0 auto;font-size: 0.3rem;}
+.pay_bot p{line-height: 1.08rem;height: 1.08rem;text-align: center;display:block;width: 3.35rem;padding:0 0.2rem;float: left;}
+.pay_bot .days{font-size: 0.3rem;line-height: 1.1rem;display: inline-block;float: left;color: #333;padding-left: 0.6rem;}
+.pay_bot .all_money{margin-left: 0.14rem;float: left;font-size: 0.4rem;line-height: 1.1rem;color: #fd4d00;background: url("../images/_$.png") no-repeat left 0.46rem;background-size: 0.15rem;padding-left:0.18rem;}
+.pay_bot .go_pay{background-color: #ffad00;width: 3.75rem;height: 1.1rem;line-height: 1.1rem;display:block;float:right;text-align: center;font-size: 0.34rem;color: #fff;}
+/**选择mask*/
+.sel_mask{display:none;padding:0 0.5rem 0.65rem;position:fixed;background-color: #fff;bottom:0;left: 50%;transform: translateX(-50%);width:6.5rem;overflow: hidden;z-index: 200;}
+.sel_mask .sel_title{font-size: 0.32rem;line-height: 1rem;color: #6b6b6b;}
+.sel_mask .sel_main_warp{overflow:hidden;height: 3.5rem;position: relative;}
+.sel_mask .sel_main{width:13rem;position: absolute;left: 0;top:0;transition: all 0.3s;}
+.sel_mask .sel_main li{width:6.5rem;height: ;float: left;}
+.sel_mask .sel_main li p{white-space: nowrap;overflow: hidden;width:1.98rem;float: left;margin:0 0.07rem 0.3rem 0.07rem;text-align: center;font-size: 0.28rem;line-height: 0.78rem;color: #333;background-color: #fff;border:0.01rem solid #e5e5e5;border-radius: 0.1rem;}
+.sel_mask .sel_main li .sel_the{color:#fff;background-color:#14b379;}
+.sel_mask .sel_btn{width: 6.7rem;font-size: 0.34rem;line-height: 1rem;background-color: #14b379;color: #fff;text-align: center;margin:0 auto 0;border-radius: 0.1rem;}
+.sel_mask .sel_prev{width: 0.22rem;height:0.38rem;background: url("../images/f_l.png") no-repeat right center;padding:0.2rem 0 0.2rem 0.2rem;background-size: 0.22rem;position: absolute;left:0;top:2.1rem;}
+.sel_mask .sel_next{width: 0.22rem;height:0.38rem;background: url("../images/f_r.png") no-repeat left center;padding:0.2rem 0.2rem 0.2rem 0;background-size: 0.22rem;position: absolute;right:0;top:2.1rem;}
+.sel_banci{}
+.sel_position{}

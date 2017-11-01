@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,height = device-height ,initial-scale = 1,minimum-scale = 1,maximum-scale = 1,user-scalable =no" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=d1902e529ff34dfe0b414e95a60efe26"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <style type="text/css">
+header{width:7.5rem;position:fixed;top:0;left:50%;transform:translateX(-50%);background-color:#ec584e;z-index:20;overflow:hidden;}
+header .head_fh{display:block;padding:0.27rem 0.24rem;position:absolute;left:0;top:0;width:0.18rem;}
+header p{font-size:0.34rem;color:#fff;line-height:0.88rem;text-align:center;}
+#container{z-index:10;position:relative;top:0.88rem;width:7.5rem;transform:translateX(-50%);left:50%;}
+.car_icon,
+.peo_icon{width:25px;height:33px;display:block;}
+</style>
+</head>
+
+<body>
+    <header>
+        <img src="images/xsj_l_03.gif" onclick="history.go(-1)" class="head_fh">
+        <p>位置</p>
+    </header>
+    <div id="container"></div>
+    <script type="text/javascript">
+    //初始化地图对象，加载地图
+    var map = new AMap.Map("container", {
+        resizeEnable: true
+    });
+
+    var peo_poi, /**参数*/
+        car_poi = [116.31621, 39.936121],
+        tm = 300000; //300秒
+
+    $(function() {
+        $(".loading_pic,.mask").show();
+        ajax_fn();
+        var win_h = $(window).height();
+        var head_h = $("header").height();
+        $("#container").css("height", win_h - head_h + "px");
+        //ajax调用以下方法
+    });
+    var ajax_fn = function(the_id = 0) {
+        $.ajax({
+                url: '/path/to/file',
+                type: 'POST',
+                dataType: 'json',
+                data: { id: the_id },
+            })
+            .done(function() {
+                car_poi = [116.31621, 39.936121];
+                tm = 300000; //300秒
+                dw();
+            })
+            .fail(function() {
+                car_poi = [116.31621, 39.936121];
+                tm = 300000; //300秒
+                dw();
+                console.log("error");
+            });
+
+    }
+    //定位获取当前坐标
+    var dw = function() {
+        map.plugin('AMap.Geolocation', function() {
+            geolocation = new AMap.Geolocation({
+                enableHighAccuracy: true, //是否使用高精度定位，默认:true
+            });
+            geolocation.getCurrentPosition();
+            AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息
+            AMap.event.addListener(geolocation, 'error', onError); //返回定位出错信息
+        });
+
+        function onComplete(data) {
+            peo_poi = [data.position.getLng(), data.position.getLat()];
+            set_poi();
+        }
+        //解析定位错误信息
+        function onError(data) {
+            console.log('定位失败');
+        }
+
+    };
+
+    /**渲染点*/
+    var set_poi = function() {
+        map.clearMap();
+        //car
+        new AMap.Marker({
+            map: map,
+            position: peo_poi,
+            content: "<img src='images/icon-map.png' class='car_icon'>",
+            offset: new AMap.Pixel(-12, -33)
+
+        });
+        //peo
+        new AMap.Marker({
+            map: map,
+            position: car_poi,
+            content: "<img src='images/map-icon.png'class='peo_icon'>",
+            offset: new AMap.Pixel(-12, -33)
+
+        });
+        var newCenter = map.setFitView();
+        setTimeout(set_poi, tm);
+        $(".loading_pic,.mask").hide();
+
+    }
+    </script>
+</body>
+
+</html>
